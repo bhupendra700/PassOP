@@ -1,0 +1,298 @@
+:root {
+    --bg-color: green;
+}
+
+html {
+    /* font-size: 62.5%; */
+    font-size: 50%;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header header {
+    background-color: #303030;
+    padding: .5rem 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 8rem;
+}
+
+
+.header header .logo {
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* justify-content: center; */
+    /* width: 100%; */
+}
+
+.header header .logo img {
+    height: 6rem;
+}
+
+.header header .logo .texticon {
+    color: green;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.header header .logo .texticon span {
+    color: white;
+}
+
+.header header nav {
+    color: white;
+}
+
+.header header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+.header header nav ul li {
+    text-wrap: nowrap;
+}
+
+.header header nav ul li:hover {
+    color: greenyellow;
+    cursor: pointer;
+}
+
+.header header nav ul .profile {
+    background-color: blueviolet;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header header .tooltip {
+    background-color: rgb(93, 182, 93);
+    position: absolute;
+    right: 20rem;
+    top: 6.2rem;
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header header .tooltip::before {
+    content: "";
+    position: absolute;
+    border-width: 0 6px 6px 6px;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: transparent transparent rgb(93, 182, 93) transparent;
+    top: -6px;
+    right: 13px;
+    z-index: 10;
+}
+
+.header header .tooltip .name,
+.email {
+    font-size: 2rem;
+}
+
+.header header .tooltip button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    padding: 1rem;
+    background-color: rgba(142, 194, 142, 0.836);
+}
+
+.header header .tooltip button i {
+    color: green;
+    font-size: 2rem;
+}
+
+.header header .ham-profile,
+.slider {
+    display: none;
+}
+
+@media screen and (max-width: 1117px) {
+    html {
+        font-size: 42%;
+    }
+
+    .header header nav ul .profile {
+        background-color: blueviolet;
+        border-radius: 50%;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .header header .tooltip {
+        right: 19.6rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header header {
+        padding: .5rem 15rem;
+    }
+
+    .header header .tooltip {
+        right: 14.6rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header header {
+        padding: .5rem 2rem;
+    }
+
+    .header header .desktop-nav {
+        display: none;
+    }
+
+    .header header .tooltip {
+        display: none;
+    }
+}
+
+/*  hamburder chalu ho raha hai */
+@media screen and (max-width: 700px) {
+    .header header .ham-profile {
+        background-color: red;
+        font-size: 3rem;
+        height: 5rem;
+        width: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+    }
+
+    .header header .slider {
+        display: flex;
+        /* display: block; */
+        position: absolute;
+        background-color: rgb(93, 182, 93);
+        font-size: 2.5rem;
+        padding: 2rem 1.25rem;
+        color: white;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        gap: 2rem;
+        width: 300px;
+    }
+
+    .header header .slider .cross{
+        cursor: pointer;
+        height: 21px;
+        /* background-color: brown; */
+    }
+
+    .header header .slider .ham-nav {
+        background-color: transparent;
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        /* background-color: aqua; */
+        width: 85%;
+    }
+
+    .header header .slider .ham-nav .ham-nav-profile {
+        background-color: red;
+        cursor: pointer;
+        height: 80px;
+        width: 80px;
+        font-size: 10rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .header header .slider .ham-nav .home , .about , .contactus {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border: 2px solid green;
+        border-radius: 5px;
+        background-color:  rgba(142, 194, 142, 0.836);
+        cursor: pointer;
+        padding: .5rem 0;
+        /* width: 80%; */
+    }
+
+    .header header .slider .ham-nav .home:hover , .about:hover , .contactus:hover {
+      color: green;
+    }
+
+    .header header .slider .ham-nav .slider-email , .slider-name , .slider-password{
+        text-wrap: nowrap;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header header .slider {
+        /* background-color: red; */
+        justify-content: space-between;
+        width: 200px;
+    }
+
+    .header header .slider .ham-nav {
+        /* background-color: green; */
+        font-size: 2rem;
+        width: 100%;
+        gap: 1rem;
+        width:80%;
+    }
+
+    .header header .slider .ham-nav .ham-nav-profile{
+       height:50px ;
+       width: 50px;
+       font-size: 5rem;
+    }
+
+    .header header .slider .ham-nav .slider-email{
+       text-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .header header {
+        padding: .5rem 2rem;
+    }
+    .table table tr td {
+        word-break: keep-all !important;
+    }
+    .table table tr td:nth-child(1) {
+        word-break: break-all !important;
+        min-width: 120px;
+    }
+}

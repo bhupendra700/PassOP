@@ -1,0 +1,237 @@
+.main {
+    min-height: calc(100vh - 114px);
+    /* background-color: aqua; */
+    background-color: rgba(223, 241, 195, 0.315);
+}
+
+@media screen and (min-width: 1117px) {
+    .main {
+        min-height: calc(100vh - 136px);
+    }
+}
+
+.hero {
+    /* background-color: blue; */
+    padding: 0 16rem;
+    padding-top: 5rem;
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    gap: 2rem;
+}
+
+.hero .hero-logo {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-logo div:nth-child(1) {
+    color: green;
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.hero .hero-logo div:nth-child(1) span {
+    color: black;
+}
+
+.hero .hero-logo div:nth-child(2) {
+    color: rgba(26, 25, 25, 0.681);
+}
+
+
+
+.hero .hero-btn {
+    background-color: rgb(109, 216, 109);
+    border: green 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem 4rem;
+    border-radius: 10rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.hero .hero-btn i {
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.hero .hero-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero .hero-input .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero .hero-input .input1,
+.row .input2 {
+    border-radius: 3rem;
+    padding: 1.5rem 2.5rem;
+    border: green .3rem solid;
+    outline: none;
+    /* font-size: 1.5rem; */
+}
+
+.hero .hero-input .row .input2 {
+    width: 70%;
+}
+
+.hero .hero-input .row .password-wrap {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border: green .3rem solid;
+    border-radius: 3rem;
+    padding: 0 2.5rem;
+    background-color: white;
+}
+
+.hero .hero-input .row .password-wrap {
+    width: 20%;
+}
+
+.hero .hero-input .row .password-wrap .input3 {
+    width: 100%;
+    outline: none;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1.5rem 0;
+}
+
+.hero .hero-input .row .password-wrap i {
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 700px) {
+    .hero {
+        /* background-color: blueviolet; */
+        padding: 0 2rem;
+        padding-top: 5rem;
+
+    }
+
+    .hero .hero-input .row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero .hero-input .row .password-wrap {
+        width: 100%;
+    }
+
+    .hero .hero-input .row .input2 {
+        width: 100%;
+    }
+
+}
+
+
+.password-table {
+    font-size: 2rem;
+    padding: 0 16rem;
+    margin-top: 2rem;
+}
+
+.password-table .heading {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.password-table .table {
+    padding-bottom: 2rem;
+    width: 100%;
+    overflow: auto;
+}
+
+.password-table .table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.password-table .table table thead tr:nth-child(1) {
+    background-color: green;
+    color: white;
+}
+
+.password-table .table table tbody tr td {
+    text-align: center;
+    padding: 1rem;
+    width: 25%;
+    background-color: rgba(74, 236, 74, 0.518);
+    border: 1px solid white;
+    word-break: break-word;
+}
+
+.password-table .table table tbody tr td:nth-child(1) , td:nth-child(4){
+    border-left: none;
+}
+
+.password-table .table table tr td:nth-child(4){
+    border-right: none;
+}
+
+.password-table .table table tr td .td-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.password-table .table table tr td .td-flex i {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.password-table .table table tr td:nth-child(4) .td-flex i {
+    font-size: 3rem;
+}
+
+.password-table .table table tr:nth-child(1) th {
+    text-align: center;
+    padding: 1rem;
+    width: 25%;
+}
+
+.password-table .table table tr td:nth-child(1) {
+    width: 50%;
+}
+
+.password-table .table table tr td:nth-child(4) {
+    width: 15%;
+}
+
+.password-table .table table tr:nth-child(1) th:nth-child(1) {
+    width: 50%;
+    border-top-left-radius: 1rem
+}
+
+.password-table .table table tr:nth-child(1) th:nth-child(4) {
+    width: 15%;
+    border-top-right-radius: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+    .password-table {
+        padding: 0 2rem;
+    }
+}

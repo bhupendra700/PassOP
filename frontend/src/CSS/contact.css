@@ -1,0 +1,79 @@
+.contact-page{
+    background-color: rgba(223, 241, 195, 0.315);
+    width: 100%;
+    min-height: calc(100vh - 114px);
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 1118px) {
+    .contact-page{
+        min-height: calc(100vh - 64px - 72px);
+    }
+}
+
+.contact-page form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    max-width: 80rem;
+    background-color: rgb(157, 239, 157);
+    padding: 3rem;
+    border-radius: 2rem;
+    gap: 2rem;
+    margin:auto;
+}
+
+.contact-page form h1{
+    font-size: 3rem;
+    margin: auto;
+}
+
+.con-name , .con-email , .message{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 2rem;
+}
+
+.con-name input, .con-email input , .message textarea{
+border: none;
+outline: none;
+border-radius: 1rem;
+border: 2px solid green;
+padding: 1.5rem;
+width: 100%;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+resize: none;
+}
+
+.message textarea{
+    width: 100%;
+    resize: none;
+    overflow: auto;
+    text-wrap: wrap;
+}
+
+.message textarea::placeholder{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+form button{
+    background-color: rgb(9, 130, 9);
+    cursor: pointer;
+    border: none;
+    padding: 1rem 5rem;
+    border-radius: 10rem;
+    color: white;
+    font-size: 2.5rem;
+}
+
+form button:hover{
+    background-color: rgb(57, 172, 57);
+}

@@ -1,0 +1,32 @@
+.footer{
+    font-size: 2rem;
+    /* background-color: black; */
+    background-color: rgba(223, 241, 195, 0.315);
+
+    /* color: white; */
+    color: black;
+    height: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.footer div:nth-child(2){
+    color: var(--bg-color);
+    font-weight: 900;
+}
+
+.footer div:nth-child(2) span{
+    /* color: white; */
+    color: black;
+}
+
+.footer div:nth-child(3){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
