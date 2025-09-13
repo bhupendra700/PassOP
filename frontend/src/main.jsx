@@ -225,10 +225,9 @@ const Root = () => {
 
     useEffect(() => {
         const unsubscribe = onMessage(messaging, (payload) => {
-            console.log("Payload foreground: " , payload);
             new Notification(payload.data.title, {
                 body: payload.data.body,
-                icon: '../public/icon.png'
+                icon: '/icon.png'
             })
         })
 
