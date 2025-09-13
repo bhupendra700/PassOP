@@ -136,12 +136,6 @@ io.on("connection", (socket) => {
         }
     })
 
-    socket.on("notify", (notifyData) => {
-        if (users[notifyData.userId]) {
-            io.to(users[notifyData.userId]).emit("foreground", notifyData);
-        }
-    })
-
     socket.on("disconnect", () => {
         for (let userId in users) {
             if (users[userId] === socket.id) {
