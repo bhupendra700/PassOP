@@ -8,7 +8,7 @@ export default defineConfig({
     VitePWA({
       manifest: {
         name: "Passop App",          // Full name (install hone ke baad)
-        short_name: "Passop",        // Short name (home screen pe)
+        short_name: "Passop",     
         description: "Password Manager Application",
         theme_color: "#ffffff",      // Top bar white
         background_color: "#ffffff", // Splash screen bhi white
