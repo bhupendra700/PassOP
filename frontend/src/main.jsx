@@ -43,10 +43,6 @@ const Root = () => {
     const [receivedDocs, setReceivedDocs] = useState([]);
 
     useEffect(() => {
-        console.log("User: ", user);
-    }, [user])
-
-    useEffect(() => {
         const isLogedIn = async () => {
             if (!navigator.onLine) {
                 setLoginLoader(false)
@@ -74,7 +70,6 @@ const Root = () => {
 
                 setLoginLoader(false)
             } catch (error) {
-                console.log(error);
                 setLoginLoader(false)
             }
         }
@@ -120,8 +115,6 @@ const Root = () => {
             })
 
             socket.on("sentRequestAccepted", (userId) => {
-                console.log("share: ", shareableUsers);
-
                 const newArr = shareableUsers.map((ele) => {
                     if (ele.userId === userId) {
                         return { ...ele, status: "accepted" }
@@ -220,8 +213,6 @@ const Root = () => {
                     await shareAxios.post("/registerToken", { token });
                     localStorage.setItem("token", token);
                 }
-            } else {
-                console.log("permission is not granted");
             }
         }
 

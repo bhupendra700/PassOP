@@ -4,7 +4,6 @@ const useParent = (id) => {
     useEffect(() => {
         const parent = (e) => {
             const ele = document.getElementById(id);
-            console.log("Element: " , ele);
             if(ele && !ele.contains(e.target)){
                 ele.removeAttribute("open");
             }

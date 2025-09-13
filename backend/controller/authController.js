@@ -128,7 +128,6 @@ const userlogin = async (req, res) => {
         return res.json({ success: true, message: "User logged in successfully.", user: userDetails, recieved, send, recievedResult, sendResult })
 
     } catch (error) {
-        console.log(error.stack);
         return res.status(400).json({ success: false, message: error.message })
     }
 }
@@ -198,7 +197,6 @@ const isLoggedIn = async (req, res) => {
         return res.json({ success: true, message: "User is logged in.", user: userDetails, recieved, send, recievedResult, sendResult })
 
     } catch (error) {
-        // console.log(error.stack);
         return res.status(400).json({ success: false, message: error.message });
     }
 }

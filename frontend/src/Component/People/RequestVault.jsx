@@ -197,7 +197,6 @@ const RequestVault = () => {
                 socket.emit("deleteuseranddocsfromsent", data);
             }
         } catch (error) {
-            console.log(error);
             setRenderAcceptedShareableUsers(renderAcceptedShareableUsers.map((ele, eleidx) => {
                 if (eleidx === idx) {
                     return { ...ele, loading: false }

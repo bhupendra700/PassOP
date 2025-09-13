@@ -38,7 +38,6 @@ const AddPassword = ({ setSelect, select, data, cat, setCat, makeUrl, isSites, i
                 return `https://www.google.com/s2/favicons?sz=64&domain=${result[0]}`
             }
         } catch (error) {
-            console.log(error);
             return null
         }
     }
@@ -114,7 +113,6 @@ const AddPassword = ({ setSelect, select, data, cat, setCat, makeUrl, isSites, i
             setAdding(false)
             setSelect(false)
         } catch (error) {
-            console.log(error);
             setAdding(false)
             if (error?.response?.data?.message) {
                 notify("error", error?.response?.data?.message)

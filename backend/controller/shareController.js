@@ -112,8 +112,6 @@ const sendRequestCancel = async (req, res) => {
     session.startTransaction()
 
     try {
-        console.log("sender: ", req.body.sender);
-        console.log("reciever: ", req.body.reciever);
         //sender ka matlab jisne request sent kiya tha aur wo ab cancel karna cahta hai
         const { _id: senderId, name: senderName, email: senderEmail, photoURL: senderPhoto } = req.body.sender;
 
@@ -301,7 +299,6 @@ const setDisappear = async (req, res) => {
             throw new Error("Value is missing!");
         }
 
-        console.log(disappear);
         await user.updateOne({ _id: userId }, { disappear });
 
         return res.json({ success: true, message: "Disappear updated successfully" });

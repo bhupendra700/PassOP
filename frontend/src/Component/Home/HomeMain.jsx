@@ -234,10 +234,6 @@ const HomeMain = () => {
     }
   }, [editId])
 
-  useEffect(() => {
-    console.log("Home Data: ", data);
-  }, [data])
-
   return <section className='homemain'>
     <div className="main-container">
       <Save setData={setData} data={data} docs={docs} setDocs={setDocs} isEdit={isEdit} setIsEdit={setIsEdit} />

@@ -134,7 +134,6 @@ const HomeTable = ({ data, setData, setIsEdit, setEditId }) => {
                 return (aIndex === -1 ? Infinity : aIndex) - (bIndex === -1 ? Infinity : bIndex);
             });
 
-            console.log("Filtered: ", filtered);
             setResult(filtered);
         } else {
             if (filterCat === "My Vault") {

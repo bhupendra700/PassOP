@@ -35,7 +35,6 @@ const ContactPage = () => {
             notify("success" , res.data.message)
         } catch (catcherror) {
             setLoader(false)
-            console.log(catcherror);
             setError({ name: "", email: "", message: "" })
             if (catcherror?.response?.data?.type === "zod") {
                 catcherror?.response?.data?.message.forEach((err) => {

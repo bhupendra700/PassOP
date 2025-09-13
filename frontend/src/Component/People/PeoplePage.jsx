@@ -45,7 +45,6 @@ const PeoplePage = () => {
       setDisappearAfterLoader(false)
     } catch (error) {
       setDisappearAfterLoader(false)
-      console.log(error);
       notify("error", error?.response?.data?.message || "Something went wrong")
     }
   }

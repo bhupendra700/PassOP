@@ -59,8 +59,6 @@ const SharePage = ({ setShowShare, shareDocs, setShareDocs }) => {
                 return { ...ele, isSelected: false }
             }))
         } else {
-            console.log("else");
-
             const map = new Map();
 
             selectedUser.map((ele) => {
@@ -76,7 +74,6 @@ const SharePage = ({ setShowShare, shareDocs, setShareDocs }) => {
                 }
             })
 
-            console.log("new ", newSelectedUser);
             setSelectedUser(newSelectedUser);
         }
     }, [shareableUsersList])
