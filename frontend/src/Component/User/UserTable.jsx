@@ -90,7 +90,7 @@ const UserTable = ({ catagory, setCatagory, data, setData, setIsEdit, setEditId,
         try {
             const regex = /^(?:https?:\/\/)?([^\/]+)/i;
             const result = url.match(regex);
-            return `https://img.logo.dev/${result[0].replace(/^https?:\/{0,2}/, "")}?token=pk_NSQByiwlTFebs6ODOSjSeA`
+            return `https://img.logo.dev/${result[0].replace(/^https?:\/{0,2}/, "")}?token=pk_Slm3zZ2dQJGp1U_6Wof0sQ`
         } catch (error) {
             return null
         }
