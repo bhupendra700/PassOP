@@ -2,7 +2,7 @@
   "name": "PassOP App",
   "short_name": "PassOP",
   "description": "Password Manager Application",
-  "start_url": "./",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
