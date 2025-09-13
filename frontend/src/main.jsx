@@ -225,8 +225,8 @@ const Root = () => {
 
     useEffect(() => {
         const unsubscribe = onMessage(messaging, (payload) => {
-            new Notification(payload.data.title, {
-                body: payload.data.body,
+            new Notification(payload.notification.title, {
+                body: payload.notification.body,
                 icon: '/icon.png'
             })
         })

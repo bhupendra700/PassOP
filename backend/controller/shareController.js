@@ -338,16 +338,20 @@ const sendNotification = async (req, res) => {
 
         const tokenDoc = await tokenCollection.find({ _id: { $in: arr_id } }).select({ token: 1 }).lean()
 
-        if (!tokenDoc || !tokenDoc.length) {
-            throw new Error("No token found for this user.")
+        if (!tokenDoc || !tokenDoc.length) { //No token found for this user
+            return res.json({ success: true, message: "Message Sent Successfully" })
         }
 
-        const tokens = tokenDoc.map((ele)=>ele.token);
+        const tokens = tokenDoc.map((ele) => ele.token);
 
-       const message = {
+        const message = {
             data: {
                 title: title,
                 body: body,
+            },
+            notification : {
+                title : title,
+                body : body
             },
             tokens
         }
