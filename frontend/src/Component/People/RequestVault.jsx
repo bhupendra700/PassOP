@@ -70,6 +70,7 @@ const RequestVault = () => {
 
             setIsLoading(false);
             setSearchUserResult(res.data.userDB);
+            setSearchUser("");
         } catch (error) {
             setIsLoading(false);
             setSearchUserResult("noresult");
@@ -104,6 +105,14 @@ const RequestVault = () => {
 
             
             await shareAxios.post('/sendNotification' , {title : "New Share Request" , body : `${user.name[0].toUpperCase() + user.name.slice(1)} (${user.email}) wants to share documents with you. Confirm or cancel` , arr_id : [searchUserResult._id]})
+
+            const notifyData = {
+                title : "New Share Request",
+                body : `${user.name[0].toUpperCase() + user.name.slice(1)} (${user.email}) wants to share documents with you. Confirm or cancel`,
+                userId : searchUserResult._id
+            }
+
+            socket.emit("notify" , notifyData);
 
         } catch (error) {
             setIsRequesting(false)

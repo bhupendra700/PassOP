@@ -125,14 +125,20 @@ io.on("connection", (socket) => {
         }
     })
 
-    socket.on("deleteUser" , (data)=>{
-        const {userId , Ids} = data;
-        if(Ids.length > 0){
+    socket.on("deleteUser", (data) => {
+        const { userId, Ids } = data;
+        if (Ids.length > 0) {
             Ids.forEach(id => {
-                if(users[id]){
-                    io.to(users[id]).emit("deleteAll" , userId);
+                if (users[id]) {
+                    io.to(users[id]).emit("deleteAll", userId);
                 }
             });
+        }
+    })
+
+    socket.on("notify", (notifyData) => {
+        if (users[notifyData.userId]) {
+            io.to(users[notifyData.userId]).emit("foreground", notifyData);
         }
     })
 

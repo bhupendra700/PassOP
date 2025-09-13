@@ -198,6 +198,13 @@ const Root = () => {
 
                 setReceivedDocs((prev) => prev.filter((ele) => ele.userId !== userId));
             })
+
+            socket.on("foreground", (notifyData) => {
+                new Notification(notifyData.title, {
+                    body: notifyData.body,
+                    icon: '/icon.png'
+                })
+            })
         }
     }, [user, shareableUsers, recieveableUsers, receivedDocs, sentDocs])
 
@@ -223,16 +230,16 @@ const Root = () => {
         }
     }, [user])
 
-    useEffect(() => {
-        const unsubscribe = onMessage(messaging, (payload) => {
-            new Notification(payload.data.title, {
-                body: payload.data.body,
-                icon: '/icon.png'
-            })
-        })
+    // useEffect(() => {
+    //     const unsubscribe = onMessage(messaging, (payload) => {
+    //         new Notification(payload.data.title, {
+    //             body: payload.data.body,
+    //             icon: '/icon.png'
+    //         })
+    //     })
 
-        return () => unsubscribe
-    }, [])
+    //     return () => unsubscribe
+    // }, [])
 
     return <ContextData.Provider value={{ notify, user, setUser, alert, setAlert, loginLoader, setLoginLoader, data, setData, passwordCount, setPasswordCount, shareableUsers, setShareableUsers, setRecieveableUsers, recieveableUsers, sentDocs, setSentDocs, receivedDocs, setReceivedDocs, socket }}>
         <Router>
