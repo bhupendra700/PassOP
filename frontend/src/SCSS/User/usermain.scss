@@ -1,0 +1,3360 @@
+$width : min(90%, 1000px);
+$calheight : calc(100dvh - 102px);
+$color : #299f29;
+$hover : #299f291a;
+$bgcolor : #299f2948;
+
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+
+.usermain {
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    min-height: $calheight;
+    z-index: 1;
+
+    .main-container {
+        width: $width;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        #save-det {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border-radius: 3px;
+            flex-shrink: 0;
+
+            &[open]>summary {
+                &>div:last-child {
+                    // background-color: red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 18px;
+
+                    .sub {
+                        display: block;
+                    }
+
+                    .add {
+                        display: none;
+                    }
+                }
+
+            }
+
+            //closed
+            &>summary {
+                // padding: 18px 15px 18px 10px;
+                padding: 10px 15px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                gap: 20px;
+
+                &>div:first-child,
+                &>div:last-child {
+                    // background-color: red;
+                    color: $color;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                &>div:first-child {
+                    // background-color: red;
+                    color: $color;
+                    font-size: 16px;
+                    font-weight: 600;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                &>.toggle-switch-main {
+                    background-color: white;
+                    flex-shrink: 0;
+                    width: 80px;
+                    border-radius: 500px;
+                    display: flex;
+                    align-items: center;
+                    padding: 2px;
+                    transition: all .2s linear;
+                    // background-color: red;
+
+                    &:has(.email) {
+                        box-shadow: inset #12121268 0px 0px 1px 0px, #0808084f 0px 0px 3px 0px;
+
+                        &:hover {
+                            box-shadow: inset #12121291 0px 0px 1px 0px, #08080886 0px 0px 3px 0px;
+                        }
+                    }
+
+                    &:has(.passimg) {
+                        box-shadow: inset #299f29fb 0px 0px 1px 0px, rgba(41, 159, 41, 0.495) 0px 0px 3px 0px;
+
+                        &:hover {
+                            box-shadow: inset #299f2998 0px 0px 1px 0px, #299f29f9 0px 0px 3px 0px;
+                        }
+                    }
+
+                    &:has(.credit-card) {
+                        box-shadow: inset rgba(255, 217, 0, 0.723) 0px 0px 1px 0px, rgba(255, 217, 0, 0.914) 0px 0px 3px 0px;
+
+                        &:hover {
+                            box-shadow: inset rgb(255, 217, 0) 0px 0px 1px 0px, rgb(255, 217, 0) 0px 0px 3px 0px;
+                        }
+                    }
+
+
+                    &>.toggle-switch-button {
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 2px solid white;
+                        overflow: hidden;
+                        transition: all .2s linear;
+
+                        &.passimg {
+                            background-color: $color;
+                            padding: 3px;
+                        }
+
+                        &.email {
+                            background-color: black;
+                            padding: 3px;
+                            transform: translateX(24px);
+                        }
+
+                        &.credit-card {
+                            background-color: rgb(239, 209, 13);
+                            padding: 3px;
+                            transform: translateX(47px);
+                        }
+
+                        &>.react-font-lock {
+                            font-size: 20px;
+                            font-weight: 800;
+                            color: white;
+                            stroke-width: 2.5;
+                        }
+
+                        &>.react-font-email {
+                            font-size: 20px;
+                            font-weight: 800;
+                            color: white;
+                        }
+
+                        &>.react-font-card {
+                            font-size: 20px;
+                            font-weight: 800;
+                            color: white;
+                            stroke-width: .5;
+                        }
+                    }
+                }
+
+                &>div:last-child {
+                    // background-color: red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 18px;
+                    flex-shrink: 0;
+
+                    .sub {
+                        display: none;
+                    }
+                }
+            }
+
+            .save-container {
+                background-color: transparent;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 10px;
+                padding-bottom: 18px;
+
+
+                &>.save-inputs {
+                    display: block;
+
+                    &.cards-mode {
+                        input[type=text]:first-child {
+                            text-transform: uppercase;
+
+                            &::placeholder {
+                                text-transform: none;
+                            }
+                        }
+                    }
+
+                    &>input {
+                        border: 1px solid rgba(0, 0, 0, 0.301);
+                        border-radius: 5px;
+                        padding: 10px;
+                        outline: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $color;
+                        width: 100%;
+
+                        &::placeholder {
+                            color: #299f29c4;
+                        }
+                    }
+
+                    &>.error {
+                        color: red;
+                        font-size: 12px;
+                        font-weight: 600;
+                        margin-top: 3px;
+                    }
+                }
+
+                &>div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    gap: 10px;
+                    position: static;
+
+                    &>.password-con {
+                        // background-color: red;
+                        width: 100%;
+
+                        &>.password {
+                            // background-color: yellow;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid rgba(0, 0, 0, 0.301);
+                            border-radius: 5px;
+                            overflow: hidden;
+
+                            &>input {
+                                border: none;
+                                padding: 10px;
+                                outline: none;
+                                width: 100%;
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: $color;
+
+                                &::placeholder {
+                                    color: #299f29c4;
+                                }
+                            }
+
+                            &>i {
+                                // background-color: rgba(0, 0, 0, 0.092);
+                                padding: 6px;
+                                color: $color;
+                            }
+                        }
+
+                        &>.error {
+                            color: red;
+                            font-size: 12px;
+                            font-weight: 600;
+                            margin-top: 3px;
+                        }
+
+                        &>.strength {
+                            font-size: 13px;
+                            font-weight: 500;
+                            padding: 5px 0;
+                            padding-left: 5px;
+                            cursor: context-menu;
+                            color: $color;
+
+                            &>span {
+                                font-weight: 650;
+                            }
+                        }
+                    }
+
+                    &>details {
+                        width: 100%;
+                        display: flex;
+                        justify-content: end;
+                        position: relative;
+                        z-index: 2;
+
+                        summary {
+                            // background-color: yellow;
+                            cursor: pointer;
+                            width: min(300px, 100%);
+                            list-style: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 8px;
+                            border-radius: 5px;
+                            font-size: 14px;
+                            font-weight: 600;
+                            border: 1px solid rgba(0, 0, 0, 0.216);
+                            color: $color;
+
+                            .position {
+                                position: relative;
+                            }
+
+                        }
+
+                        &>div {
+                            background-color: white;
+                            position: absolute;
+                            width: min(300px, 100%);
+                            top: 120%;
+                            right: 0;
+                            border-radius: 5px;
+                            border: 1px solid rgba(0, 0, 0, 0.242);
+                            padding: 5px 8px;
+                            max-height: 200px;
+                            display: flex;
+                            gap: 10px;
+                            flex-direction: column;
+                            font-size: 13px;
+                            font-weight: 500;
+
+                            &>div {
+                                cursor: pointer;
+                                padding: 5px 8px;
+                                border-radius: 5px;
+                                color: $color;
+                                border: 1px solid $color;
+
+                                &:hover {
+                                    background-color: $color;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    &.wrap {
+                        flex-wrap: wrap;
+
+                        &>details {
+                            justify-content: start;
+
+                            &>summary {
+                                width: 100%;
+                            }
+
+                            &>div {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                &>button {
+                    background-color: transparent;
+                    border: 1px solid rgba(0, 0, 0, 0.175);
+                    width: 80px;
+                    margin: auto;
+                    padding: 10px 20px;
+                    border-radius: 500px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all .12s linear;
+                    color: $color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+                    .circularloader {
+                        color: $color;
+                    }
+
+                    &:hover {
+                        border: 1px solid $color;
+                        background-color: #299f29;
+                        color: white;
+
+                        .circularloader {
+                            color: white;
+                        }
+                    }
+                }
+
+                &>.button {
+                    // background-color: red;
+
+                    &>button {
+                        background-color: transparent;
+                        border: 1px solid $color;
+                        width: 80px;
+                        margin: auto;
+                        padding: 10px 20px;
+                        border-radius: 500px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all .12s linear;
+                        color: $color;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+
+                        &>.edit-icon {
+                            font-size: 18px;
+                            flex-shrink: 0;
+                        }
+
+                        .circularloader {
+                            color: $color;
+                        }
+
+                        &:hover {
+                            background-color: #299f29;
+                            color: white;
+
+                            .circularloader {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //ya to yeah 
+        .empty {
+            // background-color: green;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            padding: 15px;
+            cursor: context-menu;
+            height: 100%;
+
+            .image {
+                // background-color: green;
+                width: min(350px, 100%);
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            h1 {
+                font-size: 20px;
+                font-weight: 500;
+                color: $color;
+                // background-color: red;
+            }
+
+            &>div:nth-child(3) {
+                // background-color: green;
+                font-size: 14px;
+                font-weight: 400;
+
+                &>span {
+                    color: $color;
+                    font-weight: 600;
+                }
+            }
+
+            &>.feature {
+                // background-color: yellow;
+                font-size: 14px;
+                font-weight: 400;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &>div {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .feature-icon {
+                        color: $color;
+                        font-size: 22px;
+                        font-weight: bolder;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+
+        //ya to yeah 
+        .loader {
+            // background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            .circularloader {
+                color: $color;
+            }
+        }
+
+        //ya to yeah 
+        .user-table {
+            // background-color: aqua;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 25px;
+
+
+            .user-table-content {
+                // background-color: red;
+                border-radius: 5px;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                padding-top: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                &:has(.nosearchresult, .nopassword) {
+                    height: 100%;
+                }
+
+                .user-table-header {
+                    // background-color: yellow;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 0 10px;
+
+                    .slider {
+                        // background-color: red;
+                        width: 100%;
+                        display: flex;
+                        gap: 10px;
+                        overflow: auto;
+                        scrollbar-width: none;
+
+
+                        &>div {
+                            // background-color: rgba(0, 0, 0, 0.116);
+                            border: 1px solid rgba(27, 31, 35, 0.15);
+                            padding: 5px 15px;
+                            border-radius: 500px;
+                            font-size: 14px;
+                            cursor: pointer;
+                            font-weight: 500;
+                            color: $color;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: all .15s linear;
+                            text-wrap: nowrap;
+
+                            &:hover {
+                                background-color: $color;
+                                color: white;
+                            }
+
+                            &.green {
+                                background-color: $color;
+                                color: white;
+                            }
+                        }
+                    }
+
+                    #adddet {
+                        flex-shrink: 0;
+                        position: relative;
+                        z-index: 10;
+
+                        &[open] {
+                            &>summary {
+                                color: white;
+                                background-color: $color;
+                            }
+                        }
+
+                        &>summary {
+                            font-size: 16px;
+                            font-weight: 600;
+                            list-style: none;
+                            cursor: pointer;
+                            width: fit-content;
+                            border-radius: 50%;
+                            height: 30px;
+                            width: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $color;
+                            transition: all .12s linear;
+
+                            &:hover {
+                                color: white;
+                                background-color: $color;
+                            }
+
+                        }
+
+                        &>div {
+                            right: 0;
+                            top: 100%;
+                            position: absolute;
+                            background-color: white;
+                            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                            padding: 10px;
+                            border-radius: 5px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 5px;
+                            width: 150px;
+
+                            &>div {
+                                font-size: 14px;
+                                font-weight: 500;
+                                padding: 3px 5px;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                transition: all .12s linear;
+                                color: $color;
+
+
+                                &:hover {
+                                    background-color: $color;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .user-table-main {
+                    // padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .nopassword {
+                        padding: 10px 50px;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 20px;
+                        height: 100%;
+
+                        .message {
+                            // background-color: red;
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: $color;
+                            text-align: center;
+                            font-family: "Delius", cursive;
+                        }
+
+                        &>button {
+                            font-family: "Delius", cursive;
+                            border: 1px solid $color;
+                            background-color: white;
+                            border-radius: 500px;
+                            padding: 10px 20px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            color: $color;
+                            transition: all .2s linear;
+
+                            &:hover {
+                                background-color: $color;
+                                color: white;
+                            }
+
+                            i {
+                                // background-color: red;
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                        }
+
+                        .image {
+                            height: 100%;
+                            width: min(50%, 240px);
+                            // width: 50%;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+
+                    &:has(.nosearchresult, .nopassword) {
+                        height: 100%;
+                    }
+
+                    .user-table-main-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 30px;
+                        padding: 0 10px;
+                        // background-color: red;
+
+
+                        &.wrap {
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            padding: 0 30px;
+                            gap: 25px;
+
+                            &>.search-password {
+                                width: 100%;
+                            }
+
+                            &>.wrapper-con {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                gap: 20px;
+
+                                &>details {
+                                    width: 100%;
+
+                                    &>summary {
+                                        width: 100%;
+                                        justify-content: center;
+                                        gap: 10;
+                                    }
+
+                                    &>section {
+                                        &>div {
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+
+                                .add {
+                                    display: block;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-shrink: 0;
+                                }
+                            }
+
+                            .add {
+                                display: none;
+                            }
+                        }
+
+                        .search-password {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.293);
+                            width: 800px;
+                            position: relative;
+
+                            &>i:first-child {
+                                // background-color: tomato;
+                                font-size: 20px;
+                                font-weight: 400;
+                                cursor: context-menu;
+                                color: $color;
+                            }
+
+                            input[type=text] {
+                                // background-color: red;
+                                outline: none;
+                                border: none;
+                                width: 100%;
+                                padding: 10px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: $color;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                text-wrap: nowrap;
+
+                                &::placeholder {
+                                    color: $color;
+                                }
+                            }
+
+                            &>i:last-child {
+                                color: $color;
+                                font-size: 20px;
+                                font-weight: 500;
+                                cursor: pointer;
+                                border-radius: 50%;
+                                padding: 5px;
+                                transition: all .15s linear;
+
+                                &:hover {
+                                    background-color: $color;
+                                    color: white;
+                                }
+                            }
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: -1px;
+                                left: 50%;
+                                width: 0%;
+                                height: 2px;
+                                background-color: $color;
+                                transition: all 0.3s ease;
+                                transform: translateX(-50%);
+                            }
+
+                            &:has(input[type="text"]:focus)::after {
+                                width: 100%;
+                            }
+
+
+                        }
+
+                        .wrapper-con {
+                            &>details {
+                                // background-color: red;
+                                position: relative;
+                                width: 140px;
+                                z-index: 10;
+
+                                &[open] {
+                                    &>summary {
+
+                                        i {
+                                            transition: all .1s linear;
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+                                }
+
+                                &>summary {
+                                    list-style: none;
+                                    display: flex;
+                                    justify-content: space-around;
+                                    align-items: center;
+                                    gap: 10px;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    border-radius: 500px;
+                                    cursor: pointer;
+                                    border: 1px solid $color;
+                                    padding: 5px 10px;
+                                    color: $color;
+                                    transition: all .15s linear;
+                                    width: 140px;
+
+
+                                    i {
+                                        font-size: 18px;
+                                        font-weight: 600;
+
+                                    }
+
+                                    &:hover {
+                                        background-color: $color;
+                                        color: white;
+                                    }
+                                }
+
+                                &>section {
+                                    background-color: white;
+                                    position: absolute;
+                                    left: 0px;
+                                    top: 105%;
+                                    padding: 10px;
+                                    border-radius: 2px;
+                                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+
+                                    &>div {
+                                        // background-color: red;
+                                        padding: 5px;
+                                        border-radius: 5px;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        color: $color;
+                                        cursor: pointer;
+
+                                        &:hover {
+                                            background-color: $color;
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &>.add {
+                                display: none;
+                            }
+
+                            width: 100%;
+                        }
+
+                        .add {
+                            color: $color;
+                            font-size: 15px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            border-radius: 50%;
+                            height: 30px;
+                            width: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-shrink: 0;
+                            transition: all .15s linear;
+
+                            &:hover {
+                                background-color: $color;
+                                color: white;
+                            }
+                        }
+                    }
+
+                    .app-site-email-card {
+                        // background-color: yellow;
+                        padding: 10px 15px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        cursor: context-menu;
+                        color: $color;
+                        width: 100%;
+                        text-transform: capitalize;
+                    }
+
+                    .user-table-main-body {
+                        .card {
+                            padding: 0 10px;
+                            display: flex;
+                            justify-content: space-between;
+                            // align-items: center;
+
+                            &:hover {
+                                background-color: $hover;
+                            }
+
+                            &:has(.card-det[open]):hover {
+                                background-color: transparent;
+                            }
+
+                            &>.card-det {
+                                // background-color: yellow;
+                                width: 100%;
+                                // transition: all .5s linear;
+
+                                &:not(summary:has(.del)) {
+                                    &>div {
+                                        padding-right: 5px;
+                                    }
+                                }
+
+                                &[open] {
+
+                                    // padding: 10px 0;
+                                    &>summary {
+                                        .arrow {
+                                            rotate: (180deg);
+                                        }
+                                    }
+                                }
+
+                                &>summary {
+                                    // background-color: blue;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    list-style: none;
+                                    gap: 10px;
+                                    cursor: pointer;
+                                    padding: 20px 0;
+
+                                    &:not(:has(.del)) {
+                                        &>.arrow {
+                                            padding: 0 15px;
+                                        }
+                                    }
+
+                                    .image {
+                                        display: flex;
+                                        overflow: hidden;
+                                        flex-shrink: 0;
+
+                                        &>a {
+                                            overflow: hidden;
+                                            height: 40px;
+                                            width: 40px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+
+                                            &>img {
+                                                height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+
+                                        &.big-img:has(img) {
+                                            height: 35px;
+                                            width: 35px;
+                                        }
+
+                                        &>span {
+                                            background-color: $color;
+                                            height: 40px;
+                                            width: 40px;
+                                            flex-shrink: 0;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-size: 25px;
+                                            font-weight: 500;
+                                            border-radius: 50%;
+                                            color: white;
+                                            cursor: context-menu;
+                                        }
+                                    }
+
+                                    .link-or-site {
+                                        padding-left: 10px;
+                                        width: 100%;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        color: $color;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                        text-wrap: nowrap;
+                                        overflow: hidden;
+                                    }
+
+                                    .all-icon {
+                                        display: flex;
+                                        color: $color;
+                                        font-size: 20px;
+                                        border-radius: 50%;
+                                        padding: 5px;
+                                    }
+
+                                    .arrow {
+                                        color: $color;
+                                        font-size: 20px;
+                                        font-weight: 600;
+                                        padding: 0 5px;
+                                    }
+
+                                    .del {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 50%;
+                                        padding: 6px;
+                                        transition: all .1s linear;
+
+                                        &:hover {
+                                            background-color: rgba(5, 205, 5, 0.066);
+                                        }
+
+                                        i {
+                                            font-size: 20px;
+                                            color: red;
+                                            font-weight: 600;
+                                        }
+
+                                        .circularloader {
+                                            color: red;
+                                        }
+                                    }
+                                }
+
+                                &>div {
+                                    background-color: transparent;
+                                    padding: 10px 10px 10px 50px;
+                                    transition: all .2s linear;
+
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 2px;
+
+                                    &.padding {
+                                        padding: 10px 0px;
+                                        // background-color: red;
+                                    }
+
+                                    &>div:not(:last-child) {
+                                        word-break: break-all;
+                                    }
+
+                                    .button {
+                                        // background-color: red;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        width: min(100%, 500px);
+                                        margin-left: auto;
+                                        padding-top: 20px;
+
+                                        &>button {
+                                            border: 1px solid rgba(0, 0, 0, 0.097);
+                                            border-radius: 200px;
+                                            padding: 10px 20px;
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                            color: $color;
+                                            background-color: transparent;
+                                            white-space: nowrap;
+
+                                            &:hover {
+                                                background-color: $color;
+                                                color: white;
+                                                border: 1px solid white;
+                                            }
+
+                                            i {
+                                                // background-color: red;
+                                                font-size: 16px;
+                                            }
+                                        }
+
+                                        &.wrap {
+                                            flex-wrap: wrap;
+                                            justify-content: center;
+                                            gap: 10px;
+                                            width: 100%;
+
+
+                                            &>button {
+                                                width: 100%;
+                                            }
+                                        }
+
+                                        &>button:last-child {
+                                            color: red;
+
+                                            &:hover {
+                                                background-color: red;
+                                                color: white;
+                                            }
+                                        }
+
+                                        &:not(:has(.share)) {
+                                            // background-color: red;
+                                            width: 300px;
+
+                                            &.wrap {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+
+                                    .common {
+                                        padding: 10px;
+                                        background-color: $bgcolor;
+
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 10px;
+
+                                        .heading {
+                                            font-size: 12px;
+                                            font-weight: 600;
+                                            cursor: context-menu;
+                                            color: $color;
+                                        }
+
+                                        .body {
+                                            // background-color: red;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            gap: 20px;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            color: #179417;
+                                            cursor: context-menu;
+
+                                            &>.icon {
+                                                font-size: 18px;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+
+                                    .password {
+                                        .body {
+                                            align-items: center;
+                                            gap: 15px;
+
+                                            .content {
+                                                width: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: space-between;
+
+                                                // background-color: resd;
+                                                i {
+                                                    font-size: 18px;
+                                                    cursor: pointer;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &>div:first-child {
+                                        border-radius: 10px 10px 0px 0px;
+                                    }
+
+                                    &>div:nth-last-child(2) {
+                                        border-radius: 0px 0px 10px 10px;
+                                    }
+
+                                    //card 
+                                    &:has(section) {
+                                        padding: 10px;
+                                    }
+
+                                    &>section {
+                                        background-color: #299f29c6;
+                                        min-height: 280px;
+                                        border-radius: 15px;
+                                        padding: 20px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-between;
+                                        gap: 20px;
+                                        max-width: 500px;
+                                        width: 100%;
+                                        margin: auto;
+                                        position: relative;
+                                        overflow: hidden;
+
+                                        &:after {
+                                            position: absolute;
+                                            content: "";
+                                            background: linear-gradient(to left, rgba(255, 255, 255, 0.773), transparent);
+                                            height: 100%;
+                                            width: 80px;
+                                            top: 0;
+                                            // left: -10%;
+                                            left: 50%;
+                                            transform: skewY(-20deg) rotate(20deg);
+                                            animation: shine 2.8s ease-in infinite;
+                                        }
+
+                                        &>.card-details {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            cursor: context-menu;
+                                            gap: 10px;
+
+                                            &>.brand-div {
+                                                // background-color: aqua;
+                                                display: flex;
+                                                align-items: center;
+                                                width: 100%;
+                                                gap: 10px;
+                                                // flex-wrap: wrap;
+
+                                                &>.image {
+                                                    // background-color: yellow;
+                                                    height: 35px;
+                                                    width: 35px;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    border-radius: 50%;
+                                                    flex-shrink: 0;
+                                                    overflow: hidden;
+
+                                                    img {
+                                                        height: 100%;
+                                                        width: 100%;
+                                                        object-fit: cover;
+                                                    }
+                                                }
+
+                                                &>.brand-name {
+                                                    // background-color: red;
+                                                    font-size: 18px;
+                                                    font-weight: 700;
+                                                    color: white;
+                                                    text-transform: capitalize;
+                                                    text-wrap: nowrap;
+                                                    text-overflow: ellipsis;
+                                                    overflow: hidden;
+                                                    width: 100%;
+                                                }
+                                            }
+
+                                            &>.card-type {
+                                                font-size: 18px;
+                                                font-weight: 650;
+                                                color: white;
+                                                text-transform: capitalize;
+                                                text-wrap: nowrap;
+                                                text-overflow: ellipsis;
+                                                text-wrap: nowrap;
+                                                overflow: hidden;
+                                                width: 100%;
+                                                text-align: end;
+                                            }
+                                        }
+
+                                        &>.bank-details {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+
+                                            // background-color: red;
+                                            &>.smart-chip {
+                                                background-color: white;
+                                                height: 50px;
+                                                width: 50px;
+                                                border: 1px solid white;
+                                                border-radius: 5px;
+                                                flex-shrink: 0;
+
+                                                img {
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            }
+
+                                            &>.bank-con {
+                                                width: 100%;
+                                                cursor: context-menu;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: flex-end;
+                                                gap: 10px;
+
+                                                &>.logo {
+                                                    height: 35px;
+                                                    width: 35px;
+                                                    border-radius: 5px;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    overflow: hidden;
+
+                                                    &>img {
+                                                        height: 100%;
+                                                        width: 100%;
+                                                        object-fit: cover;
+                                                    }
+                                                }
+
+                                                &>.details {
+                                                    font-size: 18px;
+                                                    font-weight: 500;
+                                                    color: white;
+                                                    overflow: hidden;
+                                                    display: -webkit-box;
+                                                    -webkit-line-clamp: 2;
+                                                    line-clamp: 2;
+                                                    -webkit-box-orient: vertical;
+                                                    text-overflow: ellipsis;
+                                                }
+                                            }
+                                        }
+
+                                        &>.card-holder-details {
+                                            // background-color: red;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            gap: 5px;
+
+                                            &>.card-number {
+                                                display: flex;
+                                                // background-color: yellow;
+                                                align-items: center;
+                                                gap: 15px;
+                                                font-size: 22px;
+                                                font-weight: 600;
+                                                color: white;
+                                                cursor: context-menu;
+                                                flex-wrap: wrap;
+
+                                                &>div {
+                                                    letter-spacing: 5px;
+                                                }
+                                            }
+
+                                            &>.exp-div {
+                                                // background-color: aqua;
+                                                color: white;
+
+                                                &>div:first-child {
+                                                    font-size: 8px;
+                                                    font-weight: 600;
+                                                }
+
+                                                &>div:last-child {
+                                                    font-size: 18px;
+                                                    font-weight: 600;
+                                                }
+                                            }
+
+                                            &>.account-holder-name {
+                                                // background-color: yellow;
+                                                font-size: 18px;
+                                                text-transform: uppercase;
+                                                font-weight: 600;
+                                                color: white;
+                                                text-wrap: nowrap;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                            }
+                                        }
+
+                                        @media screen and (max-width: 600px) {
+                                            & {
+                                                min-height: auto !important;
+                                                gap: 10px !important;
+                                                max-width: 350px !important;
+                                                border-radius: 10px !important;
+
+                                                &>.card-details {
+                                                    &>.brand-div {
+                                                        &>.image {
+                                                            height: 30px !important;
+                                                            width: 30px !important;
+                                                        }
+
+                                                        &>.brand-name {
+                                                            // background-color: red;
+                                                            font-size: 15px !important;
+                                                        }
+                                                    }
+
+                                                    &>.card-type {
+                                                        // background-color: yellow;
+                                                        font-size: 15px !important;
+                                                    }
+                                                }
+
+                                                &>.bank-details {
+                                                    &>.smart-chip {
+                                                        height: 30px !important;
+                                                        width: 30px !important;
+
+                                                        img {
+                                                            height: 100%;
+                                                            width: 100%;
+                                                            object-fit: cover;
+                                                        }
+                                                    }
+
+                                                    &>.bank-con {
+                                                        width: 100%;
+                                                        cursor: context-menu;
+
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: flex-end;
+                                                        gap: 10px;
+
+                                                        &>.logo {
+                                                            height: 25px;
+                                                            width: 25px;
+                                                            border-radius: 50%;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            flex-shrink: 0;
+
+                                                            &>img {
+                                                                height: 100%;
+                                                                width: 100%;
+                                                                object-fit: cover;
+                                                            }
+                                                        }
+
+                                                        &>.details {
+                                                            font-size: 14px;
+                                                            font-weight: 500;
+                                                            color: white;
+                                                        }
+                                                    }
+                                                }
+
+                                                &>.card-holder-details {
+                                                    &>.card-number {
+                                                        font-size: 16px !important;
+                                                        font-weight: 500 !important;
+                                                        gap: 10px;
+
+                                                        &>div {
+                                                            letter-spacing: 3px !important;
+                                                        }
+                                                    }
+
+                                                    &>.exp-div {
+                                                        &>div:first-child {
+                                                            font-size: 7px !important;
+                                                            font-weight: 600;
+                                                        }
+
+                                                        &>div:last-child {
+                                                            font-size: 12px !important;
+                                                        }
+                                                    }
+
+                                                    &>.account-holder-name {
+                                                        font-size: 15px !important;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .card:not(:last-child) {
+                            &>.card-det {
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+                            }
+                        }
+                    }
+
+                    .nosearchresult {
+                        padding: 10px;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        .image {
+                            height: 100%;
+                            width: 350px;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .user-table-footer {
+                // background-color: yellow;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                .image {
+                    background-color: transparent;
+                    height: 35px;
+                    width: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                &>div:last-child {
+                    // background-color: red;
+                    font-size: 14px;
+                    font-weight: 600;
+                    cursor: context-menu;
+                }
+            }
+        }
+
+        .add-collection-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100dvh;
+            width: 100dvw;
+            background-color: rgba(0, 0, 0, 0.118);
+            z-index: 200;
+            padding: 10px;
+
+            .popup {
+                background-color: white;
+                width: min(100%, 500px);
+                margin: 0 auto;
+                padding: 10px;
+                border-radius: 10px;
+
+                .add-col-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .content {
+                        // background-color: aqua;
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: 700;
+                        cursor: context-menu;
+                        color: $color;
+                    }
+
+                    .close-btn {
+                        font-size: 16px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        height: 25px;
+                        width: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all .12s linear;
+                        color: $color;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+                    }
+                }
+
+                &>form {
+                    // background-color: red;
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 10px;
+                    gap: 10px;
+
+                    &>.show {
+                        // background-color: red;
+                        border-radius: 500px;
+                        border: 1px solid $color;
+                        padding: 5px 10px;
+                        color: $color;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: context-menu;
+                        width: fit-content;
+                        word-break: break-all;
+                    }
+
+                    .input {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 5px;
+
+                        input[type=text] {
+                            width: 100%;
+                            outline: none;
+                            border: 1px solid $bgcolor;
+                            border-radius: 5px;
+                            padding: 8px 10px;
+                            color: $color;
+                            font-size: 14px;
+                            font-weight: 500;
+
+                            &::placeholder {
+                                color: $color;
+                            }
+                        }
+
+                        &>.error {
+                            color: red;
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+                    }
+
+                    &>button {
+                        border: 1px solid $bgcolor;
+                        border-radius: 500px;
+                        padding: 8px 10px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: $color;
+                        cursor: pointer;
+                        width: 100px;
+                        margin: 0 auto;
+                        background-color: white;
+                        transition: all .12s linear;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+
+                        &[type=button] {
+                            // background-color: red;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .circularloader {
+                                color: $color;
+                            }
+
+                            &:hover {
+                                .circularloader {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .rename-collection-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100dvh;
+            width: 100dvw;
+            background-color: rgba(0, 0, 0, 0.118);
+            z-index: 200;
+            padding: 10px;
+
+            .popup {
+                background-color: white;
+                width: min(100%, 500px);
+                margin: 0 auto;
+                padding: 10px;
+                border-radius: 10px;
+
+                .rename-col-header {
+                    // background-color: red;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .content {
+                        // background-color: aqua;
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: 700;
+                        cursor: context-menu;
+                        color: $color;
+                    }
+
+                    .close-btn {
+                        font-size: 16px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        height: 25px;
+                        width: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all .12s linear;
+                        color: $color;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+                    }
+                }
+
+                &>form {
+                    // background-color: red;
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 10px;
+                    gap: 10px;
+
+                    &>div:first-child {
+                        max-width: 100%;
+                        width: fit-content;
+                        padding: 5px 15px;
+                        border-radius: 500px;
+                        border: 1px solid rgba(0, 0, 0, 0.111);
+                        font-size: 14px;
+                        font-weight: 500;
+                        cursor: context-menu;
+                        color: $color;
+                        word-break: break-all
+                    }
+
+                    &>.error {
+                        width: 100%;
+                        font-size: 13px;
+                        font-weight: 600;
+                        cursor: context-menu;
+                        color: red;
+                    }
+
+                    input[type=text] {
+                        outline: none;
+                        border: 1px solid $bgcolor;
+                        border-radius: 5px;
+                        padding: 8px 10px;
+                        color: $color;
+                        font-size: 14px;
+                        font-weight: 500;
+
+                        &::placeholder {
+                            color: $color;
+                        }
+                    }
+
+                    &>button {
+                        border: 1px solid $bgcolor;
+                        border-radius: 500px;
+                        padding: 8px 10px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: $color;
+                        cursor: pointer;
+                        width: 100px;
+                        margin: 0 auto;
+                        background-color: white;
+                        transition: all .12s linear;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+
+                        &[type=button] {
+                            // background-color: red;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .circularloader {
+                                color: $color;
+                            }
+
+                            &:hover {
+                                .circularloader {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .delete-collection-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100dvh;
+            width: 100dvw;
+            background-color: rgba(0, 0, 0, 0.118);
+            z-index: 200;
+            padding: 10px;
+
+            .popup {
+                background-color: white;
+                width: min(100%, 550px);
+                margin: 0 auto;
+                padding: 20px 30px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                justify-content: center;
+                align-items: center;
+
+                .del-col-header {
+                    color: red;
+                    font-size: 18px;
+                    font-weight: 600;
+                    cursor: context-menu;
+                }
+
+                .message {
+                    font-size: 16px;
+                    color: $color;
+                    cursor: context-menu;
+                    font-weight: 500;
+
+                    &>p {
+                        background-color: white;
+                        color: $color;
+                        font-size: 16px;
+                        font-weight: 700;
+                        border-radius: 500px;
+                        border: 1px solid $color;
+                        display: inline-flex;
+                        padding: 0 10px;
+                    }
+                }
+
+                .button {
+                    // background-color: red;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    &>button {
+                        background-color: transparent;
+                        border-radius: 500px;
+                        border: 1px solid $bgcolor;
+                        padding: 10px 20px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: $color;
+                        cursor: pointer;
+                        transition: all .12s linear;
+                        margin: 0 auto;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+
+                        &:last-child {
+                            color: red;
+                            border: 1px solid red;
+
+                            &:hover {
+                                color: white;
+                                background-color: red;
+                            }
+                        }
+
+                        &.loader {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 163px;
+
+                            .circularloader {
+                                color: red;
+                            }
+
+                            &:hover {
+                                .circularloader {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .delete-pass-container {
+            background-color: rgba(0, 0, 0, 0.073);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 200;
+            height: 100dvh;
+            width: 100dvw;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            overflow: auto;
+
+
+            .del-con {
+                margin: auto;
+                background-color: white;
+                width: min(500px, 100%);
+                border-radius: 10px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .del-header {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: red;
+                    cursor: context-menu;
+                }
+
+                .message {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 10px;
+
+                    .alert {
+                        border-radius: 5px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        cursor: context-menu;
+                        color: $color;
+                    }
+
+                    .pass-con {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 2px;
+
+                        .common {
+                            background-color: $bgcolor;
+                            padding: 10px;
+
+                            .name {
+                                font-size: 12px;
+                                font-weight: 600;
+                                color: $color;
+                            }
+
+                            .value {
+                                font-size: 15px;
+                                font-weight: 600;
+                                color: $color;
+                                word-break: break-all;
+                            }
+                        }
+
+                        .password {
+
+                            .value {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 20px;
+
+                                i {
+                                    padding: 8px;
+                                }
+                            }
+                        }
+
+                        &>div:first-child {
+                            border-radius: 10px 10px 0px 0px;
+                        }
+
+                        &>div:last-child {
+                            border-radius: 0px 0px 10px 10px;
+                        }
+                    }
+
+                    &>section {
+                        background-color: #299f29c6;
+                        min-height: 280px;
+                        border-radius: 15px;
+                        padding: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: 20px;
+                        max-width: 500px;
+                        width: 100%;
+                        margin: auto;
+                        position: relative;
+                        overflow: hidden;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            background: linear-gradient(to left, rgba(255, 255, 255, 0.773), transparent);
+                            height: 100%;
+                            width: 80px;
+                            top: 0;
+                            // left: -10%;
+                            left: 50%;
+                            transform: skewY(-20deg) rotate(20deg);
+                            animation: shine 2.8s ease-in infinite;
+                        }
+
+                        &>.card-details {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            cursor: context-menu;
+                            gap: 10px;
+
+                            &>.brand-div {
+                                // background-color: aqua;
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                // flex-wrap: wrap;
+
+                                &>.image {
+                                    // background-color: yellow;
+                                    height: 35px;
+                                    width: 35px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border: 2px solid white;
+                                    border-radius: 50%;
+                                    flex-shrink: 0;
+                                    overflow: hidden;
+
+                                    img {
+                                        height: 100%;
+                                        width: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+
+                                &>.brand-name {
+                                    // background-color: red;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    color: white;
+                                    text-transform: capitalize;
+                                }
+                            }
+
+                            &>.card-type {
+                                // background-color: yellow;
+                                font-size: 18px;
+                                font-weight: 650;
+                                color: white;
+                                text-transform: capitalize;
+                                text-wrap: nowrap;
+                            }
+                        }
+
+                        &>.smart-chip {
+
+                            // background-color: red;
+                            .image {
+                                background-color: white;
+                                height: 50px;
+                                width: 50px;
+                                border: 1px solid white;
+                                border-radius: 5px;
+
+                                img {
+                                    height: 100%;
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+
+                        &>.card-holder-details {
+                            // background-color: red;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 5px;
+
+                            &>.card-number {
+                                display: flex;
+                                // background-color: yellow;
+                                align-items: center;
+                                gap: 15px;
+                                font-size: 22px;
+                                font-weight: 600;
+                                color: white;
+                                cursor: context-menu;
+                                flex-wrap: wrap;
+
+                                &>div {
+                                    letter-spacing: 5px;
+                                }
+                            }
+
+                            &>.exp-div {
+                                // background-color: aqua;
+                                color: white;
+
+                                &>div:first-child {
+                                    font-size: 8px;
+                                    font-weight: 600;
+                                }
+
+                                &>div:last-child {
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                }
+                            }
+
+                            &>.account-holder-name {
+                                // background-color: yellow;
+                                font-size: 18px;
+                                text-transform: uppercase;
+                                font-weight: 600;
+                                color: white;
+                            }
+                        }
+
+                        @media screen and (max-width: 600px) {
+                            & {
+                                min-height: auto !important;
+                                gap: 10px !important;
+                                max-width: 350px !important;
+                                border-radius: 10px !important;
+
+                                &>.card-details {
+                                    &>.brand-div {
+                                        &>.image {
+                                            height: 30px !important;
+                                            width: 30px !important;
+                                        }
+
+                                        &>.brand-name {
+                                            // background-color: red;
+                                            font-size: 15px !important;
+                                        }
+                                    }
+
+                                    &>.card-type {
+                                        // background-color: yellow;
+                                        font-size: 15px !important;
+                                    }
+                                }
+
+                                &>.smart-chip {
+                                    .image {
+                                        height: 30px !important;
+                                        width: 30px !important;
+                                    }
+                                }
+
+                                &>.card-holder-details {
+                                    &>.card-number {
+                                        font-size: 16px !important;
+                                        font-weight: 500 !important;
+                                        gap: 10px;
+
+                                        &>div {
+                                            letter-spacing: 3px !important;
+                                        }
+                                    }
+
+                                    &>.exp-div {
+                                        &>div:first-child {
+                                            font-size: 7px !important;
+                                            font-weight: 600;
+                                        }
+
+                                        &>div:last-child {
+                                            font-size: 12px !important;
+                                        }
+                                    }
+
+                                    &>.account-holder-name {
+                                        font-size: 15px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .button {
+                    // background-color: red;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 15px;
+
+                    &>button {
+                        // margin: 0 auto;
+                        background-color: white;
+                        border: 1px solid $bgcolor;
+                        padding: 8px 20px;
+                        border-radius: 100px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: $color;
+                        cursor: pointer;
+                        transition: all .12s linear;
+                        white-space: nowrap;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+
+                        &:last-child {
+                            border: 1px solid red;
+                            color: red;
+
+                            &:hover {
+                                background-color: red;
+                                color: white;
+                            }
+                        }
+
+                        &:has(.circularloader) {
+                            width: 168px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            &:hover {
+                                .circularloader {
+                                    color: white;
+                                }
+                            }
+
+                            .circularloader {
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .add-password-popup {
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.089);
+            top: 0;
+            right: 0;
+            height: 100dvh;
+            width: 100dvw;
+            z-index: 200;
+            display: flex;
+            align-items: center;
+
+            .popup {
+                background-color: white;
+                max-height: 90%;
+                width: $width;
+                margin: auto;
+                border-radius: 10px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .add-pass-header {
+                    // background-color: blue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    cursor: context-menu;
+                    padding: 10px;
+
+                    .head,
+                    i {
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: $color;
+                    }
+
+                    i {
+                        padding: 5px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        transition: all .12s linear;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+                    }
+                }
+
+                .option {
+                    // background-color: aqua;
+                    overflow: auto;
+                    scrollbar-width: none;
+                    margin: auto;
+                    width: 100%;
+
+                    .nopasswordtoselect {
+                        padding: 10px 50px;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 20px;
+                        height: 100%;
+
+                        .message {
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: red;
+                            text-align: center;
+                            font-family: "Delius", cursive;
+                            cursor: context-menu;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        .image {
+                            height: 100%;
+                            width: min(100%, 400px);
+                            // width: 50%;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+
+                    .card {
+                        padding: 0 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        // align-items: center;
+
+                        &:hover {
+                            background-color: $hover;
+                        }
+
+                        &:has(.select-card-det[open]):hover {
+                            background-color: transparent;
+                        }
+
+                        &>.select-card-det {
+                            // background-color: yellow;
+                            width: 100%;
+                            // transition: all .5s linear;
+
+                            &[open] {
+                                &>summary {
+                                    .arrow {
+                                        padding-left: 30px;
+                                        padding-right: 0px !important;
+                                        rotate: (180deg);
+                                    }
+                                }
+                            }
+
+                            &>summary {
+                                // background-color: blue;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                list-style: none;
+                                gap: 10px;
+                                cursor: pointer;
+                                padding: 20px 0;
+
+
+
+                                .image {
+                                    // background-color: red;
+                                    height: 40px;
+                                    width: 40px;
+                                    display: flex;
+
+                                    &>a {
+                                        overflow: hidden;
+                                        height: 100%;
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        &>img {
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+
+                                    &.big-img:has(img) {
+                                        height: 35px;
+                                        width: 35px;
+                                    }
+
+                                    &>span {
+                                        background-color: $color;
+                                        height: 40px;
+                                        width: 40px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        font-size: 25px;
+                                        font-weight: 500;
+                                        border-radius: 50%;
+                                        color: white;
+                                        cursor: context-menu;
+                                    }
+                                }
+
+                                .link-or-site {
+                                    // background-color: red;
+                                    padding-left: 10px;
+                                    width: 100%;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: $color;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    text-wrap: nowrap;
+                                    overflow: hidden;
+                                }
+
+                                &:not(:has(.del)) {
+                                    .arrow {
+                                        padding-right: 8px;
+                                    }
+                                }
+
+                                .arrow {
+                                    color: $color;
+                                    font-size: 20px;
+                                    font-weight: 600;
+                                    padding-right: 30px !important;
+                                    padding-left: 0px;
+                                }
+
+                                .check {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                    padding: 6px;
+                                    transition: all .1s linear;
+
+                                    &:hover {
+                                        background-color: rgba(5, 205, 5, 0.066);
+                                    }
+
+                                    &>input[type=checkbox] {
+                                        appearance: none;
+                                        height: 20px;
+                                        width: 20px;
+                                        border: 1px solid $color;
+                                        border-radius: 3px;
+                                        font-size: 20px;
+                                        color: red;
+                                        font-weight: 600;
+                                        position: relative;
+                                        cursor: pointer;
+                                        transition: all .12s linear;
+
+                                        &::after {
+                                            position: absolute;
+                                            content: "\EB7B";
+                                            font-family: remixicon;
+                                            color: $color;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            font-size: 16px;
+                                            display: none;
+                                        }
+
+                                        &:hover::after {
+                                            display: block;
+                                        }
+
+                                        &:checked {
+                                            background-color: $color;
+
+                                            &::after {
+                                                display: block;
+                                                color: white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &>div {
+                                background-color: transparent;
+                                padding: 10px 50px;
+                                transition: all .2s linear;
+
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2px;
+
+                                &.padding {
+                                    padding: 10px 0px;
+                                    // background-color: red;
+                                }
+
+                                &>div:not(:last-child) {
+                                    word-break: break-all;
+                                }
+
+                                .button {
+                                    // background-color: red;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    width: min(100%, 500px);
+                                    margin-left: auto;
+                                    padding-top: 20px;
+
+                                    &>button {
+                                        border: 1px solid rgba(0, 0, 0, 0.097);
+                                        border-radius: 200px;
+                                        padding: 10px 20px;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        cursor: pointer;
+                                        color: $color;
+                                        background-color: transparent;
+                                        white-space: nowrap;
+
+                                        &:hover {
+                                            background-color: $color;
+                                            color: white;
+                                            border: 1px solid white;
+                                        }
+
+                                        i {
+                                            // background-color: red;
+                                            font-size: 16px;
+                                        }
+                                    }
+
+                                    &.wrap {
+                                        flex-wrap: wrap;
+                                        justify-content: center;
+                                        gap: 10px;
+                                        width: 100%;
+
+
+                                        &>button {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    &>button:last-child {
+                                        color: red;
+
+                                        &:hover {
+                                            background-color: red;
+                                            color: white;
+                                        }
+                                    }
+
+                                    &:not(:has(.share)) {
+                                        // background-color: red;
+                                        width: 300px;
+
+                                        &.wrap {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                .common {
+                                    padding: 10px;
+                                    background-color: $bgcolor;
+
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+
+                                    .heading {
+                                        font-size: 12px;
+                                        font-weight: 600;
+                                        cursor: context-menu;
+                                        color: $color;
+                                    }
+
+                                    .body {
+                                        // background-color: red;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        gap: 20px;
+                                        font-size: 15px;
+                                        font-weight: 600;
+                                        color: #179417;
+                                        cursor: context-menu;
+
+                                        &>.icon {
+                                            font-size: 18px;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+
+                                .password {
+                                    .body {
+                                        align-items: center;
+                                        gap: 15px;
+
+                                        .content {
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+
+                                            // background-color: resd;
+                                            i {
+                                                font-size: 18px;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &>div:first-child {
+                                    border-radius: 10px 10px 0px 0px;
+                                }
+
+                                &>div:last-child {
+                                    border-radius: 0px 0px 10px 10px;
+                                }
+
+                                &>section {
+                                    background-color: #299f29c6;
+                                    min-height: 280px;
+                                    border-radius: 15px;
+                                    padding: 20px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    gap: 20px;
+                                    max-width: 500px;
+                                    width: 100%;
+                                    margin: auto;
+                                    position: relative;
+                                    overflow: hidden;
+
+                                    &:after {
+                                        position: absolute;
+                                        content: "";
+                                        background: linear-gradient(to left, rgba(255, 255, 255, 0.773), transparent);
+                                        height: 100%;
+                                        width: 80px;
+                                        top: 0;
+                                        // left: -10%;
+                                        left: 50%;
+                                        transform: skewY(-20deg) rotate(20deg);
+                                        animation: shine 2.8s ease-in infinite;
+                                    }
+
+                                    &>.card-details {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        cursor: context-menu;
+                                        gap: 10px;
+
+                                        &>.brand-div {
+                                            // background-color: aqua;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+                                            // flex-wrap: wrap;
+
+                                            &>.image {
+                                                // background-color: yellow;
+                                                height: 35px;
+                                                width: 35px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                border: 2px solid white;
+                                                border-radius: 50%;
+                                                flex-shrink: 0;
+                                                overflow: hidden;
+
+                                                img {
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            }
+
+                                            &>.brand-name {
+                                                // background-color: red;
+                                                font-size: 18px;
+                                                font-weight: 700;
+                                                color: white;
+                                                text-transform: capitalize;
+                                            }
+                                        }
+
+                                        &>.card-type {
+                                            // background-color: yellow;
+                                            font-size: 18px;
+                                            font-weight: 650;
+                                            color: white;
+                                            text-transform: capitalize;
+                                            text-wrap: nowrap;
+                                        }
+                                    }
+
+                                    &>.smart-chip {
+
+                                        // background-color: red;
+                                        .image {
+                                            background-color: white;
+                                            height: 50px;
+                                            width: 50px;
+                                            border: 1px solid white;
+                                            border-radius: 5px;
+
+                                            img {
+                                                height: 100%;
+                                                width: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+
+                                    &>.card-holder-details {
+                                        // background-color: red;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        gap: 5px;
+
+                                        &>.card-number {
+                                            display: flex;
+                                            // background-color: yellow;
+                                            align-items: center;
+                                            gap: 15px;
+                                            font-size: 22px;
+                                            font-weight: 600;
+                                            color: white;
+                                            cursor: context-menu;
+                                            flex-wrap: wrap;
+
+                                            &>div {
+                                                letter-spacing: 5px;
+                                            }
+                                        }
+
+                                        &>.exp-div {
+                                            // background-color: aqua;
+                                            color: white;
+
+                                            &>div:first-child {
+                                                font-size: 8px;
+                                                font-weight: 600;
+                                            }
+
+                                            &>div:last-child {
+                                                font-size: 18px;
+                                                font-weight: 600;
+                                            }
+                                        }
+
+                                        &>.account-holder-name {
+                                            // background-color: yellow;
+                                            font-size: 18px;
+                                            text-transform: uppercase;
+                                            font-weight: 600;
+                                            color: white;
+                                        }
+                                    }
+
+                                    @media screen and (max-width: 600px) {
+                                        & {
+                                            min-height: auto !important;
+                                            gap: 10px !important;
+                                            max-width: 350px !important;
+                                            border-radius: 10px !important;
+
+                                            &>.card-details {
+                                                &>.brand-div {
+                                                    &>.image {
+                                                        height: 30px !important;
+                                                        width: 30px !important;
+                                                    }
+
+                                                    &>.brand-name {
+                                                        // background-color: red;
+                                                        font-size: 15px !important;
+                                                    }
+                                                }
+
+                                                &>.card-type {
+                                                    // background-color: yellow;
+                                                    font-size: 15px !important;
+                                                }
+                                            }
+
+                                            &>.smart-chip {
+                                                .image {
+                                                    height: 30px !important;
+                                                    width: 30px !important;
+                                                }
+                                            }
+
+                                            &>.card-holder-details {
+                                                &>.card-number {
+                                                    font-size: 16px !important;
+                                                    font-weight: 500 !important;
+                                                    gap: 10px;
+
+                                                    &>div {
+                                                        letter-spacing: 3px !important;
+                                                    }
+                                                }
+
+                                                &>.exp-div {
+                                                    &>div:first-child {
+                                                        font-size: 7px !important;
+                                                        font-weight: 600;
+                                                    }
+
+                                                    &>div:last-child {
+                                                        font-size: 12px !important;
+                                                    }
+                                                }
+
+                                                &>.account-holder-name {
+                                                    font-size: 15px !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .card {
+                        &>.select-card-det {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+                        }
+                    }
+                }
+
+                .button-con {
+                    // background-color: red;
+                    padding: 20px 0;
+                    text-align: end;
+
+                    &>button {
+                        padding: 10px 20px;
+                        border: 1px solid $color;
+                        border-radius: 100px;
+                        background-color: white;
+                        font-size: 15px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        color: $color;
+                        transition: all .12s linear;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: auto;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+
+                        &:has(.circularloader) {
+                            width: 80px;
+
+                            &:hover {
+                                .circularloader {
+                                    color: white;
+                                }
+                            }
+                        }
+
+                        &>.circularloader {
+                            color: $color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sharepage-con {
+            background-color: rgba(0, 0, 0, 0.144);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100dvh;
+            width: 100dvw;
+            z-index: 201;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+
+            &>.share-con {
+                background-color: white;
+                height: min(620px, 100%);
+                margin: 0 auto;
+                border-radius: 5px;
+                padding: 10px;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                width: min(100%, 500px);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                &:has(.nouser) {
+                    height: fit-content;
+                }
+
+                &>.share-header {
+                    display: flex;
+                    justify-content: space-between;
+                    color: $color;
+                    font-size: 20px;
+                    font-weight: 500;
+                    cursor: context-menu;
+                    text-transform: capitalize;
+
+                    &>div:last-child {
+                        border-radius: 5px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        padding: 0 4px;
+                        cursor: pointer;
+                        transition: all .12s linear;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+                    }
+                }
+
+                &>.disappear-con {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 15px;
+
+                    &>div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $color;
+                        cursor: context-menu;
+                        text-wrap: nowrap;
+
+                        &>details {
+                            position: relative;
+
+                            &[open] {
+                                &>summary {
+                                    background-color: $color;
+                                    color: white;
+
+                                    &>i {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+                            }
+
+                            &>summary {
+                                list-style: none;
+                                border: 1px solid $color;
+                                border-radius: 500px;
+                                padding: 4px 15px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                color: $color;
+                                gap: 5px;
+                                text-wrap: nowrap;
+
+                                &:hover {
+                                    background-color: $color;
+                                    color: white;
+                                }
+
+                                &>i {
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                }
+                            }
+
+                            &>div {
+                                position: absolute;
+                                top: 115%;
+                                background-color: white;
+                                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                                width: 100%;
+                                padding: 5px;
+                                display: flex;
+                                flex-direction: column;
+                                border-radius: 5px;
+                                gap: 5px;
+                                z-index: 1;
+
+                                &>div {
+                                    // background-color: red;
+                                    border: 1px solid $color;
+                                    border-radius: 5px;
+                                    text-align: center;
+                                    color: $color;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    cursor: pointer;
+                                    transition: all .12s linear;
+                                    padding: 3px 0;
+
+                                    &:hover {
+                                        background-color: $color;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &>button[type=button] {
+                        background-color: transparent;
+                        border: 1px solid $color;
+                        padding: 5px 20px;
+                        border-radius: 100px;
+                        font-size: 14px;
+                        color: $color;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: all .12s linear;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+                    }
+
+                    &>.loader {
+                        background-color: transparent;
+                        border: 1px solid $color;
+                        padding: 5px 20px;
+                        border-radius: 100px;
+                        font-size: 14px;
+                        color: $color;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: all .12s linear;
+                        width: 98px;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+
+                            &>.circularloader {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                &>.search-con {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    border-radius: 200px;
+                    border: 1px solid $color;
+
+                    &>i {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $color;
+                        flex-shrink: 0;
+
+                        &:last-child {
+                            cursor: pointer;
+                            font-size: 15px;
+                            font-weight: 800;
+                        }
+                    }
+
+                    &>input[type=text] {
+                        width: 100%;
+                        font-size: 16px;
+                        font-weight: 550;
+                        color: $color;
+                        outline: none;
+                        border: none;
+                        padding: 0 5px;
+                        text-wrap: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+
+                        &::placeholder {
+                            color: $color;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                &>.user-con {
+                    // background-color: red;
+                    border-radius: 5px;
+                    border: 2px solid $color;
+                    flex: 1;
+                    padding: 10px;
+                    overflow: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    scrollbar-width: none;
+
+                    &>legend {
+                        padding: 0 5px;
+                        margin-left: 10px;
+                        color: $color;
+                        font-weight: 600;
+                        cursor: context-menu;
+                    }
+
+                    &>.user {
+                        // background-color: red;
+                        cursor: pointer;
+                        border: 2px solid $color;
+                        border-radius: 5px;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        padding: 5px;
+                        align-items: center;
+                        gap: 10px;
+
+                        &>div:first-child {
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 30px;
+                            font-weight: 600;
+                            color: white;
+                            flex-shrink: 0;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+
+                        &>div:nth-child(2) {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 5px;
+                            width: 100%;
+
+                            &>div {
+                                color: $color;
+                                font-size: 18px;
+                                font-weight: 500;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 1;
+                                -webkit-box-orient: vertical;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                word-break: break-all;
+
+                                &:first-child {
+                                    text-transform: capitalize;
+                                }
+
+                                &:last-child {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        &>input[type=checkbox] {
+                            appearance: none;
+                            border: 2px solid $color;
+                            padding: 10px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            position: relative;
+
+                            &::after {
+                                position: absolute;
+                                content: "\EB7B";
+                                font-family: remixicon;
+                                font-size: 18px;
+                                color: $color;
+                                font-weight: 600;
+                                top: 0px;
+                                left: 1px;
+                                display: none;
+                            }
+
+                            &:hover {
+                                background-color: white;
+
+                                &::after {
+                                    display: block;
+                                    color: $color;
+                                }
+                            }
+
+                            &:checked {
+                                background-color: $color;
+
+                                &::after {
+                                    display: block;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    &>.nosearch {
+                        flex: 1;
+                        width: min(200px, 50%);
+                        margin: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            // height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                &>.nouser {
+                    display: flex;
+
+                    &>img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

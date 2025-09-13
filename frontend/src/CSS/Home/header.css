@@ -1,0 +1,211 @@
+.header {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  position: sticky;
+  top: 0px;
+  z-index: 200;
+}
+.header .top {
+  width: min(90%, 1000px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+.header .top .logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: context-menu;
+  width: 100%;
+}
+.header .top .logo > img {
+  height: 45px;
+  width: 45px;
+}
+.header .top .logo > div {
+  color: #299f29;
+  font-size: 20px;
+  font-weight: 750;
+}
+.header .top .logo > div > span {
+  color: black;
+}
+.header .top .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.header .top .nav > .link, .header .top .nav > button {
+  background-color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 10px 15px;
+  border-radius: 500px;
+  color: #299f29;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.15s linear;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: none;
+  cursor: pointer;
+}
+.header .top .nav > .link:hover, .header .top .nav > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.header .top .nav > .link.active, .header .top .nav > button.active {
+  background-color: #299f29;
+  color: white;
+}
+.header .top .mob-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  color: #299f29;
+}
+.header .top .mob-nav > div:last-child {
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.12s linear;
+}
+.header .top .mob-nav > div:last-child:hover {
+  background-color: #299f29;
+  color: white;
+}
+.header .bottom {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  animation: in 0.2s ease-in 1;
+  overflow: auto;
+}
+.header .bottom .bottom-content {
+  width: min(90%, 1000px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 20px;
+  gap: 20px;
+}
+.header .bottom .bottom-content > i {
+  color: #299f29;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  transition: all 0.12s linear;
+}
+.header .bottom .bottom-content > i:hover {
+  background-color: #299f29;
+  color: white;
+}
+.header .bottom .bottom-content .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .bottom .bottom-content .logo .image {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.header .bottom .bottom-content .logo .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.header .bottom .bottom-content .header-details {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  cursor: context-menu;
+}
+.header .bottom .bottom-content .header-details > div {
+  color: #299f29;
+}
+.header .bottom .bottom-content .header-details > div > span {
+  color: black;
+}
+.header .bottom .bottom-content .nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: max(600px, 100%);
+}
+.header .bottom .bottom-content .nav > button,
+.header .bottom .bottom-content .nav .link {
+  cursor: pointer;
+  width: min(200px, 100%);
+  font-size: 16px;
+  font-weight: 600;
+  background-color: white;
+  outline: none;
+  border: 1px solid #299f29;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #299f29;
+  transition: all 0.15s linear;
+}
+.header .bottom .bottom-content .nav > button:hover,
+.header .bottom .bottom-content .nav .link:hover {
+  background-color: #299f29;
+  color: white;
+}
+.header .bottom .bottom-content .nav > button.active,
+.header .bottom .bottom-content .nav .link.active {
+  background-color: #299f29;
+  color: white;
+}
+.header .bottom.go {
+  height: 0;
+  animation: out 0.2s ease-in 1;
+}
+
+@keyframes in {
+  0% {
+    height: 0dvh;
+  }
+  100% {
+    height: 100dvh;
+  }
+}
+@keyframes out {
+  0% {
+    height: 100dvh;
+  }
+  100% {
+    height: 0dvh;
+  }
+}

@@ -1,0 +1,1828 @@
+$calheight : calc(100dvh - 102px - 20px);
+$color : #299f29;
+$width : min(90%, 1000px);
+$bgcolor : #299f2948;
+
+.peoplepage-con {
+    // background-color: red;
+    min-height: calc($calheight);
+    width: $width;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    border-radius: 5px;
+
+
+    &>.people-header-con {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 30px;
+
+        &>.first-people-header-con {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            .common-det {
+                // background-color: aqua;
+                position: relative;
+
+                &[open] {
+                    &>summary {
+                        background-color: $color;
+                        color: white;
+                    }
+                }
+
+                &>summary {
+                    list-style: none;
+                    border-radius: 200px;
+                    padding: 5px 10px;
+                    color: $color;
+                    font-size: 16px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    border: 1px solid $color;
+                    text-wrap: nowrap;
+
+                    &:hover {
+                        background-color: $color;
+                        color: white;
+                    }
+                }
+
+                &>div {
+                    z-index: 10;
+                    position: absolute;
+                    background-color: white;
+                    width: 100%;
+                    left: 0;
+                    padding: 10px;
+                    border-radius: 5px;
+                    top: 110%;
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 10px;
+
+                    &>div {
+                        padding: 5px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: $color;
+                        cursor: pointer;
+                        border: 1px solid $color;
+                        border-radius: 5px;
+                        text-wrap: nowrap;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+
+                        &>span {
+                            padding: 0px 5px;
+                            border-radius: 5px;
+                            background-color: aqua;
+                            // border-radius: 50%;
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            &>details {
+                // width: 200px;
+                width: 160px;
+            }
+
+            &>div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 16px;
+                font-weight: 600;
+                color: $color;
+                text-wrap: nowrap;
+
+                &>details {
+                    width: 110px;
+                    border: 2px solid white;
+                    border-radius: 200px;
+
+                    &.loader {
+                        animation: disapper 1s ease-in-out infinite;
+                    }
+                }
+            }
+
+            &.wrap {
+                // background-color: red;
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                gap: 30px;
+
+                &>details {
+                    width: 100%;
+                }
+
+                &>div {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &>.second-people-header-con {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+            &>details {
+                position: relative;
+                width: min(150px, 100%);
+
+                &[open] {
+                    &>summary {
+                        background-color: $color;
+                        color: white;
+                    }
+                }
+
+                &>summary {
+                    list-style: none;
+                    border-radius: 200px;
+                    padding: 5px 10px;
+                    color: $color;
+                    font-size: 16px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    border: 1px solid $color;
+                    text-wrap: nowrap;
+
+                    &:hover {
+                        background-color: $color;
+                        color: white;
+                    }
+                }
+
+                &>div {
+                    z-index: 10;
+                    position: absolute;
+                    background-color: white;
+                    width: 100%;
+                    left: 0;
+                    padding: 10px;
+                    border-radius: 5px;
+                    top: 110%;
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 10px;
+
+                    &>div {
+                        padding: 5px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: $color;
+                        cursor: pointer;
+                        border: 1px solid $color;
+                        border-radius: 5px;
+                        text-wrap: nowrap;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            &>div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 5px;
+                width: min(400px, 100%);
+
+                &>div {
+                    text-wrap: nowrap;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $color;
+                    cursor: context-menu;
+                }
+
+                &>details {
+                    position: relative;
+                    width: calc(100% - 10px - 45px);
+                    cursor: pointer;
+                    transition: all .2s linear;
+
+                    &[open] {
+                        &>summary {
+                            background-color: $color;
+                            color: white;
+
+                            i {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+
+                    &>summary {
+                        list-style: none;
+                        display: flex;
+                        align-items: center;
+                        color: $color;
+                        border-radius: 200px;
+                        border: 1px solid $color;
+                        padding: 0px 20px;
+                        gap: 10px;
+                        height: 40px;
+
+                        &:hover {
+                            background-color: $color;
+                            color: white;
+                        }
+
+                        .first-div {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2px;
+                            width: 100%;
+                            overflow: hidden;
+                            font-size: 16px;
+                            font-weight: 600;
+
+                            &>.box1,
+                            &>.box2 {
+                                width: 100%;
+                                text-wrap: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+
+                            &>.box1 {
+                                font-size: 16px;
+                                font-weight: 600;
+                            }
+
+                            &>.box2 {
+                                font-size: 10px;
+                                font-weight: 600;
+                            }
+                        }
+
+                        &>i {
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    &>div {
+                        z-index: 5;
+                        position: absolute;
+                        background-color: white;
+                        width: 100%;
+                        left: 0;
+                        padding: 10px;
+                        border-radius: 5px;
+                        top: 110%;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 10px;
+
+                        &>div {
+                            padding: 5px;
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: $color;
+                            cursor: pointer;
+                            border: 1px solid $color;
+                            border-radius: 5px;
+                            text-wrap: nowrap;
+
+                            &:hover {
+                                background-color: $color;
+                                color: white;
+                            }
+
+                            &>div:first-child {
+                                font-size: 14px;
+                                font-weight: 600;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                text-wrap: nowrap;
+                            }
+
+                            &>div:last-child {
+                                font-size: 10px;
+                                font-weight: 600;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                text-wrap: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.wrap {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                gap: 30px;
+
+                &>details {
+                    width: 100%;
+                }
+
+                &>div {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &>.people-main-con {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        &>.request-vault,
+        &>.source-vault {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            display: flex;
+            width: 100%;
+
+            &:has(.noitems){
+                flex: 1;
+            }
+
+            &>.request-sent,
+            &>.request-pending {
+                border-radius: 10px;
+                border: 2px solid $color;
+                padding: 10px;
+                width: 100%;
+                overflow: auto;
+                scrollbar-width: none;
+
+                &>legend {
+                    margin-left: 20px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $color;
+
+                    @media (max-width : 290px) {
+                        & {
+                            font-size: 17px;
+                        }
+                    }
+                }
+
+                &>.request-search {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5px 20px;
+                    border-radius: 100px;
+                    border: 1px solid $color;
+
+                    &>.search {
+                        // background-color: aqua;
+                        display: flex;
+                        align-items: center;
+                        padding: 5px 0;
+
+                        &>i {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: $color;
+                        }
+
+                        &>i:last-child {
+                            cursor: pointer;
+                        }
+
+                        &>input {
+                            width: 100%;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: $color;
+                            border: none;
+                            outline: none;
+                            padding: 0 10px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+
+                            &::placeholder {
+                                color: $color;
+                            }
+                        }
+                    }
+
+                    &:has(.result) {
+                        border-radius: 10px;
+                        padding: 10px;
+                        width: 100%;
+
+                        &>.search {
+                            border-bottom: 2px solid $color;
+                        }
+
+                        &>.result {
+                            padding-top: 20px;
+
+                            &>.noresult {
+                                margin: 0 auto;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: $color;
+                                font-size: 20px;
+                                font-weight: 600;
+
+                                &>.circularloader {
+                                    color: $color;
+                                    margin: 10px;
+                                }
+                            }
+
+                            &>.user {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                border: 1px solid $color;
+                                border-radius: 5px;
+                                padding: 5px;
+                                color: $color;
+                                gap: 10px;
+
+                                .image {
+                                    height: 50px;
+                                    width: 50px;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 30px;
+                                    font-weight: 600;
+                                    color: white;
+                                    flex-shrink: 0;
+
+
+                                    &>img {
+                                        height: 100%;
+                                        width: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+
+                                &>.details {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    gap: 5px;
+                                    width: 100%;
+                                    cursor: context-menu;
+
+                                    &>div:first-child {
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        display: -webkit-box;
+                                        -webkit-box-orient: vertical;
+                                        -webkit-line-clamp: 1;
+                                        line-clamp: 1;
+                                        word-break: break-all;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+
+                                    &>div:last-child {
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        display: -webkit-box;
+                                        -webkit-box-orient: vertical;
+                                        -webkit-line-clamp: 1;
+                                        line-clamp: 1;
+                                        overflow: hidden;
+                                        word-break: break-all;
+                                        text-overflow: ellipsis;
+                                        flex-shrink: 1;
+
+                                    }
+                                }
+
+                                &>button {
+                                    text-wrap: nowrap;
+                                    font-size: 14px;
+                                    color: $color;
+                                    font-weight: 600;
+                                    border: 1px solid $color;
+                                    border-radius: 500px;
+                                    padding: 5px 10px;
+                                    background-color: transparent;
+                                    cursor: pointer;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 5px;
+                                    transition: all .15s linear;
+                                    width: 100px;
+                                    flex-shrink: 0;
+
+                                    &:hover {
+                                        background-color: $color;
+                                        color: white;
+
+                                        .circularloader {
+                                            color: white;
+                                        }
+                                    }
+
+                                    i {
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                    }
+
+                                    .circularloader {
+                                        color: $color;
+                                    }
+                                }
+
+                                &.wrap {
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &>.request-sended,
+                &>.request-status {
+                    padding-top: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    &>.user {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border: 1px solid $color;
+                        border-radius: 5px;
+                        padding: 5px;
+                        color: $color;
+                        gap: 10px;
+
+
+                        &>.image {
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 30px;
+                            font-weight: 600;
+                            color: white;
+                            flex-shrink: 0;
+
+                            &>img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        &>.details {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            gap: 5px;
+                            width: 100%;
+                            cursor: context-menu;
+
+                            &>div:first-child {
+                                font-size: 18px;
+                                font-weight: 600;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1;
+                                line-clamp: 1;
+                                word-break: break-all;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+
+                            &>div:last-child {
+                                font-size: 14px;
+                                font-weight: 500;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1;
+                                line-clamp: 1;
+                                overflow: hidden;
+                                word-break: break-all;
+                                text-overflow: ellipsis;
+                                flex-shrink: 1;
+
+                            }
+                        }
+
+                        &>button {
+                            text-wrap: nowrap;
+                            color: $color;
+                            border: none;
+                            border-radius: 500px;
+                            // padding: 5px 10px;
+                            background-color: transparent;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+                            transition: all .15s linear;
+                            flex-shrink: 0;
+                            padding: 3px;
+
+                            &:has(.circularloader) {
+                                padding: 6px;
+                            }
+
+                            &.close {
+                                &>.circularloader {
+                                    color: red;
+                                }
+                            }
+
+                            &:hover {
+                                background-color: $color;
+                                color: white;
+
+                                &:last-child {
+                                    background-color: red;
+                                }
+
+                                &>.close {
+                                    color: white;
+                                }
+
+                                &>.circularloader {
+                                    color: white;
+                                }
+                            }
+
+                            &>.circularloader {
+                                color: $color;
+                            }
+
+                            &>i {
+                                font-size: 28px;
+                                font-weight: 500;
+                            }
+
+                            &>.close {
+                                color: red;
+                            }
+                        }
+
+                        &.wrap {
+                            flex-wrap: wrap;
+                            justify-content: center;
+                        }
+                    }
+                }
+
+                &>.request-status {
+                    padding-top: 0px;
+                }
+            }
+
+            &>.request-sent {
+                max-height: 345px;
+            }
+
+            &>.request-pending {
+                max-height: 250px;
+            }
+
+            &>.request-accepted {
+                overflow: hidden;
+                border-radius: 10px;
+                padding: 10px;
+                border: 2px solid $color;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                flex-grow: 1;
+
+                &>legend {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $color;
+                    margin: 0 10px;
+                    padding: 0 5px;
+
+                    @media (max-width : 290px) {
+                        & {
+                            font-size: 17px;
+                        }
+                    }
+                }
+
+                &>.search-con {
+                    // background-color: red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    flex-wrap: wrap;
+
+                    &>div:first-child {
+                        font-size: 17px;
+                        color: $color;
+                        font-weight: 600;
+                        text-wrap: nowrap;
+                    }
+
+                    &>.search {
+                        padding: 5px;
+                        width: min(400px, 100%);
+                        margin-left: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: stretch;
+                        position: relative;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        padding-bottom: 3px;
+
+                        &>i {
+                            font-size: 22px;
+                            font-weight: 550;
+                            flex-shrink: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $color;
+                        }
+
+                        &>i:last-child {
+                            cursor: pointer;
+                        }
+
+                        input {
+                            width: 100%;
+                            font-size: 16px;
+                            border: none;
+                            outline: none;
+                            padding: 5px 10px;
+                            color: $color;
+                            text-wrap: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+
+                            &::placeholder {
+                                color: $color;
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            border-bottom: 2px solid $color;
+                            width: 0%;
+                            bottom: -1px;
+                            transition: all .18s linear;
+                        }
+
+                        &:has(input[type=text]:focus) {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+
+                        &:has(input[type=text]:not(:placeholder-shown)) {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+
+                    }
+                }
+
+                &>.request-acceptor {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    &>.user {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 15px;
+                        padding: 5px;
+                        border: 1px solid $color;
+                        border-radius: 5px;
+
+                        .image {
+                            height: 60px;
+                            width: 60px;
+                            // background-color: yellow;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            overflow: hidden;
+                            font-size: 35px;
+                            font-weight: 600;
+                            color: white;
+                            flex-shrink: 0;
+                            cursor: context-menu;
+
+                            @media screen and (max-width : 500px) {
+                                & {
+                                    // background-color: blue;
+                                    height: 50px;
+                                    width: 50px;
+                                    font-size: 30px;
+                                }
+                            }
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .details {
+                            // background-color: blue;
+                            width: 100%;
+                            font-size: 16px;
+                            font-weight: 700;
+                            display: flex;
+                            justify-content: space-around;
+                            flex-direction: column;
+                            cursor: context-menu;
+                            overflow: hidden;
+                            color: $color;
+
+                            &>div:first-child {
+                                font-size: 18px;
+                                font-weight: 600;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1;
+                                line-clamp: 1;
+                                word-break: break-all;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+
+                            &>div:last-child {
+                                font-size: 14px;
+                                font-weight: 500;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1;
+                                line-clamp: 1;
+                                overflow: hidden;
+                                word-break: break-all;
+                                text-overflow: ellipsis;
+                                flex-shrink: 1;
+
+                            }
+                        }
+
+                        &>div:last-child {
+                            // background-color: green;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            align-items: center;
+
+                            &>div:first-child {
+                                font-size: 16px;
+                                font-weight: 650;
+                                text-wrap: nowrap;
+                                color: $color;
+                                height: 38px;
+                                width: 38px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                margin-left: auto;
+                                cursor: pointer;
+                                transition: all .15s linear;
+
+                                &:hover {
+                                    background-color: #299f2931;
+                                }
+
+                                .circularloader {
+                                    color: red;
+                                }
+                            }
+
+                            &>div:last-child {
+                                font-size: 16px;
+                                font-weight: 650;
+                                text-wrap: nowrap;
+                                color: $color;
+                            }
+
+                            &>i {
+                                margin-left: auto;
+                                color: $color;
+                                padding: 5px;
+                                border-radius: 50%;
+                                font-size: 25px;
+                                font-weight: 600;
+                                cursor: pointer;
+                                text-wrap: nowrap;
+                                transition: all .15s linear;
+                                color: red;
+
+                                &:hover {
+                                    background-color: #299f2931;
+                                }
+                            }
+                        }
+                    }
+
+                    &>.noresult {
+                        color: $color;
+                        padding: 30px;
+                        margin: auto;
+                        font-size: 20px;
+                        font-weight: 600;
+                        cursor: context-menu;
+                    }
+                }
+            }
+
+            &>.noitems{
+                height: 100%;
+                flex: 1;
+                background-image: url("../../Images/nothing.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        &>.sent-vault,
+        &>.recieved-vault {
+            flex: 1;
+            display: flex;
+
+            &>fieldset {
+                border-radius: 10px;
+                border: 2px solid $color;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                flex: 1;
+
+                &>legend {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $color;
+                    padding: 0 10px;
+                }
+
+                &>.sent-vault-header,
+                &>.recieved-vault-header {
+                    // background-color: red;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+
+                    &>div:first-child {
+                        white-space: nowrap;
+                        font-size: 16px;
+                        font-weight: 650;
+                        color: $color;
+                        cursor: context-menu;
+                    }
+
+                    &>div:last-child {
+                        width: min(400px, 100%);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-bottom: 2px solid rgba(0, 0, 0, 0.195);
+                        padding: 5px 0;
+                        position: relative;
+
+                        &::after {
+                            transition: all .1s linear;
+                            position: absolute;
+                            content: "";
+                            border-bottom: 2px solid $color;
+                            bottom: -2px;
+                            width: 0;
+                        }
+
+                        &:has(input:focus)::after,
+                        &:has(input:not(:placeholder-shown))::after {
+                            width: 100%;
+                        }
+
+                        &>i {
+                            font-size: 20px;
+                            color: $color;
+                            font-weight: 500;
+                            cursor: pointer;
+                            flex-shrink: 0;
+                        }
+
+                        &>input {
+                            border: none;
+                            font-size: 16px;
+                            font-weight: 500;
+                            width: 100%;
+                            outline: none;
+                            color: $color;
+                            padding: 0 10px;
+                            text-overflow: ellipsis;
+                            // text-wrap: nowrap;
+                            overflow: hidden;
+
+                            &::placeholder {
+                                color: $color;
+                            }
+                        }
+                    }
+                }
+
+                &>.sent-vault-main,
+                &>.recieved-vault-main {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    &>.user {
+                        &>.card-det {
+                            width: 100%;
+                            border: 1px solid $color;
+                            border-radius: 10px;
+                            transition: all .1s linear;
+
+                            &:hover {
+                                background-color: #299f291c;
+                            }
+
+                            &[open] {
+                                &:hover {
+                                    background-color: white;
+                                }
+
+                                &>summary {
+                                    .arrow {
+                                        rotate: (180deg);
+                                    }
+                                }
+                            }
+
+                            &>summary {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-between;
+                                list-style: none;
+                                gap: 10px;
+                                cursor: pointer;
+                                padding: 10px;
+
+
+                                &>div:first-child {
+                                    display: flex;
+                                    gap: 10px;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    width: 100%;
+
+                                    &>div:first-child {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 5px;
+                                        color: $color;
+
+                                        &>div:first-child {
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                            display: -webkit-box;
+                                            -webkit-box-orient: vertical;
+                                            -webkit-line-clamp: 1;
+                                            line-clamp: 1;
+                                            word-break: break-all;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                        }
+
+                                        &>div:last-child {
+                                            font-size: 10px;
+                                            font-weight: 600;
+                                            display: -webkit-box;
+                                            -webkit-box-orient: vertical;
+                                            -webkit-line-clamp: 1;
+                                            line-clamp: 1;
+                                            word-break: break-all;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+
+                                    &>.del {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 50%;
+                                        padding: 6px;
+                                        transition: all .1s linear;
+
+                                        &:hover {
+                                            background-color: rgba(5, 205, 5, 0.066);
+                                        }
+
+                                        i {
+                                            font-size: 20px;
+                                            color: red;
+                                            font-weight: 600;
+                                        }
+
+                                        .circularloader {
+                                            color: red;
+                                        }
+                                    }
+                                }
+
+                                &>div:last-child {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 10px;
+
+                                    &>.image {
+                                        height: 40px;
+                                        width: 40px;
+                                        display: flex;
+                                        position: relative;
+                                        flex-shrink: 0;
+
+                                        // border-radius: 50%;
+                                        // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+                                        &>a {
+                                            overflow: hidden;
+                                            height: 100%;
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+
+                                            // border-radius: 50%;
+                                            // overflow: hidden;
+                                            // padding: 5px;
+
+
+                                            &>img {
+                                                height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+
+                                        &.big-img:has(img) {
+                                            height: 35px;
+                                            width: 35px;
+                                        }
+
+                                        &>.app-name {
+                                            background-color: $color;
+                                            height: 40px;
+                                            width: 40px;
+                                            flex-shrink: 0;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-size: 25px;
+                                            font-weight: 500;
+                                            border-radius: 50%;
+                                            color: white;
+                                            cursor: context-menu;
+                                        }
+
+                                        &>.disappear {
+                                            background-color: white;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            bottom: -2px;
+                                            right: -3px;
+                                            height: 18px;
+                                            width: 18px;
+
+
+                                            i {
+                                                font-size: 10px;
+                                                -webkit-text-stroke: 0.8px;
+                                                color: black;
+                                            }
+                                        }
+                                    }
+
+                                    &>.link-or-site {
+                                        width: 100%;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        color: $color;
+                                        display: -webkit-box;
+                                        -webkit-box-orient: vertical;
+                                        -webkit-line-clamp: 1;
+                                        line-clamp: 1;
+                                        word-break: break-all;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+
+                                    }
+
+                                    &>.all-icon {
+                                        display: flex;
+                                        color: $color;
+                                        font-size: 20px;
+                                        border-radius: 50%;
+                                        padding: 5px;
+                                    }
+
+                                    &>.arrow {
+                                        color: $color;
+                                        font-size: 20px;
+                                        font-weight: 600;
+                                        padding: 0 5px;
+                                    }
+
+                                    &>.del {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 50%;
+                                        padding: 6px;
+                                        transition: all .1s linear;
+
+                                        &:hover {
+                                            background-color: rgba(5, 205, 5, 0.066);
+                                        }
+
+                                        i {
+                                            font-size: 20px;
+                                            color: red;
+                                            font-weight: 600;
+                                        }
+
+                                        .circularloader {
+                                            color: red;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &>div {
+                                background-color: transparent;
+                                padding: 10px 10px 10px 50px;
+                                transition: all .2s linear;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2px;
+
+                                &.padding {
+                                    padding: 10px;
+                                }
+
+                                &>div:not(:last-child) {
+                                    word-break: break-all;
+                                }
+
+                                .date {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: flex-end;
+                                    width: 100%;
+                                    padding-top: 20px;
+                                    // background-color: red;
+                                    gap: 10px;
+
+                                    &>.created {
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        cursor: context-menu;
+                                        color: $color;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 5px;
+                                        flex-wrap: wrap;
+
+                                        &>span {
+                                            background-color: $bgcolor;
+                                            border-radius: 200px;
+                                            padding: 2px 10px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            gap: 2px;
+                                            text-wrap: nowrap;
+
+                                            &>i {
+                                                font-size: 16px;
+                                                font-weight: 500;
+                                            }
+                                        }
+                                    }
+
+                                    &>.expired {
+                                        border-radius: 200px;
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        color: red;
+                                        background-color: transparent;
+                                        text-wrap: nowrap;
+                                        background-color: $bgcolor;
+                                        border-radius: 200px;
+                                        padding: 2px 10px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 5px;
+
+                                        &>i {
+                                            font-size: 13px;
+                                            font-weight: 500;
+                                        }
+                                    }
+
+                                    &.wrap {
+                                        flex-wrap: wrap;
+                                    }
+                                }
+
+                                .common {
+                                    padding: 10px;
+                                    background-color: $bgcolor;
+
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+
+                                    .heading {
+                                        font-size: 12px;
+                                        font-weight: 600;
+                                        cursor: context-menu;
+                                        color: $color;
+                                    }
+
+                                    .body {
+                                        // background-color: red;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        gap: 20px;
+                                        font-size: 15px;
+                                        font-weight: 600;
+                                        color: #179417;
+                                        cursor: context-menu;
+
+                                        &>.icon {
+                                            font-size: 18px;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+
+                                .password {
+                                    .body {
+                                        align-items: center;
+                                        gap: 15px;
+
+                                        .content {
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+
+                                            // background-color: resd;
+                                            i {
+                                                font-size: 18px;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &>div:first-child {
+                                    border-radius: 10px 10px 0px 0px;
+                                }
+
+                                &>div:nth-last-child(2) {
+                                    border-radius: 0px 0px 10px 10px;
+                                }
+
+                                //card 
+                                &:has(section) {
+                                    padding: 10px;
+                                }
+
+                                &>section {
+                                    background-color: #299f29c6;
+                                    min-height: 280px;
+                                    border-radius: 15px;
+                                    padding: 20px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    gap: 20px;
+                                    max-width: 500px;
+                                    width: 100%;
+                                    margin: auto;
+                                    position: relative;
+                                    overflow: hidden;
+
+                                    &:after {
+                                        position: absolute;
+                                        content: "";
+                                        background: linear-gradient(to left, rgba(255, 255, 255, 0.773), transparent);
+                                        height: 100%;
+                                        width: 80px;
+                                        top: 0;
+                                        // left: -10%;
+                                        left: 50%;
+                                        transform: skewY(-20deg) rotate(20deg);
+                                        animation: shine 2.8s ease-in infinite;
+                                    }
+
+                                    &>.card-details {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        cursor: context-menu;
+                                        gap: 10px;
+
+                                        &>.brand-div {
+                                            // background-color: aqua;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+                                            // flex-wrap: wrap;
+
+                                            &>.image {
+                                                // background-color: yellow;
+                                                height: 35px;
+                                                width: 35px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                border-radius: 50%;
+                                                flex-shrink: 0;
+                                                overflow: hidden;
+
+                                                img {
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            }
+
+                                            &>.brand-name {
+                                                // background-color: red;
+                                                font-size: 18px;
+                                                font-weight: 700;
+                                                color: white;
+                                                text-transform: capitalize;
+                                                // background-color: red;
+                                                width: 100%;
+                                                display: -webkit-box;
+                                                -webkit-box-orient: vertical;
+                                                -webkit-line-clamp: 1;
+                                                line-clamp: 1;
+                                                word-break: break-all;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                            }
+                                        }
+
+                                        &>.card-type {
+                                            // background-color: yellow;
+                                            font-size: 18px;
+                                            font-weight: 650;
+                                            color: white;
+                                            text-transform: capitalize;
+                                            display: -webkit-box;
+                                            -webkit-box-orient: vertical;
+                                            -webkit-line-clamp: 1;
+                                            line-clamp: 1;
+                                            word-break: break-all;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+
+                                    &>.bank-details {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+
+                                        // background-color: red;
+                                        &>.smart-chip {
+                                            background-color: white;
+                                            height: 50px;
+                                            width: 50px;
+                                            border: 1px solid white;
+                                            border-radius: 5px;
+                                            flex-shrink: 0;
+
+                                            img {
+                                                height: 100%;
+                                                width: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+
+                                        &>.bank-con {
+                                            width: 100%;
+                                            cursor: context-menu;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: flex-end;
+                                            gap: 10px;
+
+                                            &>.logo {
+                                                height: 35px;
+                                                width: 35px;
+                                                border-radius: 5px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                overflow: hidden;
+
+                                                &>img {
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            }
+
+                                            &>.details {
+                                                font-size: 18px;
+                                                font-weight: 500;
+                                                color: white;
+                                                overflow: hidden;
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 2;
+                                                line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                                text-overflow: ellipsis;
+                                            }
+                                        }
+                                    }
+
+                                    &>.card-holder-details {
+                                        // background-color: red;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        gap: 5px;
+
+                                        &>.card-number {
+                                            display: flex;
+                                            // background-color: yellow;
+                                            align-items: center;
+                                            gap: 15px;
+                                            font-size: 22px;
+                                            font-weight: 600;
+                                            color: white;
+                                            cursor: context-menu;
+                                            flex-wrap: wrap;
+
+                                            &>div {
+                                                letter-spacing: 5px;
+                                            }
+                                        }
+
+                                        &>.exp-div {
+                                            // background-color: aqua;
+                                            color: white;
+
+                                            &>div:first-child {
+                                                font-size: 8px;
+                                                font-weight: 600;
+                                            }
+
+                                            &>div:last-child {
+                                                font-size: 18px;
+                                                font-weight: 600;
+                                            }
+                                        }
+
+                                        &>.account-holder-name {
+                                            // background-color: yellow;
+                                            font-size: 18px;
+                                            text-transform: uppercase;
+                                            font-weight: 600;
+                                            color: white;
+                                            display: -webkit-box;
+                                            -webkit-box-orient: vertical;
+                                            -webkit-line-clamp: 1;
+                                            line-clamp: 1;
+                                            word-break: break-all;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+
+                                    @media screen and (max-width: 600px) {
+                                        & {
+                                            padding: 10px;
+                                            min-height: auto !important;
+                                            gap: 10px !important;
+                                            max-width: 300px !important;
+                                            border-radius: 10px !important;
+
+                                            &>.card-details {
+                                                &>.brand-div {
+                                                    &>.image {
+                                                        height: 30px !important;
+                                                        width: 30px !important;
+                                                    }
+
+                                                    &>.brand-name {
+                                                        // background-color: red;
+                                                        font-size: 15px !important;
+                                                    }
+                                                }
+
+                                                &>.card-type {
+                                                    // background-color: yellow;
+                                                    font-size: 15px !important;
+                                                }
+                                            }
+
+                                            &>.bank-details {
+                                                &>.smart-chip {
+                                                    height: 30px !important;
+                                                    width: 30px !important;
+
+                                                    img {
+                                                        height: 100%;
+                                                        width: 100%;
+                                                        object-fit: cover;
+                                                    }
+                                                }
+
+                                                &>.bank-con {
+                                                    width: 100%;
+                                                    cursor: context-menu;
+
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: flex-end;
+                                                    gap: 10px;
+
+                                                    &>.logo {
+                                                        height: 25px;
+                                                        width: 25px;
+                                                        border-radius: 50%;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        flex-shrink: 0;
+
+                                                        &>img {
+                                                            height: 100%;
+                                                            width: 100%;
+                                                            object-fit: cover;
+                                                        }
+                                                    }
+
+                                                    &>.details {
+                                                        font-size: 14px;
+                                                        font-weight: 500;
+                                                        color: white;
+                                                    }
+                                                }
+                                            }
+
+                                            &>.card-holder-details {
+                                                &>.card-number {
+                                                    font-size: 16px !important;
+                                                    font-weight: 500 !important;
+                                                    gap: 10px;
+
+                                                    &>div {
+                                                        letter-spacing: 3px !important;
+                                                    }
+                                                }
+
+                                                &>.exp-div {
+                                                    &>div:first-child {
+                                                        font-size: 7px !important;
+                                                        font-weight: 600;
+                                                    }
+
+                                                    &>div:last-child {
+                                                        font-size: 12px !important;
+                                                    }
+                                                }
+
+                                                &>.account-holder-name {
+                                                    font-size: 14px !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:has(.noresult) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &>.noresult {
+                        margin: auto;
+                        background-image: url('../../Images/nosearch.png');
+                        height: 200px;
+                        width: min(400px, 100%);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                    }
+                }
+
+                &>.noitems {
+                    background-image: url('../../Images/noitem.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    flex: 1;
+                    background-size: contain;
+                    min-height: 200px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes disapper {
+
+    0%,
+    100% {
+        border-left: 2px solid red;
+    }
+
+    25% {
+        border-top: 2px solid red;
+    }
+
+    50% {
+        border-right: 2px solid red;
+    }
+
+    75% {
+        border-bottom: 2px solid red;
+    }
+}

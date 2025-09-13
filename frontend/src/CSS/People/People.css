@@ -1,0 +1,1503 @@
+.peoplepage-con {
+  min-height: calc(100dvh - 102px - 20px);
+  width: min(90%, 1000px);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.peoplepage-con > .people-header-con {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con .common-det {
+  position: relative;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con .common-det[open] > summary {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con .common-det > summary {
+  list-style: none;
+  border-radius: 200px;
+  padding: 5px 10px;
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #299f29;
+  text-wrap: nowrap;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con .common-det > summary:hover {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con .common-det > div {
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  padding: 10px;
+  border-radius: 5px;
+  top: 110%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con .common-det > div > div {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #299f29;
+  cursor: pointer;
+  border: 1px solid #299f29;
+  border-radius: 5px;
+  text-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con .common-det > div > div:hover {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con .common-det > div > div > span {
+  padding: 0px 5px;
+  border-radius: 5px;
+  background-color: aqua;
+  color: black;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con > details {
+  width: 160px;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #299f29;
+  text-wrap: nowrap;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con > div > details {
+  width: 110px;
+  border: 2px solid white;
+  border-radius: 200px;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con > div > details.loader {
+  animation: disapper 1s ease-in-out infinite;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con.wrap {
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con.wrap > details {
+  width: 100%;
+}
+.peoplepage-con > .people-header-con > .first-people-header-con.wrap > div {
+  width: 100%;
+  justify-content: space-between;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > details {
+  position: relative;
+  width: min(150px, 100%);
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > details[open] > summary {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > details > summary {
+  list-style: none;
+  border-radius: 200px;
+  padding: 5px 10px;
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #299f29;
+  text-wrap: nowrap;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > details > summary:hover {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > details > div {
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  padding: 10px;
+  border-radius: 5px;
+  top: 110%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > details > div > div {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #299f29;
+  cursor: pointer;
+  border: 1px solid #299f29;
+  border-radius: 5px;
+  text-wrap: nowrap;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > details > div > div:hover {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  width: min(400px, 100%);
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > div {
+  text-wrap: nowrap;
+  font-size: 16px;
+  font-weight: 600;
+  color: #299f29;
+  cursor: context-menu;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details {
+  position: relative;
+  width: calc(100% - 10px - 45px);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details[open] > summary {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details[open] > summary i {
+  transform: rotate(180deg);
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: #299f29;
+  border-radius: 200px;
+  border: 1px solid #299f29;
+  padding: 0px 20px;
+  gap: 10px;
+  height: 40px;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > summary:hover {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > summary .first-div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > summary .first-div > .box1, .peoplepage-con > .people-header-con > .second-people-header-con > div > details > summary .first-div > .box2 {
+  width: 100%;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > summary .first-div > .box1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > summary .first-div > .box2 {
+  font-size: 10px;
+  font-weight: 600;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > summary > i {
+  font-size: 18px;
+  font-weight: 700;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > div {
+  z-index: 5;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  padding: 10px;
+  border-radius: 5px;
+  top: 110%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > div > div {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #299f29;
+  cursor: pointer;
+  border: 1px solid #299f29;
+  border-radius: 5px;
+  text-wrap: nowrap;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > div > div:hover {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > div > div > div:first-child {
+  font-size: 14px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con > div > details > div > div > div:last-child {
+  font-size: 10px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con.wrap {
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con.wrap > details {
+  width: 100%;
+}
+.peoplepage-con > .people-header-con > .second-people-header-con.wrap > div {
+  width: 100%;
+}
+.peoplepage-con > .people-main-con {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.peoplepage-con > .people-main-con > .request-vault, .peoplepage-con > .people-main-con > .source-vault {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  display: flex;
+  width: 100%;
+}
+.peoplepage-con > .people-main-con > .request-vault:has(.noitems), .peoplepage-con > .people-main-con > .source-vault:has(.noitems) {
+  flex: 1;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent, .peoplepage-con > .people-main-con > .request-vault > .request-pending, .peoplepage-con > .people-main-con > .source-vault > .request-sent, .peoplepage-con > .people-main-con > .source-vault > .request-pending {
+  border-radius: 10px;
+  border: 2px solid #299f29;
+  padding: 10px;
+  width: 100%;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > legend, .peoplepage-con > .people-main-con > .request-vault > .request-pending > legend, .peoplepage-con > .people-main-con > .source-vault > .request-sent > legend, .peoplepage-con > .people-main-con > .source-vault > .request-pending > legend {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #299f29;
+}
+@media (max-width: 290px) {
+  .peoplepage-con > .people-main-con > .request-vault > .request-sent > legend, .peoplepage-con > .people-main-con > .request-vault > .request-pending > legend, .peoplepage-con > .people-main-con > .source-vault > .request-sent > legend, .peoplepage-con > .people-main-con > .source-vault > .request-pending > legend {
+    font-size: 17px;
+  }
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+  border-radius: 100px;
+  border: 1px solid #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search > .search, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search > .search, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search > .search, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search > .search {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search > .search > i, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search > .search > i, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search > .search > i, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search > .search > i {
+  font-size: 16px;
+  font-weight: 600;
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search > .search > i:last-child, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search > .search > i:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search > .search > i:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search > .search > i:last-child {
+  cursor: pointer;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search > .search > input, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search > .search > input, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search > .search > input, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search > .search > input {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #299f29;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search > .search > input::placeholder, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search > .search > input::placeholder, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search > .search > input::placeholder, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search > .search > input::placeholder {
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result), .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result), .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result), .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) {
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .search, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .search, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .search, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .search {
+  border-bottom: 2px solid #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result {
+  padding-top: 20px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .noresult, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .noresult, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .noresult, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .noresult {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #299f29;
+  font-size: 20px;
+  font-weight: 600;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .noresult > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .noresult > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .noresult > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .noresult > .circularloader {
+  color: #299f29;
+  margin: 10px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #299f29;
+  border-radius: 5px;
+  padding: 5px;
+  color: #299f29;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user .image, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user .image, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user .image, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user .image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  flex-shrink: 0;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user .image > img, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user .image > img, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user .image > img, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user .image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user > .details, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user > .details, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user > .details, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user > .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+  cursor: context-menu;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user > .details > div:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user > .details > div:last-child {
+  font-size: 14px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user > button, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user > button, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user > button, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user > button {
+  text-wrap: nowrap;
+  font-size: 14px;
+  color: #299f29;
+  font-weight: 600;
+  border: 1px solid #299f29;
+  border-radius: 500px;
+  padding: 5px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s linear;
+  width: 100px;
+  flex-shrink: 0;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user > button:hover, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user > button:hover, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user > button:hover, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user > button:hover .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user > button:hover .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user > button:hover .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user > button:hover .circularloader {
+  color: white;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user > button i, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user > button i, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user > button i, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user > button i {
+  font-size: 18px;
+  font-weight: 600;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user > button .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user > button .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user > button .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user > button .circularloader {
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-search:has(.result) > .result > .user.wrap, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-search:has(.result) > .result > .user.wrap, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-search:has(.result) > .result > .user.wrap, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-search:has(.result) > .result > .user.wrap {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #299f29;
+  border-radius: 5px;
+  padding: 5px;
+  color: #299f29;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > .image, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > .image, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > .image, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > .image, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > .image, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > .image, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > .image, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > .image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  flex-shrink: 0;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > .image > img, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > .image > img, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > .image > img, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > .image > img, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > .image > img, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > .image > img, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > .image > img, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > .image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > .details, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > .details, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > .details, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > .details, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > .details, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > .details, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > .details, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+  cursor: context-menu;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > .details > div:first-child, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > .details > div:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > .details > div:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > .details > div:last-child {
+  font-size: 14px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button {
+  text-wrap: nowrap;
+  color: #299f29;
+  border: none;
+  border-radius: 500px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s linear;
+  flex-shrink: 0;
+  padding: 3px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button:has(.circularloader), .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button:has(.circularloader), .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button:has(.circularloader), .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button:has(.circularloader), .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button:has(.circularloader), .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button:has(.circularloader), .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button:has(.circularloader), .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button:has(.circularloader) {
+  padding: 6px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button.close > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button.close > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button.close > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button.close > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button.close > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button.close > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button.close > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button.close > .circularloader {
+  color: red;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button:hover, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button:hover, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button:hover, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button:hover, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button:hover, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button:hover, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button:hover, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button:hover:last-child, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button:hover:last-child, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button:hover:last-child, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button:hover:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button:hover:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button:hover:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button:hover:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button:hover:last-child {
+  background-color: red;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button:hover > .close, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button:hover > .close, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button:hover > .close, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button:hover > .close, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button:hover > .close, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button:hover > .close, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button:hover > .close, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button:hover > .close {
+  color: white;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button:hover > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button:hover > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button:hover > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button:hover > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button:hover > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button:hover > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button:hover > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button:hover > .circularloader {
+  color: white;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button > .circularloader, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button > .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button > .circularloader {
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button > i, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button > i, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button > i, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button > i, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button > i, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button > i, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button > i, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button > i {
+  font-size: 28px;
+  font-weight: 500;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user > button > .close, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user > button > .close, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user > button > .close, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user > button > .close, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user > button > .close, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user > button > .close, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user > button > .close, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user > button > .close {
+  color: red;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-sended > .user.wrap, .peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status > .user.wrap, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-sended > .user.wrap, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status > .user.wrap, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-sended > .user.wrap, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status > .user.wrap, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-sended > .user.wrap, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status > .user.wrap {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent > .request-status, .peoplepage-con > .people-main-con > .request-vault > .request-pending > .request-status, .peoplepage-con > .people-main-con > .source-vault > .request-sent > .request-status, .peoplepage-con > .people-main-con > .source-vault > .request-pending > .request-status {
+  padding-top: 0px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-sent, .peoplepage-con > .people-main-con > .source-vault > .request-sent {
+  max-height: 345px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-pending, .peoplepage-con > .people-main-con > .source-vault > .request-pending {
+  max-height: 250px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted, .peoplepage-con > .people-main-con > .source-vault > .request-accepted {
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #299f29;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  flex-grow: 1;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > legend, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > legend {
+  font-size: 20px;
+  font-weight: 600;
+  color: #299f29;
+  margin: 0 10px;
+  padding: 0 5px;
+}
+@media (max-width: 290px) {
+  .peoplepage-con > .people-main-con > .request-vault > .request-accepted > legend, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > legend {
+    font-size: 17px;
+  }
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con > div:first-child, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con > div:first-child {
+  font-size: 17px;
+  color: #299f29;
+  font-weight: 600;
+  text-wrap: nowrap;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con > .search, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con > .search {
+  padding: 5px;
+  width: min(400px, 100%);
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 3px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con > .search > i, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con > .search > i {
+  font-size: 22px;
+  font-weight: 550;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con > .search > i:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con > .search > i:last-child {
+  cursor: pointer;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con > .search input, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con > .search input {
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  color: #299f29;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con > .search input::placeholder, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con > .search input::placeholder {
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con > .search::after, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con > .search::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #299f29;
+  width: 0%;
+  bottom: -1px;
+  transition: all 0.18s linear;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con > .search:has(input[type=text]:focus)::after, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con > .search:has(input[type=text]:focus)::after {
+  width: 100%;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .search-con > .search:has(input[type=text]:not(:placeholder-shown))::after, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .search-con > .search:has(input[type=text]:not(:placeholder-shown))::after {
+  width: 100%;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 5px;
+  border: 1px solid #299f29;
+  border-radius: 5px;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user .image, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user .image {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  flex-shrink: 0;
+  cursor: context-menu;
+}
+@media screen and (max-width: 500px) {
+  .peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user .image, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user .image {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+  }
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user .image img, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user .details, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user .details {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  cursor: context-menu;
+  overflow: hidden;
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user .details > div:first-child, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user .details > div:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user .details > div:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user .details > div:last-child {
+  font-size: 14px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user > div:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user > div:last-child > div:first-child, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user > div:last-child > div:first-child {
+  font-size: 16px;
+  font-weight: 650;
+  text-wrap: nowrap;
+  color: #299f29;
+  height: 38px;
+  width: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user > div:last-child > div:first-child:hover, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user > div:last-child > div:first-child:hover {
+  background-color: rgba(41, 159, 41, 0.1921568627);
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user > div:last-child > div:first-child .circularloader, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user > div:last-child > div:first-child .circularloader {
+  color: red;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user > div:last-child > div:last-child, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user > div:last-child > div:last-child {
+  font-size: 16px;
+  font-weight: 650;
+  text-wrap: nowrap;
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user > div:last-child > i, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user > div:last-child > i {
+  margin-left: auto;
+  color: #299f29;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  text-wrap: nowrap;
+  transition: all 0.15s linear;
+  color: red;
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .user > div:last-child > i:hover, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .user > div:last-child > i:hover {
+  background-color: rgba(41, 159, 41, 0.1921568627);
+}
+.peoplepage-con > .people-main-con > .request-vault > .request-accepted > .request-acceptor > .noresult, .peoplepage-con > .people-main-con > .source-vault > .request-accepted > .request-acceptor > .noresult {
+  color: #299f29;
+  padding: 30px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: context-menu;
+}
+.peoplepage-con > .people-main-con > .request-vault > .noitems, .peoplepage-con > .people-main-con > .source-vault > .noitems {
+  height: 100%;
+  flex: 1;
+  background-image: url("../../Images/nothing.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.peoplepage-con > .people-main-con > .sent-vault, .peoplepage-con > .people-main-con > .recieved-vault {
+  flex: 1;
+  display: flex;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset, .peoplepage-con > .people-main-con > .recieved-vault > fieldset {
+  border-radius: 10px;
+  border: 2px solid #299f29;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > legend, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > legend {
+  font-size: 18px;
+  font-weight: 600;
+  color: #299f29;
+  padding: 0 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-header, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-header, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-header, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-header > div:first-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-header > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-header > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-header > div:first-child {
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 650;
+  color: #299f29;
+  cursor: context-menu;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-header > div:last-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-header > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-header > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-header > div:last-child {
+  width: min(400px, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.195);
+  padding: 5px 0;
+  position: relative;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-header > div:last-child::after, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-header > div:last-child::after, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-header > div:last-child::after, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-header > div:last-child::after {
+  transition: all 0.1s linear;
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #299f29;
+  bottom: -2px;
+  width: 0;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-header > div:last-child:has(input:focus)::after, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-header > div:last-child:has(input:not(:placeholder-shown))::after, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-header > div:last-child:has(input:focus)::after, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-header > div:last-child:has(input:not(:placeholder-shown))::after, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-header > div:last-child:has(input:focus)::after, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-header > div:last-child:has(input:not(:placeholder-shown))::after, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-header > div:last-child:has(input:focus)::after, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-header > div:last-child:has(input:not(:placeholder-shown))::after {
+  width: 100%;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-header > div:last-child > i, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-header > div:last-child > i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-header > div:last-child > i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-header > div:last-child > i {
+  font-size: 20px;
+  color: #299f29;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-header > div:last-child > input, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-header > div:last-child > input, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-header > div:last-child > input, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-header > div:last-child > input {
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  outline: none;
+  color: #299f29;
+  padding: 0 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-header > div:last-child > input::placeholder, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-header > div:last-child > input::placeholder, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-header > div:last-child > input::placeholder, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-header > div:last-child > input::placeholder {
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det {
+  width: 100%;
+  border: 1px solid #299f29;
+  border-radius: 10px;
+  transition: all 0.1s linear;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det:hover, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det:hover, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det:hover, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det:hover {
+  background-color: rgba(41, 159, 41, 0.1098039216);
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det[open]:hover, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det[open]:hover, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det[open]:hover, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det[open]:hover {
+  background-color: white;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det[open] > summary .arrow, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det[open] > summary .arrow, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det[open] > summary .arrow, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det[open] > summary .arrow {
+  rotate: 180deg;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > div:first-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > div:first-child > div:first-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > div:first-child > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > div:first-child > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > div:first-child > div:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > div:first-child > div:last-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > div:first-child > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > div:first-child > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > div:first-child > div:last-child {
+  font-size: 10px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > .del, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > .del, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > .del, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > .del {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 6px;
+  transition: all 0.1s linear;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > .del:hover, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > .del:hover, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > .del:hover, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > .del:hover {
+  background-color: rgba(5, 205, 5, 0.066);
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > .del i, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > .del i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > .del i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > .del i {
+  font-size: 20px;
+  color: red;
+  font-weight: 600;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > .del .circularloader, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > .del .circularloader, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:first-child > .del .circularloader, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:first-child > .del .circularloader {
+  color: red;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  position: relative;
+  flex-shrink: 0;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > a, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > a, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > a, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > a {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > a > img, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > a > img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > a > img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > a > img {
+  height: 100%;
+  object-fit: cover;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image.big-img:has(img), .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image.big-img:has(img), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image.big-img:has(img), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image.big-img:has(img) {
+  height: 35px;
+  width: 35px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > .app-name, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > .app-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > .app-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > .app-name {
+  background-color: #299f29;
+  height: 40px;
+  width: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 50%;
+  color: white;
+  cursor: context-menu;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > .disappear, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > .disappear, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > .disappear, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > .disappear {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -2px;
+  right: -3px;
+  height: 18px;
+  width: 18px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > .disappear i, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > .disappear i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .image > .disappear i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .image > .disappear i {
+  font-size: 10px;
+  -webkit-text-stroke: 0.8px;
+  color: black;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .link-or-site, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .link-or-site, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .link-or-site, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .link-or-site {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #299f29;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .all-icon, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .all-icon, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .all-icon, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .all-icon {
+  display: flex;
+  color: #299f29;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 5px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .arrow, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .arrow, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .arrow, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .arrow {
+  color: #299f29;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 5px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .del, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .del, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .del, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .del {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 6px;
+  transition: all 0.1s linear;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .del:hover, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .del:hover, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .del:hover, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .del:hover {
+  background-color: rgba(5, 205, 5, 0.066);
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .del i, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .del i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .del i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .del i {
+  font-size: 20px;
+  color: red;
+  font-weight: 600;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .del .circularloader, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .del .circularloader, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > summary > div:last-child > .del .circularloader, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > summary > div:last-child > .del .circularloader {
+  color: red;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div {
+  background-color: transparent;
+  padding: 10px 10px 10px 50px;
+  transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div.padding, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div.padding, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div.padding, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div.padding {
+  padding: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > div:not(:last-child), .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > div:not(:last-child), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > div:not(:last-child), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > div:not(:last-child) {
+  word-break: break-all;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .date, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .date, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding-top: 20px;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .created, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .created, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .created, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .created {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: context-menu;
+  color: #299f29;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .created > span, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .created > span, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .created > span, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .created > span {
+  background-color: rgba(41, 159, 41, 0.2823529412);
+  border-radius: 200px;
+  padding: 2px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  text-wrap: nowrap;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .created > span > i, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .created > span > i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .created > span > i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .created > span > i {
+  font-size: 16px;
+  font-weight: 500;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .expired, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .expired, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .expired, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .expired {
+  border-radius: 200px;
+  font-size: 14px;
+  font-weight: 500;
+  color: red;
+  background-color: transparent;
+  text-wrap: nowrap;
+  background-color: rgba(41, 159, 41, 0.2823529412);
+  border-radius: 200px;
+  padding: 2px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .expired > i, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .expired > i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .date > .expired > i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date > .expired > i {
+  font-size: 13px;
+  font-weight: 500;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .date.wrap, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date.wrap, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .date.wrap, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .date.wrap {
+  flex-wrap: wrap;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .common, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .common, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .common, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .common {
+  padding: 10px;
+  background-color: rgba(41, 159, 41, 0.2823529412);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .common .heading, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .common .heading, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .common .heading, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .common .heading {
+  font-size: 12px;
+  font-weight: 600;
+  cursor: context-menu;
+  color: #299f29;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .common .body, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .common .body, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .common .body, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .common .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #179417;
+  cursor: context-menu;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .common .body > .icon, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .common .body > .icon, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .common .body > .icon, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .common .body > .icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .password .body, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .password .body, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .password .body, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .password .body {
+  align-items: center;
+  gap: 15px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .password .body .content, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .password .body .content, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .password .body .content, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .password .body .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div .password .body .content i, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div .password .body .content i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div .password .body .content i, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div .password .body .content i {
+  font-size: 18px;
+  cursor: pointer;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > div:first-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > div:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > div:nth-last-child(2), .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > div:nth-last-child(2), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > div:nth-last-child(2), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > div:nth-last-child(2) {
+  border-radius: 0px 0px 10px 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div:has(section), .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div:has(section), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div:has(section), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div:has(section) {
+  padding: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section {
+  background-color: rgba(41, 159, 41, 0.7764705882);
+  min-height: 280px;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section:after, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section:after, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section:after, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section:after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.773), transparent);
+  height: 100%;
+  width: 80px;
+  top: 0;
+  left: 50%;
+  transform: skewY(-20deg) rotate(20deg);
+  animation: shine 2.8s ease-in infinite;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: context-menu;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image img, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .brand-name, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .brand-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .brand-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .card-type, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .card-type, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .card-type, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .card-type {
+  font-size: 18px;
+  font-weight: 650;
+  color: white;
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip img, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con {
+  width: 100%;
+  cursor: context-menu;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo {
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo > img, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo > img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo > img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .details, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .details {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  cursor: context-menu;
+  flex-wrap: wrap;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number > div, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number > div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number > div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number > div {
+  letter-spacing: 5px;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div {
+  color: white;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:first-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:first-child {
+  font-size: 8px;
+  font-weight: 600;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:last-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:last-child {
+  font-size: 18px;
+  font-weight: 600;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .account-holder-name, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .account-holder-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .account-holder-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .account-holder-name {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 600px) {
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section {
+    padding: 10px;
+    min-height: auto !important;
+    gap: 10px !important;
+    max-width: 300px !important;
+    border-radius: 10px !important;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .image {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .brand-name, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .brand-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .brand-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .brand-div > .brand-name {
+    font-size: 15px !important;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .card-type, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .card-type, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-details > .card-type, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-details > .card-type {
+    font-size: 15px !important;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip img, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .smart-chip img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con {
+    width: 100%;
+    cursor: context-menu;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo > img, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo > img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo > img, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .logo > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .details, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .details, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .bank-details > .bank-con > .details {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    gap: 10px;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number > div, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number > div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number > div, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .card-number > div {
+    letter-spacing: 3px !important;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:first-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:first-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:first-child {
+    font-size: 7px !important;
+    font-weight: 600;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:last-child, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:last-child, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .exp-div > div:last-child {
+    font-size: 12px !important;
+  }
+  .peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .account-holder-name, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .account-holder-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .user > .card-det > div > section > .card-holder-details > .account-holder-name, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .user > .card-det > div > section > .card-holder-details > .account-holder-name {
+    font-size: 14px !important;
+  }
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main:has(.noresult), .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main:has(.noresult), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main:has(.noresult), .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main:has(.noresult) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .sent-vault-main > .noresult, .peoplepage-con > .people-main-con > .sent-vault > fieldset > .recieved-vault-main > .noresult, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .sent-vault-main > .noresult, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .recieved-vault-main > .noresult {
+  margin: auto;
+  background-image: url("../../Images/nosearch.png");
+  height: 200px;
+  width: min(400px, 100%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.peoplepage-con > .people-main-con > .sent-vault > fieldset > .noitems, .peoplepage-con > .people-main-con > .recieved-vault > fieldset > .noitems {
+  background-image: url("../../Images/noitem.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  background-size: contain;
+  min-height: 200px;
+}
+
+@keyframes disapper {
+  0%, 100% {
+    border-left: 2px solid red;
+  }
+  25% {
+    border-top: 2px solid red;
+  }
+  50% {
+    border-right: 2px solid red;
+  }
+  75% {
+    border-bottom: 2px solid red;
+  }
+}

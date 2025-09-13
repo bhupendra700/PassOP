@@ -1,0 +1,190 @@
+$color : #299f29;
+$bgcolor : #c3e4c3;
+
+.delete-container {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    padding: 10px;
+    overflow: auto;
+    z-index: 200;
+
+    .delete-account {
+        background-color: white;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.153) 0px 1px 5px;
+        width: min(100%, 500px);
+
+        .delete-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            color: red;
+
+            i {
+                padding: 5px;
+                cursor: pointer;
+                border-radius: 5px;
+                color: $color;
+                font-weight: 600;
+                font-size: 18px;
+                transition: all .12s linear;
+
+                &:hover {
+                    background-color: $color;
+                    color: white;
+                }
+            }
+        }
+
+        .delete-message {
+            background-color: $bgcolor;
+            padding: 15px;
+            border-radius: 10px;
+            line-height: 25px;
+            font-size: 16px;
+            margin-bottom: 30px;
+
+            p:nth-child(1) {
+                font-weight: 650;
+                color: $color;
+
+                i {
+                    font-size: 17px;
+                }
+            }
+
+            p:nth-child(2) {
+                margin-left: 23px;
+                color: $color;
+                font-weight: 500;
+                font-size: 14px;
+            }
+        }
+
+        form {
+            .password-con {
+                // background-color: red;
+                color: $color;
+                font-weight: 600;
+                margin-bottom: 30px;
+                font-size: 16px;
+
+                .password-box {
+                    width: 100%;
+                    background-color: white;
+                    border: 1px solid #299f295d;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    margin-top: 10px;
+                    transition: all .12s linear;
+
+                    &:hover , &:has(input:focus) , &:has(input:not(:placeholder-shown)) {
+                        border: 1px solid $color;
+
+                        &>input::placeholder , i{
+                            color: $color;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        outline: none;
+                        transition: all .2s linear;
+                        border: none;
+                        font-size: 14px;
+                        font-weight: 600;
+                        padding: 0 10px;
+                        color: $color;
+
+                        // &:focus {
+                        //     border: 1px solid rgba(0, 0, 0, 0.952);
+                        // }
+
+                        &::placeholder {
+                            color: #299f29b7;
+                        }
+                    }
+
+                    i{
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: #299f29b7;
+                    }
+                }
+
+                &>div {
+                    color: red;
+                    font-size: 13px;
+                    font-weight: 500;
+                    margin-top: 5px;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                gap: 15px;
+
+                .cancel,
+                .delete {
+                    border-radius: 20px;
+                    cursor: pointer;
+                    font-weight: 600;
+                }
+
+                .cancel {
+                    border: none;
+                    background-color: transparent;
+                    color: $color;
+                    padding: 10px 20px;
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    font-size: 14px;
+                    font-weight: 600;
+                    transition: all .12s linear;
+
+                    &:hover {
+                        background-color: $color;
+                        color: white;
+                    }
+                }
+
+                .delete {
+                    background-color: white;
+                    color: red;
+                    width: 140px;
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    padding: 0 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid red;
+                    transition: all .12s linear;
+                    font-size: 14px;
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: red;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+    }
+}

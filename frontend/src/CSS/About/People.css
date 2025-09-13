@@ -1,0 +1,7 @@
+.peoplepage-con {
+  background-color: red;
+  min-height: calc(100dvh - 102px);
+}
+.peoplepage-con .header-con {
+  background-color: aqua;
+}

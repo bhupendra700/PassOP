@@ -1,0 +1,2674 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
+.usermain {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100dvh - 102px);
+  z-index: 1;
+}
+.usermain .main-container {
+  width: min(90%, 1000px);
+  padding-top: 20px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.usermain .main-container #save-det {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.usermain .main-container #save-det[open] > summary > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+.usermain .main-container #save-det[open] > summary > div:last-child .sub {
+  display: block;
+}
+.usermain .main-container #save-det[open] > summary > div:last-child .add {
+  display: none;
+}
+.usermain .main-container #save-det > summary {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 20px;
+}
+.usermain .main-container #save-det > summary > div:first-child, .usermain .main-container #save-det > summary > div:last-child {
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 600;
+}
+.usermain .main-container #save-det > summary > div:first-child {
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main {
+  background-color: white;
+  flex-shrink: 0;
+  width: 80px;
+  border-radius: 500px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: all 0.2s linear;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main:has(.email) {
+  box-shadow: inset rgba(18, 18, 18, 0.4078431373) 0px 0px 1px 0px, rgba(8, 8, 8, 0.3098039216) 0px 0px 3px 0px;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main:has(.email):hover {
+  box-shadow: inset rgba(18, 18, 18, 0.568627451) 0px 0px 1px 0px, rgba(8, 8, 8, 0.5254901961) 0px 0px 3px 0px;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main:has(.passimg) {
+  box-shadow: inset rgba(41, 159, 41, 0.9843137255) 0px 0px 1px 0px, rgba(41, 159, 41, 0.495) 0px 0px 3px 0px;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main:has(.passimg):hover {
+  box-shadow: inset rgba(41, 159, 41, 0.5960784314) 0px 0px 1px 0px, rgba(41, 159, 41, 0.9764705882) 0px 0px 3px 0px;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main:has(.credit-card) {
+  box-shadow: inset rgba(255, 217, 0, 0.723) 0px 0px 1px 0px, rgba(255, 217, 0, 0.914) 0px 0px 3px 0px;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main:has(.credit-card):hover {
+  box-shadow: inset rgb(255, 217, 0) 0px 0px 1px 0px, rgb(255, 217, 0) 0px 0px 3px 0px;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main > .toggle-switch-button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main > .toggle-switch-button.passimg {
+  background-color: #299f29;
+  padding: 3px;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main > .toggle-switch-button.email {
+  background-color: black;
+  padding: 3px;
+  transform: translateX(24px);
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main > .toggle-switch-button.credit-card {
+  background-color: rgb(239, 209, 13);
+  padding: 3px;
+  transform: translateX(47px);
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main > .toggle-switch-button > .react-font-lock {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  stroke-width: 2.5;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main > .toggle-switch-button > .react-font-email {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+}
+.usermain .main-container #save-det > summary > .toggle-switch-main > .toggle-switch-button > .react-font-card {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  stroke-width: 0.5;
+}
+.usermain .main-container #save-det > summary > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.usermain .main-container #save-det > summary > div:last-child .sub {
+  display: none;
+}
+.usermain .main-container #save-det .save-container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px;
+  padding-bottom: 18px;
+}
+.usermain .main-container #save-det .save-container > .save-inputs {
+  display: block;
+}
+.usermain .main-container #save-det .save-container > .save-inputs.cards-mode input[type=text]:first-child {
+  text-transform: uppercase;
+}
+.usermain .main-container #save-det .save-container > .save-inputs.cards-mode input[type=text]:first-child::placeholder {
+  text-transform: none;
+}
+.usermain .main-container #save-det .save-container > .save-inputs > input {
+  border: 1px solid rgba(0, 0, 0, 0.301);
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #299f29;
+  width: 100%;
+}
+.usermain .main-container #save-det .save-container > .save-inputs > input::placeholder {
+  color: rgba(41, 159, 41, 0.768627451);
+}
+.usermain .main-container #save-det .save-container > .save-inputs > .error {
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 3px;
+}
+.usermain .main-container #save-det .save-container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+  position: static;
+}
+.usermain .main-container #save-det .save-container > div > .password-con {
+  width: 100%;
+}
+.usermain .main-container #save-det .save-container > div > .password-con > .password {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.301);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.usermain .main-container #save-det .save-container > div > .password-con > .password > input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #299f29;
+}
+.usermain .main-container #save-det .save-container > div > .password-con > .password > input::placeholder {
+  color: rgba(41, 159, 41, 0.768627451);
+}
+.usermain .main-container #save-det .save-container > div > .password-con > .password > i {
+  padding: 6px;
+  color: #299f29;
+}
+.usermain .main-container #save-det .save-container > div > .password-con > .error {
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 3px;
+}
+.usermain .main-container #save-det .save-container > div > .password-con > .strength {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 0;
+  padding-left: 5px;
+  cursor: context-menu;
+  color: #299f29;
+}
+.usermain .main-container #save-det .save-container > div > .password-con > .strength > span {
+  font-weight: 650;
+}
+.usermain .main-container #save-det .save-container > div > details {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  z-index: 2;
+}
+.usermain .main-container #save-det .save-container > div > details summary {
+  cursor: pointer;
+  width: min(300px, 100%);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.216);
+  color: #299f29;
+}
+.usermain .main-container #save-det .save-container > div > details summary .position {
+  position: relative;
+}
+.usermain .main-container #save-det .save-container > div > details > div {
+  background-color: white;
+  position: absolute;
+  width: min(300px, 100%);
+  top: 120%;
+  right: 0;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.242);
+  padding: 5px 8px;
+  max-height: 200px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 500;
+}
+.usermain .main-container #save-det .save-container > div > details > div > div {
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 5px;
+  color: #299f29;
+  border: 1px solid #299f29;
+}
+.usermain .main-container #save-det .save-container > div > details > div > div:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container #save-det .save-container > div.wrap {
+  flex-wrap: wrap;
+}
+.usermain .main-container #save-det .save-container > div.wrap > details {
+  justify-content: start;
+}
+.usermain .main-container #save-det .save-container > div.wrap > details > summary {
+  width: 100%;
+}
+.usermain .main-container #save-det .save-container > div.wrap > details > div {
+  width: 100%;
+}
+.usermain .main-container #save-det .save-container > button {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  width: 80px;
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 500px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  color: #299f29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.usermain .main-container #save-det .save-container > button .circularloader {
+  color: #299f29;
+}
+.usermain .main-container #save-det .save-container > button:hover {
+  border: 1px solid #299f29;
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container #save-det .save-container > button:hover .circularloader {
+  color: white;
+}
+.usermain .main-container #save-det .save-container > .button > button {
+  background-color: transparent;
+  border: 1px solid #299f29;
+  width: 80px;
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 500px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  color: #299f29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.usermain .main-container #save-det .save-container > .button > button > .edit-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.usermain .main-container #save-det .save-container > .button > button .circularloader {
+  color: #299f29;
+}
+.usermain .main-container #save-det .save-container > .button > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container #save-det .save-container > .button > button:hover .circularloader {
+  color: white;
+}
+.usermain .main-container .empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 15px;
+  cursor: context-menu;
+  height: 100%;
+}
+.usermain .main-container .empty .image {
+  width: min(350px, 100%);
+}
+.usermain .main-container .empty .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.usermain .main-container .empty h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #299f29;
+}
+.usermain .main-container .empty > div:nth-child(3) {
+  font-size: 14px;
+  font-weight: 400;
+}
+.usermain .main-container .empty > div:nth-child(3) > span {
+  color: #299f29;
+  font-weight: 600;
+}
+.usermain .main-container .empty > .feature {
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.usermain .main-container .empty > .feature > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.usermain .main-container .empty > .feature > div .feature-icon {
+  color: #299f29;
+  font-size: 22px;
+  font-weight: bolder;
+  flex-shrink: 0;
+}
+.usermain .main-container .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.usermain .main-container .loader .circularloader {
+  color: #299f29;
+}
+.usermain .main-container .user-table {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 25px;
+}
+.usermain .main-container .user-table .user-table-content {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.usermain .main-container .user-table .user-table-content:has(.nosearchresult, .nopassword) {
+  height: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 0 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header .slider {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header .slider > div {
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  padding: 5px 15px;
+  border-radius: 500px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #299f29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s linear;
+  text-wrap: nowrap;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header .slider > div:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header .slider > div.green {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header #adddet {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header #adddet[open] > summary {
+  color: white;
+  background-color: #299f29;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header #adddet > summary {
+  font-size: 16px;
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #299f29;
+  transition: all 0.12s linear;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header #adddet > summary:hover {
+  color: white;
+  background-color: #299f29;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header #adddet > div {
+  right: 0;
+  top: 100%;
+  position: absolute;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 150px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header #adddet > div > div {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  color: #299f29;
+}
+.usermain .main-container .user-table .user-table-content .user-table-header #adddet > div > div:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nopassword {
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nopassword .message {
+  font-size: 20px;
+  font-weight: 600;
+  color: #299f29;
+  text-align: center;
+  font-family: "Delius", cursive;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nopassword > button {
+  font-family: "Delius", cursive;
+  border: 1px solid #299f29;
+  background-color: white;
+  border-radius: 500px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #299f29;
+  transition: all 0.2s linear;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nopassword > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nopassword > button i {
+  font-size: 18px;
+  font-weight: 600;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nopassword .image {
+  height: 100%;
+  width: min(50%, 240px);
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nopassword .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main:has(.nosearchresult, .nopassword) {
+  height: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 0 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header.wrap {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 30px;
+  gap: 25px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header.wrap > .search-password {
+  width: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header.wrap > .wrapper-con {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header.wrap > .wrapper-con > details {
+  width: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header.wrap > .wrapper-con > details > summary {
+  width: 100%;
+  justify-content: center;
+  gap: 10;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header.wrap > .wrapper-con > details > section > div {
+  text-align: center;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header.wrap > .wrapper-con .add {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header.wrap .add {
+  display: none;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .search-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.293);
+  width: 800px;
+  position: relative;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .search-password > i:first-child {
+  font-size: 20px;
+  font-weight: 400;
+  cursor: context-menu;
+  color: #299f29;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .search-password input[type=text] {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #299f29;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .search-password input[type=text]::placeholder {
+  color: #299f29;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .search-password > i:last-child {
+  color: #299f29;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  transition: all 0.15s linear;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .search-password > i:last-child:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .search-password::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #299f29;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .search-password:has(input[type=text]:focus)::after {
+  width: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con {
+  width: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con > details {
+  position: relative;
+  width: 140px;
+  z-index: 10;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con > details[open] > summary i {
+  transition: all 0.1s linear;
+  transform: rotate(180deg);
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con > details > summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 500px;
+  cursor: pointer;
+  border: 1px solid #299f29;
+  padding: 5px 10px;
+  color: #299f29;
+  transition: all 0.15s linear;
+  width: 140px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con > details > summary i {
+  font-size: 18px;
+  font-weight: 600;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con > details > summary:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con > details > section {
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 105%;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con > details > section > div {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #299f29;
+  cursor: pointer;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con > details > section > div:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .wrapper-con > .add {
+  display: none;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .add {
+  color: #299f29;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: all 0.15s linear;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-header .add:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .app-site-email-card {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: context-menu;
+  color: #299f29;
+  width: 100%;
+  text-transform: capitalize;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card:hover {
+  background-color: rgba(41, 159, 41, 0.1019607843);
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card:has(.card-det[open]):hover {
+  background-color: transparent;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det {
+  width: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det:not(summary:has(.del)) > div {
+  padding-right: 5px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det[open] > summary .arrow {
+  rotate: 180deg;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 10px;
+  cursor: pointer;
+  padding: 20px 0;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary:not(:has(.del)) > .arrow {
+  padding: 0 15px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .image {
+  display: flex;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .image > a {
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .image > a > img {
+  height: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .image.big-img:has(img) {
+  height: 35px;
+  width: 35px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .image > span {
+  background-color: #299f29;
+  height: 40px;
+  width: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 50%;
+  color: white;
+  cursor: context-menu;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .link-or-site {
+  padding-left: 10px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #299f29;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .all-icon {
+  display: flex;
+  color: #299f29;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 5px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .arrow {
+  color: #299f29;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 5px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .del {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 6px;
+  transition: all 0.1s linear;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .del:hover {
+  background-color: rgba(5, 205, 5, 0.066);
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .del i {
+  font-size: 20px;
+  color: red;
+  font-weight: 600;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .del .circularloader {
+  color: red;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div {
+  background-color: transparent;
+  padding: 10px 10px 10px 50px;
+  transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div.padding {
+  padding: 10px 0px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > div:not(:last-child) {
+  word-break: break-all;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100%, 500px);
+  margin-left: auto;
+  padding-top: 20px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button > button {
+  border: 1px solid rgba(0, 0, 0, 0.097);
+  border-radius: 200px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #299f29;
+  background-color: transparent;
+  white-space: nowrap;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button > button:hover {
+  background-color: #299f29;
+  color: white;
+  border: 1px solid white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button > button i {
+  font-size: 16px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button.wrap {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button.wrap > button {
+  width: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button > button:last-child {
+  color: red;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button > button:last-child:hover {
+  background-color: red;
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button:not(:has(.share)) {
+  width: 300px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .button:not(:has(.share)).wrap {
+  width: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .common {
+  padding: 10px;
+  background-color: rgba(41, 159, 41, 0.2823529412);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .common .heading {
+  font-size: 12px;
+  font-weight: 600;
+  cursor: context-menu;
+  color: #299f29;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .common .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #179417;
+  cursor: context-menu;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .common .body > .icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .password .body {
+  align-items: center;
+  gap: 15px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .password .body .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div .password .body .content i {
+  font-size: 18px;
+  cursor: pointer;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > div:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > div:nth-last-child(2) {
+  border-radius: 0px 0px 10px 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div:has(section) {
+  padding: 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section {
+  background-color: rgba(41, 159, 41, 0.7764705882);
+  min-height: 280px;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section:after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.773), transparent);
+  height: 100%;
+  width: 80px;
+  top: 0;
+  left: 50%;
+  transform: skewY(-20deg) rotate(20deg);
+  animation: shine 2.8s ease-in infinite;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: context-menu;
+  gap: 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-details > .brand-div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-details > .brand-div > .image {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-details > .brand-div > .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-details > .brand-div > .brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-details > .card-type {
+  font-size: 18px;
+  font-weight: 650;
+  color: white;
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-align: end;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .smart-chip {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .smart-chip img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .bank-con {
+  width: 100%;
+  cursor: context-menu;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .bank-con > .logo {
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .bank-con > .logo > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .bank-con > .details {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .card-number {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  cursor: context-menu;
+  flex-wrap: wrap;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .card-number > div {
+  letter-spacing: 5px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .exp-div {
+  color: white;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .exp-div > div:first-child {
+  font-size: 8px;
+  font-weight: 600;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .exp-div > div:last-child {
+  font-size: 18px;
+  font-weight: 600;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .account-holder-name {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section {
+    min-height: auto !important;
+    gap: 10px !important;
+    max-width: 350px !important;
+    border-radius: 10px !important;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-details > .brand-div > .image {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-details > .brand-div > .brand-name {
+    font-size: 15px !important;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-details > .card-type {
+    font-size: 15px !important;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .smart-chip {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .smart-chip img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .bank-con {
+    width: 100%;
+    cursor: context-menu;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .bank-con > .logo {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .bank-con > .logo > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .bank-details > .bank-con > .details {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .card-number {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    gap: 10px;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .card-number > div {
+    letter-spacing: 3px !important;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .exp-div > div:first-child {
+    font-size: 7px !important;
+    font-weight: 600;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .exp-div > div:last-child {
+    font-size: 12px !important;
+  }
+  .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > div > section > .card-holder-details > .account-holder-name {
+    font-size: 15px !important;
+  }
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card:not(:last-child) > .card-det {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nosearchresult {
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nosearchresult .image {
+  height: 100%;
+  width: 350px;
+}
+.usermain .main-container .user-table .user-table-content .user-table-main .nosearchresult .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.usermain .main-container .user-table .user-table-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.usermain .main-container .user-table .user-table-footer .image {
+  background-color: transparent;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.usermain .main-container .user-table .user-table-footer .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .user-table .user-table-footer > div:last-child {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: context-menu;
+}
+.usermain .main-container .add-collection-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: rgba(0, 0, 0, 0.118);
+  z-index: 200;
+  padding: 10px;
+}
+.usermain .main-container .add-collection-container .popup {
+  background-color: white;
+  width: min(100%, 500px);
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.usermain .main-container .add-collection-container .popup .add-col-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.usermain .main-container .add-collection-container .popup .add-col-header .content {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: context-menu;
+  color: #299f29;
+}
+.usermain .main-container .add-collection-container .popup .add-col-header .close-btn {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.12s linear;
+  color: #299f29;
+}
+.usermain .main-container .add-collection-container .popup .add-col-header .close-btn:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .add-collection-container .popup > form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 10px;
+}
+.usermain .main-container .add-collection-container .popup > form > .show {
+  border-radius: 500px;
+  border: 1px solid #299f29;
+  padding: 5px 10px;
+  color: #299f29;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: context-menu;
+  width: fit-content;
+  word-break: break-all;
+}
+.usermain .main-container .add-collection-container .popup > form .input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.usermain .main-container .add-collection-container .popup > form .input input[type=text] {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(41, 159, 41, 0.2823529412);
+  border-radius: 5px;
+  padding: 8px 10px;
+  color: #299f29;
+  font-size: 14px;
+  font-weight: 500;
+}
+.usermain .main-container .add-collection-container .popup > form .input input[type=text]::placeholder {
+  color: #299f29;
+}
+.usermain .main-container .add-collection-container .popup > form .input > .error {
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
+}
+.usermain .main-container .add-collection-container .popup > form > button {
+  border: 1px solid rgba(41, 159, 41, 0.2823529412);
+  border-radius: 500px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #299f29;
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto;
+  background-color: white;
+  transition: all 0.12s linear;
+}
+.usermain .main-container .add-collection-container .popup > form > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .add-collection-container .popup > form > button[type=button] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.usermain .main-container .add-collection-container .popup > form > button[type=button] .circularloader {
+  color: #299f29;
+}
+.usermain .main-container .add-collection-container .popup > form > button[type=button]:hover .circularloader {
+  color: white;
+}
+.usermain .main-container .rename-collection-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: rgba(0, 0, 0, 0.118);
+  z-index: 200;
+  padding: 10px;
+}
+.usermain .main-container .rename-collection-container .popup {
+  background-color: white;
+  width: min(100%, 500px);
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.usermain .main-container .rename-collection-container .popup .rename-col-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.usermain .main-container .rename-collection-container .popup .rename-col-header .content {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: context-menu;
+  color: #299f29;
+}
+.usermain .main-container .rename-collection-container .popup .rename-col-header .close-btn {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.12s linear;
+  color: #299f29;
+}
+.usermain .main-container .rename-collection-container .popup .rename-col-header .close-btn:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .rename-collection-container .popup > form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 10px;
+}
+.usermain .main-container .rename-collection-container .popup > form > div:first-child {
+  max-width: 100%;
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.111);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: context-menu;
+  color: #299f29;
+  word-break: break-all;
+}
+.usermain .main-container .rename-collection-container .popup > form > .error {
+  width: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: context-menu;
+  color: red;
+}
+.usermain .main-container .rename-collection-container .popup > form input[type=text] {
+  outline: none;
+  border: 1px solid rgba(41, 159, 41, 0.2823529412);
+  border-radius: 5px;
+  padding: 8px 10px;
+  color: #299f29;
+  font-size: 14px;
+  font-weight: 500;
+}
+.usermain .main-container .rename-collection-container .popup > form input[type=text]::placeholder {
+  color: #299f29;
+}
+.usermain .main-container .rename-collection-container .popup > form > button {
+  border: 1px solid rgba(41, 159, 41, 0.2823529412);
+  border-radius: 500px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #299f29;
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto;
+  background-color: white;
+  transition: all 0.12s linear;
+}
+.usermain .main-container .rename-collection-container .popup > form > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .rename-collection-container .popup > form > button[type=button] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.usermain .main-container .rename-collection-container .popup > form > button[type=button] .circularloader {
+  color: #299f29;
+}
+.usermain .main-container .rename-collection-container .popup > form > button[type=button]:hover .circularloader {
+  color: white;
+}
+.usermain .main-container .delete-collection-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: rgba(0, 0, 0, 0.118);
+  z-index: 200;
+  padding: 10px;
+}
+.usermain .main-container .delete-collection-container .popup {
+  background-color: white;
+  width: min(100%, 550px);
+  margin: 0 auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.usermain .main-container .delete-collection-container .popup .del-col-header {
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: context-menu;
+}
+.usermain .main-container .delete-collection-container .popup .message {
+  font-size: 16px;
+  color: #299f29;
+  cursor: context-menu;
+  font-weight: 500;
+}
+.usermain .main-container .delete-collection-container .popup .message > p {
+  background-color: white;
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 500px;
+  border: 1px solid #299f29;
+  display: inline-flex;
+  padding: 0 10px;
+}
+.usermain .main-container .delete-collection-container .popup .button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.usermain .main-container .delete-collection-container .popup .button > button {
+  background-color: transparent;
+  border-radius: 500px;
+  border: 1px solid rgba(41, 159, 41, 0.2823529412);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #299f29;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  margin: 0 auto;
+}
+.usermain .main-container .delete-collection-container .popup .button > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .delete-collection-container .popup .button > button:last-child {
+  color: red;
+  border: 1px solid red;
+}
+.usermain .main-container .delete-collection-container .popup .button > button:last-child:hover {
+  color: white;
+  background-color: red;
+}
+.usermain .main-container .delete-collection-container .popup .button > button.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 163px;
+}
+.usermain .main-container .delete-collection-container .popup .button > button.loader .circularloader {
+  color: red;
+}
+.usermain .main-container .delete-collection-container .popup .button > button.loader:hover .circularloader {
+  color: white;
+}
+.usermain .main-container .delete-pass-container {
+  background-color: rgba(0, 0, 0, 0.073);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 100dvh;
+  width: 100dvw;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+.usermain .main-container .delete-pass-container .del-con {
+  margin: auto;
+  background-color: white;
+  width: min(500px, 100%);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.usermain .main-container .delete-pass-container .del-con .del-header {
+  font-size: 18px;
+  font-weight: 600;
+  color: red;
+  cursor: context-menu;
+}
+.usermain .main-container .delete-pass-container .del-con .message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.usermain .main-container .delete-pass-container .del-con .message .alert {
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: context-menu;
+  color: #299f29;
+}
+.usermain .main-container .delete-pass-container .del-con .message .pass-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+.usermain .main-container .delete-pass-container .del-con .message .pass-con .common {
+  background-color: rgba(41, 159, 41, 0.2823529412);
+  padding: 10px;
+}
+.usermain .main-container .delete-pass-container .del-con .message .pass-con .common .name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #299f29;
+}
+.usermain .main-container .delete-pass-container .del-con .message .pass-con .common .value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #299f29;
+  word-break: break-all;
+}
+.usermain .main-container .delete-pass-container .del-con .message .pass-con .password .value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.usermain .main-container .delete-pass-container .del-con .message .pass-con .password .value i {
+  padding: 8px;
+}
+.usermain .main-container .delete-pass-container .del-con .message .pass-con > div:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.usermain .main-container .delete-pass-container .del-con .message .pass-con > div:last-child {
+  border-radius: 0px 0px 10px 10px;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section {
+  background-color: rgba(41, 159, 41, 0.7764705882);
+  min-height: 280px;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section:after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.773), transparent);
+  height: 100%;
+  width: 80px;
+  top: 0;
+  left: 50%;
+  transform: skewY(-20deg) rotate(20deg);
+  animation: shine 2.8s ease-in infinite;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: context-menu;
+  gap: 10px;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-details > .brand-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-details > .brand-div > .image {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-details > .brand-div > .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-details > .brand-div > .brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-details > .card-type {
+  font-size: 18px;
+  font-weight: 650;
+  color: white;
+  text-transform: capitalize;
+  text-wrap: nowrap;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .smart-chip .image {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .smart-chip .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .card-number {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  cursor: context-menu;
+  flex-wrap: wrap;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .card-number > div {
+  letter-spacing: 5px;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .exp-div {
+  color: white;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .exp-div > div:first-child {
+  font-size: 8px;
+  font-weight: 600;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .exp-div > div:last-child {
+  font-size: 18px;
+  font-weight: 600;
+}
+.usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .account-holder-name {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  .usermain .main-container .delete-pass-container .del-con .message > section {
+    min-height: auto !important;
+    gap: 10px !important;
+    max-width: 350px !important;
+    border-radius: 10px !important;
+  }
+  .usermain .main-container .delete-pass-container .del-con .message > section > .card-details > .brand-div > .image {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .usermain .main-container .delete-pass-container .del-con .message > section > .card-details > .brand-div > .brand-name {
+    font-size: 15px !important;
+  }
+  .usermain .main-container .delete-pass-container .del-con .message > section > .card-details > .card-type {
+    font-size: 15px !important;
+  }
+  .usermain .main-container .delete-pass-container .del-con .message > section > .smart-chip .image {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .card-number {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    gap: 10px;
+  }
+  .usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .card-number > div {
+    letter-spacing: 3px !important;
+  }
+  .usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .exp-div > div:first-child {
+    font-size: 7px !important;
+    font-weight: 600;
+  }
+  .usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .exp-div > div:last-child {
+    font-size: 12px !important;
+  }
+  .usermain .main-container .delete-pass-container .del-con .message > section > .card-holder-details > .account-holder-name {
+    font-size: 15px !important;
+  }
+}
+.usermain .main-container .delete-pass-container .del-con .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.usermain .main-container .delete-pass-container .del-con .button > button {
+  background-color: white;
+  border: 1px solid rgba(41, 159, 41, 0.2823529412);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #299f29;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  white-space: nowrap;
+}
+.usermain .main-container .delete-pass-container .del-con .button > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .delete-pass-container .del-con .button > button:last-child {
+  border: 1px solid red;
+  color: red;
+}
+.usermain .main-container .delete-pass-container .del-con .button > button:last-child:hover {
+  background-color: red;
+  color: white;
+}
+.usermain .main-container .delete-pass-container .del-con .button > button:has(.circularloader) {
+  width: 168px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.usermain .main-container .delete-pass-container .del-con .button > button:has(.circularloader):hover .circularloader {
+  color: white;
+}
+.usermain .main-container .delete-pass-container .del-con .button > button:has(.circularloader) .circularloader {
+  color: red;
+}
+.usermain .main-container .add-password-popup {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.089);
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+}
+.usermain .main-container .add-password-popup .popup {
+  background-color: white;
+  max-height: 90%;
+  width: min(90%, 1000px);
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.usermain .main-container .add-password-popup .popup .add-pass-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  cursor: context-menu;
+  padding: 10px;
+}
+.usermain .main-container .add-password-popup .popup .add-pass-header .head,
+.usermain .main-container .add-password-popup .popup .add-pass-header i {
+  font-size: 18px;
+  font-weight: 600;
+  color: #299f29;
+}
+.usermain .main-container .add-password-popup .popup .add-pass-header i {
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.12s linear;
+}
+.usermain .main-container .add-password-popup .popup .add-pass-header i:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .add-password-popup .popup .option {
+  overflow: auto;
+  scrollbar-width: none;
+  margin: auto;
+  width: 100%;
+}
+.usermain .main-container .add-password-popup .popup .option .nopasswordtoselect {
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+.usermain .main-container .add-password-popup .popup .option .nopasswordtoselect .message {
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
+  text-align: center;
+  font-family: "Delius", cursive;
+  cursor: context-menu;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.usermain .main-container .add-password-popup .popup .option .nopasswordtoselect .image {
+  height: 100%;
+  width: min(100%, 400px);
+}
+.usermain .main-container .add-password-popup .popup .option .nopasswordtoselect .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.usermain .main-container .add-password-popup .popup .option .card {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.usermain .main-container .add-password-popup .popup .option .card:hover {
+  background-color: rgba(41, 159, 41, 0.1019607843);
+}
+.usermain .main-container .add-password-popup .popup .option .card:has(.select-card-det[open]):hover {
+  background-color: transparent;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det {
+  width: 100%;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det[open] > summary .arrow {
+  padding-left: 30px;
+  padding-right: 0px !important;
+  rotate: 180deg;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 10px;
+  cursor: pointer;
+  padding: 20px 0;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .image {
+  height: 40px;
+  width: 40px;
+  display: flex;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .image > a {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .image > a > img {
+  height: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .image.big-img:has(img) {
+  height: 35px;
+  width: 35px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .image > span {
+  background-color: #299f29;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 50%;
+  color: white;
+  cursor: context-menu;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .link-or-site {
+  padding-left: 10px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #299f29;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary:not(:has(.del)) .arrow {
+  padding-right: 8px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .arrow {
+  color: #299f29;
+  font-size: 20px;
+  font-weight: 600;
+  padding-right: 30px !important;
+  padding-left: 0px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 6px;
+  transition: all 0.1s linear;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .check:hover {
+  background-color: rgba(5, 205, 5, 0.066);
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .check > input[type=checkbox] {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #299f29;
+  border-radius: 3px;
+  font-size: 20px;
+  color: red;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.12s linear;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .check > input[type=checkbox]::after {
+  position: absolute;
+  content: "\eb7b";
+  font-family: remixicon;
+  color: #299f29;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  display: none;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .check > input[type=checkbox]:hover::after {
+  display: block;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .check > input[type=checkbox]:checked {
+  background-color: #299f29;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .check > input[type=checkbox]:checked::after {
+  display: block;
+  color: white;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div {
+  background-color: transparent;
+  padding: 10px 50px;
+  transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div.padding {
+  padding: 10px 0px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > div:not(:last-child) {
+  word-break: break-all;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100%, 500px);
+  margin-left: auto;
+  padding-top: 20px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button > button {
+  border: 1px solid rgba(0, 0, 0, 0.097);
+  border-radius: 200px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #299f29;
+  background-color: transparent;
+  white-space: nowrap;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button > button:hover {
+  background-color: #299f29;
+  color: white;
+  border: 1px solid white;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button > button i {
+  font-size: 16px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button.wrap {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button.wrap > button {
+  width: 100%;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button > button:last-child {
+  color: red;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button > button:last-child:hover {
+  background-color: red;
+  color: white;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button:not(:has(.share)) {
+  width: 300px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .button:not(:has(.share)).wrap {
+  width: 100%;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .common {
+  padding: 10px;
+  background-color: rgba(41, 159, 41, 0.2823529412);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .common .heading {
+  font-size: 12px;
+  font-weight: 600;
+  cursor: context-menu;
+  color: #299f29;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .common .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #179417;
+  cursor: context-menu;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .common .body > .icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .password .body {
+  align-items: center;
+  gap: 15px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .password .body .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div .password .body .content i {
+  font-size: 18px;
+  cursor: pointer;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > div:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > div:last-child {
+  border-radius: 0px 0px 10px 10px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section {
+  background-color: rgba(41, 159, 41, 0.7764705882);
+  min-height: 280px;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section:after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.773), transparent);
+  height: 100%;
+  width: 80px;
+  top: 0;
+  left: 50%;
+  transform: skewY(-20deg) rotate(20deg);
+  animation: shine 2.8s ease-in infinite;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: context-menu;
+  gap: 10px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-details > .brand-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-details > .brand-div > .image {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-details > .brand-div > .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-details > .brand-div > .brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-details > .card-type {
+  font-size: 18px;
+  font-weight: 650;
+  color: white;
+  text-transform: capitalize;
+  text-wrap: nowrap;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .smart-chip .image {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .smart-chip .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .card-number {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  cursor: context-menu;
+  flex-wrap: wrap;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .card-number > div {
+  letter-spacing: 5px;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .exp-div {
+  color: white;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .exp-div > div:first-child {
+  font-size: 8px;
+  font-weight: 600;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .exp-div > div:last-child {
+  font-size: 18px;
+  font-weight: 600;
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .account-holder-name {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section {
+    min-height: auto !important;
+    gap: 10px !important;
+    max-width: 350px !important;
+    border-radius: 10px !important;
+  }
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-details > .brand-div > .image {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-details > .brand-div > .brand-name {
+    font-size: 15px !important;
+  }
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-details > .card-type {
+    font-size: 15px !important;
+  }
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .smart-chip .image {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .card-number {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    gap: 10px;
+  }
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .card-number > div {
+    letter-spacing: 3px !important;
+  }
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .exp-div > div:first-child {
+    font-size: 7px !important;
+    font-weight: 600;
+  }
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .exp-div > div:last-child {
+    font-size: 12px !important;
+  }
+  .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > div > section > .card-holder-details > .account-holder-name {
+    font-size: 15px !important;
+  }
+}
+.usermain .main-container .add-password-popup .popup .option .card > .select-card-det {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+}
+.usermain .main-container .add-password-popup .popup .button-con {
+  padding: 20px 0;
+  text-align: end;
+}
+.usermain .main-container .add-password-popup .popup .button-con > button {
+  padding: 10px 20px;
+  border: 1px solid #299f29;
+  border-radius: 100px;
+  background-color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #299f29;
+  transition: all 0.12s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.usermain .main-container .add-password-popup .popup .button-con > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .add-password-popup .popup .button-con > button:has(.circularloader) {
+  width: 80px;
+}
+.usermain .main-container .add-password-popup .popup .button-con > button:has(.circularloader):hover .circularloader {
+  color: white;
+}
+.usermain .main-container .add-password-popup .popup .button-con > button > .circularloader {
+  color: #299f29;
+}
+.usermain .main-container .sharepage-con {
+  background-color: rgba(0, 0, 0, 0.144);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 201;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.usermain .main-container .sharepage-con > .share-con {
+  background-color: white;
+  height: min(620px, 100%);
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  width: min(100%, 500px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.usermain .main-container .sharepage-con > .share-con:has(.nouser) {
+  height: fit-content;
+}
+.usermain .main-container .sharepage-con > .share-con > .share-header {
+  display: flex;
+  justify-content: space-between;
+  color: #299f29;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: context-menu;
+  text-transform: capitalize;
+}
+.usermain .main-container .sharepage-con > .share-con > .share-header > div:last-child {
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 4px;
+  cursor: pointer;
+  transition: all 0.12s linear;
+}
+.usermain .main-container .sharepage-con > .share-con > .share-header > div:last-child:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #299f29;
+  cursor: context-menu;
+  text-wrap: nowrap;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div > details {
+  position: relative;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div > details[open] > summary {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div > details[open] > summary > i {
+  transform: rotate(180deg);
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div > details > summary {
+  list-style: none;
+  border: 1px solid #299f29;
+  border-radius: 500px;
+  padding: 4px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #299f29;
+  gap: 5px;
+  text-wrap: nowrap;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div > details > summary:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div > details > summary > i {
+  font-size: 18px;
+  font-weight: 600;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div > details > div {
+  position: absolute;
+  top: 115%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  gap: 5px;
+  z-index: 1;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div > details > div > div {
+  border: 1px solid #299f29;
+  border-radius: 5px;
+  text-align: center;
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  padding: 3px 0;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > div > details > div > div:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > button[type=button] {
+  background-color: transparent;
+  border: 1px solid #299f29;
+  padding: 5px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  color: #299f29;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.12s linear;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > button[type=button]:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > .loader {
+  background-color: transparent;
+  border: 1px solid #299f29;
+  padding: 5px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  color: #299f29;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  width: 98px;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > .loader:hover {
+  background-color: #299f29;
+  color: white;
+}
+.usermain .main-container .sharepage-con > .share-con > .disappear-con > .loader:hover > .circularloader {
+  color: white;
+}
+.usermain .main-container .sharepage-con > .share-con > .search-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 200px;
+  border: 1px solid #299f29;
+}
+.usermain .main-container .sharepage-con > .share-con > .search-con > i {
+  font-size: 18px;
+  font-weight: 500;
+  color: #299f29;
+  flex-shrink: 0;
+}
+.usermain .main-container .sharepage-con > .share-con > .search-con > i:last-child {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+}
+.usermain .main-container .sharepage-con > .share-con > .search-con > input[type=text] {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 550;
+  color: #299f29;
+  outline: none;
+  border: none;
+  padding: 0 5px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.usermain .main-container .sharepage-con > .share-con > .search-con > input[type=text]::placeholder {
+  color: #299f29;
+  font-weight: 400;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con {
+  border-radius: 5px;
+  border: 2px solid #299f29;
+  flex: 1;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: none;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > legend {
+  padding: 0 5px;
+  margin-left: 10px;
+  color: #299f29;
+  font-weight: 600;
+  cursor: context-menu;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user {
+  cursor: pointer;
+  border: 2px solid #299f29;
+  border-radius: 5px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  align-items: center;
+  gap: 10px;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > div:first-child {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  flex-shrink: 0;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > div:first-child img {
+  height: 100%;
+  width: 100%;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > div:nth-child(2) > div {
+  color: #299f29;
+  font-size: 18px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > div:nth-child(2) > div:first-child {
+  text-transform: capitalize;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > div:nth-child(2) > div:last-child {
+  font-size: 14px;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > input[type=checkbox] {
+  appearance: none;
+  border: 2px solid #299f29;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > input[type=checkbox]::after {
+  position: absolute;
+  content: "\eb7b";
+  font-family: remixicon;
+  font-size: 18px;
+  color: #299f29;
+  font-weight: 600;
+  top: 0px;
+  left: 1px;
+  display: none;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > input[type=checkbox]:hover {
+  background-color: white;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > input[type=checkbox]:hover::after {
+  display: block;
+  color: #299f29;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > input[type=checkbox]:checked {
+  background-color: #299f29;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .user > input[type=checkbox]:checked::after {
+  display: block;
+  color: white;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .nosearch {
+  flex: 1;
+  width: min(200px, 50%);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.usermain .main-container .sharepage-con > .share-con > .user-con > .nosearch img {
+  width: 100%;
+  object-fit: cover;
+}
+.usermain .main-container .sharepage-con > .share-con > .nouser {
+  display: flex;
+}
+.usermain .main-container .sharepage-con > .share-con > .nouser > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
