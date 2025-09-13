@@ -25,7 +25,7 @@ const notify = (method, message) => {
     });
 }
 
-const socket = io("http://localhost:8000");
+const socket = io("https://passop-sj3o.onrender.com");
 
 const Root = () => {
     const [user, setUser] = useState(null);
