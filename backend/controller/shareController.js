@@ -349,10 +349,6 @@ const sendNotification = async (req, res) => {
                 title: title,
                 body: body,
             },
-            notification : {
-                title : title,
-                body : body
-            },
             tokens
         }
 
