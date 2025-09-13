@@ -517,7 +517,7 @@ const contactUs = async (req, res) => {
     </div>
     <div class="footer">
       This email was sent from the <strong>PassOP Contact Form</strong>. <br>
-      <a href="https://passop.example.com">Visit Website</a>
+      <a href="https://passopfree.netlify.app">Visit Website</a>
     </div>
   </div>
 </body>

@@ -1,16 +1,19 @@
 import axios from "axios";
 
+const backendUrl = "https://passop-sj3o.onrender.com"
+// const backendUrl = "http://localhost:8000"
+
 const userAxios = axios.create({
-    baseURL: "https://passop-sj3o.onrender.com/user",
+    baseURL: `${backendUrl}/user`,
     withCredentials: true
 })
 
 const authAxios = axios.create({
-    baseURL: "https://passop-sj3o.onrender.com/auth",
+    baseURL: `${backendUrl}/auth`,
 })
 
 const shareAxios = axios.create({
-    baseURL : "https://passop-sj3o.onrender.com/share",
+    baseURL : `${backendUrl}/share`,
     withCredentials : true
 })
 

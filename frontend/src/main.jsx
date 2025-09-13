@@ -95,7 +95,6 @@ const Root = () => {
     const [passwordCount, setPasswordCount] = useState(0);
 
     useEffect(() => {
-        console.log("Data: ", data);
         setPasswordCount(data.length)
     }, [data])
 
@@ -229,7 +228,7 @@ const Root = () => {
         if (user) {
             setTimeout(() => {
                 requestPermissionAndGetToken()
-            }, 1000 * 40);
+            }, 1000 * 30);
         }
     }, [user])
 
@@ -241,7 +240,7 @@ const Root = () => {
             })
         })
 
-        return () => unsubscribe
+        return () => unsubscribe()
     }, [])
 
     return <ContextData.Provider value={{ notify, user, setUser, alert, setAlert, loginLoader, setLoginLoader, data, setData, passwordCount, setPasswordCount, shareableUsers, setShareableUsers, setRecieveableUsers, recieveableUsers, sentDocs, setSentDocs, receivedDocs, setReceivedDocs, socket }}>
