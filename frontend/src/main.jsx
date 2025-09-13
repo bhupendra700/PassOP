@@ -200,11 +200,16 @@ const Root = () => {
             })
 
             socket.on("foreground", (notifyData) => {
+                if (!notifyData || !notifyData.title) return;
                 alert(notifyData.title);
-                new Notification(notifyData.title, {
-                    body: notifyData.body,
-                    icon: '/icon.png'
-                })
+                try {
+                    new Notification(notifyData.title, {
+                        body: notifyData.body,
+                        icon: '/icon.png'
+                    });
+                } catch (e) {
+                    console.error("Notification failed:", e);
+                }
             })
         }
     }, [user, shareableUsers, recieveableUsers, receivedDocs, sentDocs])
