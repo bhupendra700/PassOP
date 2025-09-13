@@ -200,7 +200,7 @@ const Root = () => {
             })
 
             socket.on("foreground", (notifyData) => {
-                alert(notify.title);
+                alert(notifyData.title);
                 new Notification(notifyData.title, {
                     body: notifyData.body,
                     icon: '/icon.png'
