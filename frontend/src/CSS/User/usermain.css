@@ -457,7 +457,7 @@
 .usermain .main-container .user-table .user-table-content .user-table-header #adddet {
   flex-shrink: 0;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 .usermain .main-container .user-table .user-table-content .user-table-header #adddet[open] > summary {
   color: white;

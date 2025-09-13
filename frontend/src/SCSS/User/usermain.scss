@@ -580,7 +580,7 @@ $bgcolor : #299f2948;
                     #adddet {
                         flex-shrink: 0;
                         position: relative;
-                        z-index: 10;
+                        z-index: 20;
 
                         &[open] {
                             &>summary {
