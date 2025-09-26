@@ -3,7 +3,7 @@ import '../../CSS/Reusable/Login.css'
 import { useContext, useEffect, useState } from 'react'
 import { ContextData } from '../../main'
 import { authAxios } from '../../config/axiosconfig'
-import Login2FA from '../TwoFA/login2FA'
+import Login2FA from '../TwoFA/Login2FA'
 import Recovery2FAOtp from '../TwoFA/Recovery2FAOtp'
 import ResetQRCode from '../TwoFA/ResetQRCode'
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google"
