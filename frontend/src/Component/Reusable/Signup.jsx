@@ -5,7 +5,7 @@ import { ContextData } from '../../main.jsx'
 import { authAxios } from '../../config/axiosconfig.js'
 import google from "../../Images/google.png"
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google"
-import Login2FA from '../TwoFA/login2FA.jsx'
+import Login2FA from '../TwoFA/Login2FA.jsx'
 import Recovery2FAOtp from '../TwoFA/Recovery2FAOtp.jsx'
 import ResetQRCode from '../TwoFA/ResetQRCode.jsx'
 
