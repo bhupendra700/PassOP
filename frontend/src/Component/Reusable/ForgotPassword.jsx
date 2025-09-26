@@ -1,10 +1,16 @@
-import { useContext, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import "../../CSS/Reusable/ForgotPassword.css"
 import { CircularProgress } from "@mui/material"
 import { ContextData } from "../../main"
 import { authAxios } from "../../config/axiosconfig"
 
-const ForgotPassword = ({setIsForgot}) => {
+const ForgotPassword = ({ setIsForgot }) => {
+    useEffect(() => {
+        document.documentElement.style.overflow = "hidden"
+
+        return () => document.documentElement.style.overflow = "auto"
+    }, [])
+
     const { notify } = useContext(ContextData)
 
     const [loader, setLoader] = useState(false)
@@ -68,7 +74,7 @@ const ForgotPassword = ({setIsForgot}) => {
             if (error?.response?.data?.message) {
                 setOTPError(error?.response?.data?.message)
             } else if (error?.message) {
-                notify("error" , error?.message)
+                notify("error", error?.message)
             }
         }
     }
@@ -79,7 +85,9 @@ const ForgotPassword = ({setIsForgot}) => {
     const handleEmail = async () => {
         try {
             setLoader(true);
-            if (!email.endsWith("@gmail.com")) throw new Error("Invalid email")
+            if (!email.endsWith("@gmail.com")) {
+                throw new Error("Invalid email")
+            }
 
             await authAxios.post('/sendotp', { email })
 
@@ -92,7 +100,7 @@ const ForgotPassword = ({setIsForgot}) => {
             if (error?.response?.data?.message) {
                 setEmailError(error?.response?.data?.message)
             } else if (error?.message) {
-                notify("error" , error?.message)
+                notify("error", error?.message)
             }
         }
     }
@@ -103,12 +111,12 @@ const ForgotPassword = ({setIsForgot}) => {
     const handleNewPassword = async () => {
         try {
             setLoader(true);
-            
-            if(newPassword.length < 8) throw new Error("Password must be 8 character long");
 
-            await authAxios.post('/setnewpassword' , {email , newPassword})
+            if (newPassword.length < 8) throw new Error("Password must be 8 character long");
 
-            notify("success" , "Password reset SuccessFully");
+            await authAxios.post('/setnewpassword', { email, newPassword })
+
+            notify("success", "Password reset SuccessFully");
             setPasswordError("")
             setLoader(false);
             setIsForgot(false)
@@ -117,7 +125,7 @@ const ForgotPassword = ({setIsForgot}) => {
             if (error?.response?.data?.message) {
                 setPasswordError(error?.response?.data?.message)
             } else if (error?.message) {
-                notify("error" , error?.message)
+                notify("error", error?.message)
             }
         }
     }
@@ -127,9 +135,11 @@ const ForgotPassword = ({setIsForgot}) => {
             <div className="forgot-header">
                 <div className="forgot-header-div">
                     <h2>Reset Password ?</h2>
-                    <i className="ri-close-fill" onClick={()=>{if(!loader){
-                        setIsForgot(false)
-                    }}}></i>
+                    <i className="ri-close-fill" onClick={() => {
+                        if (!loader) {
+                            setIsForgot(false)
+                        }
+                    }}></i>
                 </div>
                 <div className="message">
                     Enter your regetered email address
@@ -151,9 +161,11 @@ const ForgotPassword = ({setIsForgot}) => {
             <div className="forgot-header">
                 <div className="forgot-header-div">
                     <h2>Reset Password OTP</h2>
-                    <i className="ri-close-fill" onClick={()=>{if(!loader){
-                        setIsForgot(false)
-                    }}}></i>
+                    <i className="ri-close-fill" onClick={() => {
+                        if (!loader) {
+                            setIsForgot(false)
+                        }
+                    }}></i>
                 </div>
                 <div className="message">
                     Enter the 6 digit code sent to your email id
@@ -188,9 +200,11 @@ const ForgotPassword = ({setIsForgot}) => {
             <div className="forgot-header">
                 <div className="forgot-header-div">
                     <h2>New password</h2>
-                    <i className="ri-close-fill" onClick={()=>{if(!loader){
-                        setIsForgot(false)
-                    }}}></i>
+                    <i className="ri-close-fill" onClick={() => {
+                        if (!loader) {
+                            setIsForgot(false)
+                        }
+                    }}></i>
                 </div>
                 <div className="message">
                     Enter the new password below

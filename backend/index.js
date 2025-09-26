@@ -9,6 +9,7 @@ import shareRouter from "./routes/shareRouter.js";
 dotenv.config();
 import http from "http";
 import { Server } from "socket.io";
+import paymentRouter from "./routes/paymentRouter.js";
 
 const port = process.env.PORT || 8000
 connectDB()
@@ -16,6 +17,7 @@ const app = express();
 app.use(cookieParser())
 
 const allowedOrigin = ["https://passopfree.netlify.app"]
+// const allowedOrigin = ["http://localhost:5173"]
 app.use(cors({
     origin: allowedOrigin,
     credentials: true
@@ -33,11 +35,14 @@ app.use('/user', userRouter);
 
 app.use('/share', shareRouter);
 
+app.use('/payment' , paymentRouter);
+
 const server = http.createServer(app);
+
 
 const io = new Server(server, {
     cors: {
-        origin: "https://passopfree.netlify.app",
+        origin: allowedOrigin,
     }
 })
 

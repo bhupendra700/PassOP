@@ -85,13 +85,7 @@ const SharePage = ({ setShowShare, shareDocs, setShareDocs }) => {
             const _id = shareDocs._id;
             const expiredAt = disappear;
 
-            if (!arr_of_Id.length) {
-                setLoader(false);
-                notify("success", `Please select at least one user to share the ${shareDocs.Doctype.slice(0)}.`)
-                return;
-            }
-
-            const { data } = await shareAxios.post('/senddocs', { arr_of_Id, _id, expiredAt });
+            const { data } = await shareAxios.post('/senddocs', { arr_of_Id, _id, expiredAt , sharedItem : shareDocs.Doctype.slice(0)});
 
             setLoader(false);
             setShowShare(false);
@@ -184,7 +178,7 @@ const SharePage = ({ setShowShare, shareDocs, setShareDocs }) => {
         } catch (error) {
             setLoader(false);
             console.log(error);
-            notify("error", error?.response?.data?.message || "Something Went Wrong!")
+            notify("error", error?.response?.data?.message || error?.message || "Something Went Wrong!")
         }
     }
 
@@ -226,7 +220,7 @@ const SharePage = ({ setShowShare, shareDocs, setShareDocs }) => {
                     {renderList?.length ? (renderList || []).map((ele, idx) => {
                         return <label htmlFor={ele.email} className="user" key={idx}>
                             <div className="image" style={{ backgroundColor: ele.photoURL || "green" }}>
-                                {1 ? ele.name[0].toUpperCase() : <img src={logo} alt="image" />}
+                                {!ele.photoURL.startsWith("https://") ? ele.name[0].toUpperCase() : <img src={ele.photoURL} alt="image" />}
                             </div>
                             <div className="details">
                                 <div>{ele.name}</div>

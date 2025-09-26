@@ -10,6 +10,7 @@ const userAxios = axios.create({
 
 const authAxios = axios.create({
     baseURL: `${backendUrl}/auth`,
+    withCredentials: true
 })
 
 const shareAxios = axios.create({
@@ -17,4 +18,9 @@ const shareAxios = axios.create({
     withCredentials : true
 })
 
-export { userAxios , authAxios ,shareAxios};
+const paymentAxios = axios.create({
+    baseURL : `${backendUrl}/payment`,
+    withCredentials : true,
+})
+
+export { userAxios , authAxios ,shareAxios , backendUrl , paymentAxios};

@@ -59,53 +59,53 @@
   font-weight: 500;
   font-size: 14px;
 }
-.delete-container .delete-account form .password-con {
+.delete-container .delete-account form > .twofaotp {
   color: #299f29;
-  font-weight: 600;
   margin-bottom: 30px;
-  font-size: 16px;
-}
-.delete-container .delete-account form .password-con .password-box {
-  width: 100%;
-  background-color: white;
-  border: 1px solid rgba(41, 159, 41, 0.3647058824);
-  border-radius: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  margin-top: 10px;
-  transition: all 0.12s linear;
+  flex-direction: column;
+  gap: 20px;
 }
-.delete-container .delete-account form .password-con .password-box:hover, .delete-container .delete-account form .password-con .password-box:has(input:focus), .delete-container .delete-account form .password-con .password-box:has(input:not(:placeholder-shown)) {
-  border: 1px solid #299f29;
+.delete-container .delete-account form > .twofaotp > .message {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: context-menu;
+  text-align: center;
 }
-.delete-container .delete-account form .password-con .password-box:hover > input::placeholder, .delete-container .delete-account form .password-con .password-box:hover i, .delete-container .delete-account form .password-con .password-box:has(input:focus) > input::placeholder, .delete-container .delete-account form .password-con .password-box:has(input:focus) i, .delete-container .delete-account form .password-con .password-box:has(input:not(:placeholder-shown)) > input::placeholder, .delete-container .delete-account form .password-con .password-box:has(input:not(:placeholder-shown)) i {
-  color: #299f29;
+.delete-container .delete-account form > .twofaotp > .input-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.delete-container .delete-account form .password-con .password-box input {
-  width: 100%;
+.delete-container .delete-account form > .twofaotp > .input-div > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: wrap;
+  width: min(100%, 400px);
+  margin: auto;
+}
+.delete-container .delete-account form > .twofaotp > .input-div > div:first-child > input {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
   outline: none;
-  transition: all 0.2s linear;
-  border: none;
+  border: 2px solid rgba(41, 159, 41, 0.537254902);
+  color: #299f29;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+.delete-container .delete-account form > .twofaotp > .input-div > div:first-child > input:hover, .delete-container .delete-account form > .twofaotp > .input-div > div:first-child > input:focus, .delete-container .delete-account form > .twofaotp > .input-div > div:first-child > input:not(:placeholder-shown) {
+  border: 2px solid #299f29;
+}
+.delete-container .delete-account form > .twofaotp > .input-div > div:last-child {
+  width: min(100%, 400px);
+  margin: auto;
+  color: red;
   font-size: 14px;
   font-weight: 600;
-  padding: 0 10px;
-  color: #299f29;
-}
-.delete-container .delete-account form .password-con .password-box input::placeholder {
-  color: rgba(41, 159, 41, 0.7176470588);
-}
-.delete-container .delete-account form .password-con .password-box i {
-  font-size: 18px;
-  font-weight: 600;
-  color: rgba(41, 159, 41, 0.7176470588);
-}
-.delete-container .delete-account form .password-con > div {
-  color: red;
-  font-size: 13px;
-  font-weight: 500;
-  margin-top: 5px;
+  cursor: context-menu;
 }
 .delete-container .delete-account form .buttons {
   display: flex;

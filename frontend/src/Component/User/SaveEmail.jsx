@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import useWindowSize from "../../Functions/useWindowSize";
 import { CircularProgress } from '@mui/material';
 import { SaveContext } from "./Save";
@@ -12,7 +12,9 @@ const SaveEmail = () => {
     const { isEdit, setIsEdit, emailDocs, setEmailDocs, emailError, setEmailError, cat, setCat, newcat, newsetCat, catagory, setCatagory, loader, setLoader } = useContext(SaveContext);
 
     const size = useWindowSize();
-    const [eye, setEye] = useState(false)
+    const [eye, setEye] = useState(false);
+    const [strengthText, setStrengthText] = useState("Very Poor");
+    const [color, setColor] = useState("gray");
 
     const addEmail = async () => {
         try {
@@ -39,8 +41,11 @@ const SaveEmail = () => {
             }
 
             setEmailDocs({ email: "", password: "", notes: "" })
-            setEmailError({ email: "", password: "" })
-            setLoader(false)
+            setEmailError({ email: "", password: "" });
+            setLoader(false);
+            setStrengthText("Very Poor")
+            setColor("gray");
+            notify("success", "Email has been added successfully.")
         } catch (catcherror) {
             setEmailDocs({ email: "", password: "" })
             setLoader(false)
@@ -55,7 +60,7 @@ const SaveEmail = () => {
                     })
                 })
             } else {
-                notify("error", catcherror?.response?.data?.message)
+                notify("error", catcherror?.response?.data?.message || catcherror?.message || "Something went wrong")
             }
         }
     }
@@ -90,6 +95,8 @@ const SaveEmail = () => {
             setEmailError({ email: "", password: "" })
             setLoader(false)
             setIsEdit(false)
+            setStrengthText("Very Poor");
+            setColor("gray");
             notify("success", "Your changes have been saved.")
         } catch (catcherror) {
             setEmailError({ email: "", password: "" })
@@ -110,9 +117,6 @@ const SaveEmail = () => {
         }
 
     }
-
-     const [strengthText, setStrengthText] = useState("Very Poor");
-    const [color, setColor] = useState("gray");
 
     const checkPasswordStrength = (password) => {
         let score = 0;
@@ -158,6 +162,12 @@ const SaveEmail = () => {
         }
     };
 
+    useEffect(() => {
+        if (emailDocs.password) {
+            checkPasswordStrength(emailDocs.password)
+        }
+    }, [emailDocs])
+
     return <form className="save-container" onSubmit={(e) => {
         e.preventDefault();
         isEdit ? updateEmail() : addEmail();
@@ -169,10 +179,10 @@ const SaveEmail = () => {
         <div className={size < 600 ? "wrap" : ""}>
             <div className="password-con">
                 <div className="password">
-                    <input type={eye ? "text" : "password"} placeholder='Enter password' name='password' value={emailDocs?.password} onChange={(e) => { 
+                    <input type={eye ? "text" : "password"} placeholder='Enter password' name='password' value={emailDocs?.password} onChange={(e) => {
                         setEmailDocs({ ...emailDocs, [e.target.name]: e.target.value })
                         checkPasswordStrength(e.target.value);
-                        }} />
+                    }} />
                     {eye ? <i className="ri-eye-line" onClick={() => { setEye(!eye) }}></i> : <i className="ri-eye-off-line" onClick={() => { setEye(!eye) }}></i>}
                 </div>
                 {emailError?.password && <div className="error">* {emailError.password}</div>}
@@ -200,7 +210,9 @@ const SaveEmail = () => {
                     if (!loader) {
                         setEmailDocs({ email: "", password: "", notes: "" });
                         setEmailError({ email: "", password: "" })
-                        setIsEdit(false)
+                        setIsEdit(false);
+                        setStrengthText("Very Poor");
+                        setColor("gray");
                     }
                 }}>Cancel</button>
                 {!loader ? <button type='submit'><MdEditSquare className='edit-icon' /> Edit</button> :

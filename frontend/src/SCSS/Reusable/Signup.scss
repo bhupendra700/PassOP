@@ -220,36 +220,23 @@ $color : #299f29;
         .google {
             // background-color: red;
             color: $color;
-            border-radius: 100px;
+            border-radius: 5px;
             padding: 8px;
             font-size: 16px;
             font-weight: 550;
-            border: 1px solid $color;
+            border: 1px solid rgba(0, 0, 0, 0.118);
             cursor: pointer;
             transition: all .12s linear;
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 10px;
 
+            border: 1px solid rgba(0, 0, 255, 0.195);
 
             &:hover {
-                border: 1px solid $color;
-                background-color: $color;
+                background-color: rgba(134, 134, 225, 0.158);
                 color: white;
-
-                .circularprogress {
-                    color: white;
-                }
-            }
-
-            i {
-                padding-right: 5px;
-                font-size: 20px;
-                font-weight: 600;
-            }
-
-            .circularprogress {
-                color: $color;
             }
         }
     }

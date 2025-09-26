@@ -240,7 +240,7 @@ const RequestVault = () => {
                 {(isLoading || searchUserResult) && <div className='result'>
                     {(searchUserResult && searchUserResult !== "noresult") ? <div className={`user ${size < 290 ? "wrap" : ""}`}>
                         <div className="image" style={{ backgroundColor: searchUserResult.photoURL }}>
-                            {false ? <img src={logo} alt='user' height={10} /> : searchUserResult.name.substring(0, 1).toUpperCase()}
+                            {searchUserResult.photoURL.startsWith("https://") ? <img src={searchUserResult.photoURL} alt='user' /> : searchUserResult.name[0].toUpperCase()}
                         </div>
                         <div className='details'>
                             <div>{searchUserResult.name}</div>
@@ -254,7 +254,7 @@ const RequestVault = () => {
                 {pendingShareableUsers.map((ele, idx) => {
                     return <div className={`user ${size < 290 ? "wrap" : ""}`} key={idx}>
                         <div className="image" style={{ backgroundColor: ele.photoURL }}>
-                            {true ? ele.name.substring(0, 1).toUpperCase() : <img src={ele.photoURL} alt="user" />}
+                            {!ele.photoURL.startsWith("https://") ? ele.name.substring(0, 1).toUpperCase() : <img src={ele.photoURL} alt="user" />}
                         </div>
                         <div className="details">
                             <div>{ele.name}</div>
@@ -279,7 +279,7 @@ const RequestVault = () => {
                 {renderAcceptedShareableUsers.length === 0 ? <div className="noresult">No User Found</div> : renderAcceptedShareableUsers.map((ele, idx) => {
                     return <div className="user" key={idx}>
                         <div className="image" style={{ backgroundColor: ele.photoURL }}>
-                            {1 ? ele.name[0].toUpperCase() : <img src={logo} alt="image" />}
+                            {!ele.photoURL.startsWith("https://") ? ele.name[0].toUpperCase() : <img src={ele.photoURL} alt="image" />}
                         </div>
                         <div className="details">
                             <div>{ele.name}</div>

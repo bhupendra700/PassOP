@@ -22,7 +22,7 @@ const UserMain = () => {
   const setValidCat = () => {
     const localcat = localStorage.getItem("cat");
 
-    const allCat = catagory.map((ele) => {
+    const allCat = (catagory || []).map((ele) => {
       return ele.name;
     })
 
@@ -31,7 +31,7 @@ const UserMain = () => {
         return ele.name === localcat
       });
     } else { //localcat = null
-      localStorage.setItem("cat", catagory[0].name);
+      localStorage.setItem("cat", catagory[0]?.name);
       return catagory[0];
     }
   }

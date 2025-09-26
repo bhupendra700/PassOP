@@ -21,6 +21,14 @@ const addPass = async (req, res) => {
         const { url, username, password, notes, Doctype } = req.body.docs;
         const { cat } = req.body;
 
+        const ValidUser = req.user;
+        const storedAllPassword = ValidUser.AllPassword;
+        const isPremiumUser = ValidUser.plan_type === "Ultimate" || ((ValidUser.plan_type === "Pro") && (new Date(ValidUser.plan_expiry) > new Date()))
+
+        if (!isPremiumUser && (storedAllPassword?.length >= 50)) {
+            throw new Error("You have reached the Free plan limit. Upgrade to Pro or Ultimate to store unlimited passwords.")
+        }
+
         const encryptPassword = CryptoJS.AES.encrypt(password, process.env.CRYPTO_SECRET_KEY).toString();
 
         const newPassword = {
@@ -52,6 +60,14 @@ const addEmail = async (req, res) => {
         const userId = req.userId;
         const { email, password, notes, Doctype } = req.body.docs;
         const { cat } = req.body;
+
+        const ValidUser = req.user;
+        const storedAllPassword = ValidUser.AllPassword;
+        const isPremiumUser = ValidUser.plan_type === "Ultimate" || ((ValidUser.plan_type === "Pro") && (new Date(ValidUser.plan_expiry) > new Date()))
+
+        if (!isPremiumUser && (storedAllPassword?.length >= 50)) {
+           throw new Error("You have reached the Free plan limit. Upgrade to Pro or Ultimate to store unlimited emials.");
+        }
 
         const encryptPassword = CryptoJS.AES.encrypt(password, process.env.CRYPTO_SECRET_KEY).toString();
 
@@ -102,6 +118,15 @@ const addCard = async (req, res) => {
         const userId = req.userId;
 
         const { docs, cat } = req.body;
+
+        const ValidUser = req.user;
+        const storedAllPassword = ValidUser.AllPassword;
+        const isPremiumUser = ValidUser.plan_type === "Ultimate" || ((ValidUser.plan_type === "Pro") && (new Date(ValidUser.plan_expiry) > new Date()))
+
+        if (!isPremiumUser && (storedAllPassword?.length >= 50)) {
+           throw new Error("You have reached the Free plan limit. Upgrade to Pro or Ultimate to store unlimited cards.")
+        }
+
         const { card_holder_name, card_number, expiry_date } = docs;
 
         const clean_expiry_date = expiry_date.split("/").map((ele) => ele.trim()).join("/")
@@ -293,12 +318,28 @@ const addCollection = async (req, res) => {
     try {
         const { name } = req.body;
 
+        const ValidUser = req.user;
+        const storedCollection = ValidUser.collections;
+        const isPremiumUser = ValidUser.plan_type === "Ultimate" || ((ValidUser.plan_type === "Pro") && (new Date(ValidUser.plan_expiry) > new Date()))
+
         if (!name || !name.trim()) {
             throw new Error("Please provide a collection name.");
         }
 
         if (name.length < 2) {
             throw new Error("Collection name must be 2 character long");
+        }
+
+        const duplicateName = storedCollection.find((ele) => {
+            return ele.name === name;
+        })
+
+        if (duplicateName) {
+            throw new Error("Collection name is already exists.")
+        }
+
+        if (!isPremiumUser && (storedCollection?.length >= 3)) {
+            throw new Error("Free plan limit reached. Upgrade to Pro or Ultimate to create unlimited collections.");
         }
 
         const collection = { _id: uuid(), name, passwordID: [] };
@@ -327,6 +368,9 @@ const renameCollection = async (req, res) => {
         const { colid, name } = req.body;
         const userId = req.userId;
 
+        const ValidUser = req.user;
+        const storedCollection = ValidUser.collections;
+
         if (!colid || !colid.trim()) {
             throw new Error("Collection ID is required.");
         }
@@ -337,6 +381,14 @@ const renameCollection = async (req, res) => {
 
         if (name.length < 2) {
             throw new Error("Collection name must be 2 character long");
+        }
+
+        const duplicateName = storedCollection.find((ele) => {
+            return ele.name === name;
+        })
+
+        if (duplicateName) {
+            throw new Error("Collection name is already exists.")
         }
 
         await user.updateOne(
@@ -503,19 +555,19 @@ const contactUs = async (req, res) => {
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
+  <div className="container">
+    <div className="header">
       <h1>📩 New Contact Request - PassOP</h1>
     </div>
-    <div class="content">
-      <p><span class="highlight">Name:</span> ${name}</p>
-      <p><span class="highlight">Email:</span> ${email}</p>
-      <p><span class="highlight">Message:</span></p>
-      <div class="message-box">
+    <div className="content">
+      <p><span className="highlight">Name:</span> ${name}</p>
+      <p><span className="highlight">Email:</span> ${email}</p>
+      <p><span className="highlight">Message:</span></p>
+      <div className="message-box">
         ${message}
       </div>
     </div>
-    <div class="footer">
+    <div className="footer">
       This email was sent from the <strong>PassOP Contact Form</strong>. <br>
       <a href="https://passopfree.netlify.app">Visit Website</a>
     </div>

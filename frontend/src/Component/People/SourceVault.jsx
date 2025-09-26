@@ -201,7 +201,7 @@ const SourceVault = () => {
         {(pendingrequest || []).map((ele, idx) => {
           return <div className={`user ${size < 290 ? "wrap" : ""}`} key={idx}>
             <div className="image" style={{ backgroundColor: ele.photoURL }}>
-              {1 ? ele.name[0].toUpperCase() : <img src={logo} alt="user" />}
+              {!ele.photoURL.startsWith("https://") ? ele.name[0].toUpperCase() : <img src={ele.photoURL} alt="user" />}
             </div>
             <div className="details">
               <div>{ele.name}</div>
@@ -227,7 +227,7 @@ const SourceVault = () => {
         {renderacceptedRequest && renderacceptedRequest.length !== 0 ? (renderacceptedRequest).map((ele, idx) => {
           return <div className="user" key={idx}>
             <div className="image" style={{ backgroundColor: ele.photoURL }}>
-              {1 ? ele.name[0].toUpperCase() : <img src={logo} alt="image" />}
+              {!ele.photoURL.startsWith("https://") ? ele.name[0].toUpperCase() : <img src={ele.photoURL} alt="image" />}
             </div>
             <div className="details">
               <div>{ele.name}</div>

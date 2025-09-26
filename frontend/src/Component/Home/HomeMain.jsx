@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import '../../CSS/Home/homemain.css'
 import Save from './Save';
 import HomeTable from './HomeTable';
+import { toast } from 'react-toastify';
+import CustomeToast from '../CustomeToast.jsx/CustomeToast';
 
 const HomeMain = () => {
   const [data, setData] = useState([])
@@ -233,7 +235,6 @@ const HomeMain = () => {
       })
     }
   }, [editId])
-
   return <section className='homemain'>
     <div className="main-container">
       <Save setData={setData} data={data} docs={docs} setDocs={setDocs} isEdit={isEdit} setIsEdit={setIsEdit} />

@@ -1,0 +1,289 @@
+.show2fapopup {
+  background-color: rgba(255, 255, 255, 0.268);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  overflow: auto;
+  scrollbar-width: thin;
+  z-index: 200;
+}
+.show2fapopup > .generateqr-con {
+  background-color: white;
+  margin: auto 0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: min(100%, 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.show2fapopup > .generateqr-con > .header-close {
+  position: relative;
+  width: 100%;
+}
+.show2fapopup > .generateqr-con > .header-close h1 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+  cursor: context-menu;
+  color: #299f29;
+  padding: 0 30px;
+}
+.show2fapopup > .generateqr-con > .header-close i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.142);
+  transition: all 0.15s linear;
+}
+.show2fapopup > .generateqr-con > .header-close i:hover {
+  border: 1px solid #299f29;
+  background-color: #299f29;
+  color: white;
+}
+.show2fapopup > .generateqr-con > .message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #299f29;
+  cursor: context-menu;
+}
+.show2fapopup > .generateqr-con > .qrimage {
+  background-color: yellow;
+  border-radius: 5px;
+  width: min(100%, 400px);
+  display: flex;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.show2fapopup > .generateqr-con > .qrimage > img {
+  width: 100%;
+  height: 100%;
+}
+.show2fapopup > .generateqr-con > .note {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #299f29;
+  cursor: context-menu;
+}
+.show2fapopup > .generateqr-con > .tip {
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 500;
+}
+.show2fapopup > .generateqr-con > button {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #299f29;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 90px;
+  transition: all 0.15s linear;
+}
+.show2fapopup > .generateqr-con > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.show2fapopup > .generateqr-con > button:has(.loader) {
+  background-color: #299f29;
+}
+.show2fapopup > .generateqr-con > button > .loader {
+  color: white;
+}
+.show2fapopup > .showqr-con {
+  margin: auto 0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: min(100%, 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+}
+.show2fapopup > .showqr-con > .header-close {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.show2fapopup > .showqr-con > .header-close i {
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.142);
+  transition: all 0.15s linear;
+}
+.show2fapopup > .showqr-con > .header-close i:hover {
+  border: 1px solid #299f29;
+  background-color: #299f29;
+  color: white;
+}
+.show2fapopup > .showqr-con > .qrimage {
+  background-color: white;
+  border-radius: 5px;
+  width: min(100%, 300px);
+  display: flex;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: inset rgba(60, 64, 67, 0.3) 0px 0px 1px 0px, inset rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 5px;
+}
+.show2fapopup > .showqr-con > .qrimage > img {
+  width: 100%;
+  height: 100%;
+}
+.show2fapopup > .showqr-con > .app {
+  font-size: 12px;
+  font-weight: 500;
+  cursor: context-menu;
+  text-align: center;
+  color: #299f29;
+}
+.show2fapopup > .showqr-con > .code {
+  cursor: context-menu;
+  width: 100%;
+}
+.show2fapopup > .showqr-con > .code > div:first-child {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #299f29;
+}
+.show2fapopup > .showqr-con > .code > div:last-child {
+  background-color: rgb(246, 241, 241);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2px;
+  gap: 5px;
+  border-radius: 3px;
+}
+.show2fapopup > .showqr-con > .code > div:last-child > div {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  padding-left: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.show2fapopup > .showqr-con > .code > div:last-child > i {
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 550;
+  flex-shrink: 0;
+}
+.show2fapopup > .showqr-con > .otp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding-top: 20px;
+}
+.show2fapopup > .showqr-con > .otp > .message {
+  font-size: 15px;
+  font-weight: 550;
+  cursor: context-menu;
+  color: #299f29;
+  width: 100%;
+}
+.show2fapopup > .showqr-con > .otp > .qr-box {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.show2fapopup > .showqr-con > .otp > .qr-box input[type=text] {
+  border: 2px solid rgba(0, 128, 0, 0.24);
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  outline: none;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #299f29;
+}
+.show2fapopup > .showqr-con > .otp > .qr-box input[type=text]:hover, .show2fapopup > .showqr-con > .otp > .qr-box input[type=text]:focus, .show2fapopup > .showqr-con > .otp > .qr-box input[type=text]:not(:placeholder-shown) {
+  border: 2px solid #299f29;
+}
+.show2fapopup > .showqr-con > .otp > .error {
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: context-menu;
+  width: 100%;
+}
+.show2fapopup > .showqr-con > .otp > button {
+  background-color: white;
+  color: #299f29;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  transition: all 0.12s linear;
+  width: 100%;
+}
+.show2fapopup > .showqr-con > .otp > button:hover {
+  background-color: #299f29;
+  color: white;
+}
+.show2fapopup > .showqr-con > .otp > button:has(.loader) {
+  background-color: #299f29;
+}
+.show2fapopup > .showqr-con > .otp > button > .loader {
+  color: white;
+}
+.show2fapopup > .showqr-con > .tip {
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+  font-weight: 600;
+  cursor: context-menu;
+}

@@ -1,5 +1,5 @@
 import { CircularProgress } from '@mui/material'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import '../../CSS/Reusable/DeleteAcc.css'
 import { ContextData } from '../../main'
 import { useNavigate } from 'react-router-dom'
@@ -8,41 +8,43 @@ import { authAxios } from '../../config/axiosconfig'
 const DeleteAccount = ({ setIsDeleteAcc }) => {
   const navigate = useNavigate()
 
+  const Inputref = useRef([])
   const [loader, setLoader] = useState(false)
-  const [error, setError] = useState("");
-  const [password, setPassword] = useState("");
 
-  const { notify, user, setUser , socket} = useContext(ContextData);
+  const [error, setError] = useState("")
+
+  const { notify, user, setUser, socket } = useContext(ContextData);
 
   const handleDelete = async () => {
+    setError("")
     try {
       setLoader(true);
 
-      if (password.length < 8) {
-        setError("Password must be 8 character long");
-        setLoader(false);
-        return;
+      if(user.is2FA){
+        const otpValue = Inputref.current.map((ele) => ele.value).join("")
+
+        await authAxios.post('/delete2FAVerify' , {otp : otpValue});
       }
 
-      const res = await authAxios.delete("/delUser", { data: { email: user?.email, password } })
+      const res = await authAxios.delete(`/delUser/${user.email}`, { email: user?.email })
 
       const data = { userId: user._id, Ids: res.data.Ids }
-      
+
       socket.emit("deleteUser", data)
 
       if (res.data.success) {
         setUser(null)
       }
 
+      localStorage.removeItem("passKey");
       navigate('/')
-      setPassword("")
       setLoader(false);
     } catch (error) {
       setLoader(false);
-      if (error?.response?.data?.message) {
-        setError(error?.response?.data?.message)
-      } else if (error?.message) {
-        notify("error", error?.message);
+      if(error?.response?.data?.message && error?.response?.data?.message.toLowerCase().includes("otp")){
+        setError(error?.response?.data?.message);
+      }else{
+        notify("error", error?.response?.data?.message || error?.message || "Something went wrong");
       }
     }
   }
@@ -51,6 +53,41 @@ const DeleteAccount = ({ setIsDeleteAcc }) => {
     document.body.style.overflow = "hidden"
     return () => document.body.style.overflow = "auto"
   }, [])
+
+  const handleInput = (e, idx) => {
+    e.target.value = e.target.value.replace(/[^0-9]/g, '');
+
+    if (e.target.value.length > 0 && idx < Inputref.current.length - 1) {
+      Inputref.current[idx + 1].focus();
+    }
+  }
+
+  const handleDel = (e, idx) => {
+    if (e.key === "Backspace" && idx > 0) {
+      e.preventDefault();
+      Inputref.current[idx].value = "";
+      Inputref.current[idx - 1].focus();
+    }
+  }
+
+  const handlePaste = async () => {
+    let numbers = (await navigator.clipboard.readText()).split("");
+
+    let lastIndex = 0;
+
+    for (let idx = 0; idx < numbers.length; idx++) {
+      const number = numbers[idx];
+      if (isNaN(number)) {
+        break;  // loop yahi ruk jayega
+      }
+      if (idx < Inputref.current.length) {
+        Inputref.current[idx].value = number;
+        lastIndex = idx;
+      }
+    }
+
+    lastIndex < 5 ? Inputref.current[lastIndex + 1].focus() : Inputref.current[lastIndex].focus();
+  }
 
   return <div className="delete-container">
     <div className="delete-account">
@@ -71,16 +108,17 @@ const DeleteAccount = ({ setIsDeleteAcc }) => {
         e.preventDefault();
         handleDelete();
       }}>
-        <div className="password-con">
-          Password
-          <div className="password-box">
-            <i className="ri-lock-2-line"></i>
-            <input type="password" placeholder='Enter Password' required value={password} onChange={(e) => { setPassword(e.target.value) }} />
+        {user.is2FA && <div className='twofaotp'>
+          <div className="message">Enter the 6-digit OTP from your authenticator app.</div>
+          <div className='input-div'>
+            <div>
+              {Array(6).fill(0).map((ele, idx) => {
+                return <input type="text" key={idx} placeholder=' ' onInput={(e) => { handleInput(e, idx) }} ref={(e) => { Inputref.current[idx] = e }} maxLength={1} onKeyDown={(e) => { handleDel(e, idx) }} onPaste={()=>{handlePaste()}}/>
+              })}
+            </div>
+            {error && <div>*{error}</div>}
           </div>
-          {error && <div className="error">
-            * {error}
-          </div>}
-        </div>
+        </div>}
         <div className="buttons">
           <button className='cancel' type='button' onClick={() => {
             if (!loader) {

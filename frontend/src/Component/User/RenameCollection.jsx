@@ -18,17 +18,9 @@ const RenameCollection = ({ setShowRenameCollection, showRenameCollection, setCa
 
   const renameCollection = async () => {
     try {
-      setRenaming(true)
+      setRenaming(true);
 
-      const duplicateName = catagory.find((ele) => {
-        return ele.name === inputval;
-      })
-
-      if (duplicateName) {
-        throw new Error("Collection name is already exists.")
-      }
-
-      await userAxios.post('/renamecollection', { colid: cat._id, name: inputval });
+      const res = await userAxios.post('/renamecollection', { colid: cat._id, name: inputval });
 
       localStorage.setItem("cat", inputval);
 
@@ -45,6 +37,7 @@ const RenameCollection = ({ setShowRenameCollection, showRenameCollection, setCa
       setRenaming(false)
       setShowRenameCollection(false)
       setInputVal("")
+      notify("success" , res.data.message);
     } catch (error) {
       setRenaming(false)
       setError("")

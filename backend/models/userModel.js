@@ -94,7 +94,7 @@ const sendSchema = new Schema({
         type: String,
         required: true,
     },
-} , {_id : false})
+}, { _id: false })
 
 const recievedSchema = new Schema({
     _id: {
@@ -121,7 +121,7 @@ const recievedSchema = new Schema({
         type: String,
         required: true,
     },
-} , {_id : false})
+}, { _id: false })
 
 const userSchema = new Schema({
     _id: {
@@ -149,6 +149,10 @@ const userSchema = new Schema({
         type: String,
         default: "green", // ya koi image URL
     },
+    provider: {
+        type: String,
+        default: "password"
+    },
     otp: {
         type: String,
         default: "",
@@ -156,6 +160,22 @@ const userSchema = new Schema({
     otpExpireAt: {
         type: Date,
         default: null,
+    },
+    twoFactorSecret: {
+        type: String,
+        default: "",
+    },
+    is2FA: {
+        type: Boolean,
+        default: false
+    },
+    isPassKey: {
+        type: Boolean,
+        default: false
+    },
+    passKey: {
+        type: Object,
+        default: {}
     },
     collections: {
         type: [collectionSchema],
@@ -176,6 +196,15 @@ const userSchema = new Schema({
     recieved: {
         type: [recievedSchema],
         default: [],
+    },
+    plan_type: {
+        type: String,
+        enum: ["Free", "Pro", "Ultimate"],
+        default: "Free"
+    },
+    plan_expiry: {
+        type: Date,
+        default: null
     }
 });
 

@@ -87,7 +87,6 @@ $color : #299f29;
 
                 &>summary {
                     list-style: none;
-                    background-color: red;
                     height: 40px;
                     width: 40px;
                     border-radius: 50%;
@@ -101,6 +100,16 @@ $color : #299f29;
                         color: white;
                         font-size: 25px;
                         font-weight: 600;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &>img {
+                        height: 100%;
+                        width: 100%;
                     }
                 }
 
@@ -141,14 +150,58 @@ $color : #299f29;
                         border-radius: 5px;
                         color: $color;
                         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-                        i{
+
+                        i {
                             font-size: 20px;
+                        }
+                    }
+
+                    &>.passKey_2FA {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 20px;
+
+                        &>button {
+                            background-color: transparent;
+                            padding: 6px 8px;
+                            font-size: 14px;
+                            border: none;
+                            font-weight: 600;
+                            color: $color;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            transition: all .15s linear;
+                            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+                            width: 100%;
+
+                            i {
+                                font-size: 19px;
+                            }
+
+
+                            &:hover {
+                                background-color: $color;
+                                color: white;
+
+                                &>.loader{
+                                    color: white;
+                                }
+                            }
+
+                            &>.loader{
+                                color: $color;
+                            }
                         }
                     }
 
                     &>button {
                         background-color: transparent;
-                        padding:6px 8px;
+                        padding: 6px 8px;
                         font-size: 14px;
                         border: none;
                         font-weight: 600;
@@ -157,21 +210,19 @@ $color : #299f29;
                         cursor: pointer;
                         transition: all .15s linear;
                         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+
+                        i {
+                            font-size: 19px;
+                        }
 
 
                         &:hover {
                             background-color: $color;
                             color: white;
-                        }
-
-                        &:last-child {
-                            color: red;
-
-                            &:hover {
-                                background-color: red;
-                                color: white;
-                            }
-
                         }
                     }
 
@@ -226,6 +277,11 @@ $color : #299f29;
                 color: white;
                 font-size: 25px;
                 font-weight: 600;
+
+                &>img {
+                    height: 100%;
+                    width: 100%;
+                }
             }
 
             &>div:last-child {
@@ -254,8 +310,8 @@ $color : #299f29;
             display: flex;
             flex-direction: column;
             position: relative;
-            padding-top: 20px;
-            gap: 20px;
+            padding-top: 15px;
+            gap: 10px;
 
             &>i {
                 color: $color;
@@ -284,35 +340,41 @@ $color : #299f29;
                 align-items: center;
                 cursor: context-menu;
 
-                & > div{
+                &>div {
                     background-color: $color;
-                    height: 60px;
-                    width: 60px;
+                    height: 80px;
+                    width: 80px;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     color: white;
-                    font-size: 35px;
+                    font-size: 50px;
                     font-weight: 600;
+                    overflow: hidden;
+
+                    &>img {
+                        height: 100%;
+                        width: 100%;
+                    }
                 }
-                
+
             }
 
             .header-details {
                 text-align: center;
                 font-size: 16px;
                 font-weight: 600;
-                margin-bottom:30px;
+                margin-bottom: 15px;
                 cursor: context-menu;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 10px;
+                gap: 5px;
                 color: $color;
 
-                i{
+                i {
                     font-size: 22px;
                 }
             }
@@ -322,7 +384,7 @@ $color : #299f29;
                 flex-direction: column;
                 align-items: center;
                 gap: 20px;
-                height: max(600px , 100%);
+                height: max(600px, 100%);
                 // background-color: red;
 
                 &>button,
@@ -340,15 +402,27 @@ $color : #299f29;
                     text-decoration: none;
                     color: $color;
                     transition: all .15s linear;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
 
                     &:hover {
                         background-color: $color;
                         color: white;
+
+                        &>.loader {
+                            color: white;
+                        }
                     }
 
                     &.active {
                         background-color: $color;
                         color: white;
+                    }
+
+                    &>.loader {
+                        color: $color;
                     }
                 }
 
@@ -363,6 +437,7 @@ $color : #299f29;
                     }
                 }
             }
+
         }
 
         &.go {
@@ -370,6 +445,17 @@ $color : #299f29;
             animation: out .2s ease-in 1;
         }
     }
+
+}
+
+.layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    height: 100dvh;
+    width: 100dvw;
+    z-index: 200;
 }
 
 @keyframes in {

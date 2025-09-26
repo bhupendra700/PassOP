@@ -1,11 +1,14 @@
 import { CircularProgress } from "@mui/material"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import useHandleclickoutside from "../../Functions/useHandleclickoutside"
 import useHideScroll from "../../Functions/useHideScroll";
 import { userAxios } from "../../config/axiosconfig";
+import { ContextData } from "../../main";
 
 const DeleteCollections = ({ setShowDelCollection, showDelCollection, cat, setCat, setCatagory, catagory }) => {
     const [deleting, setDeleting] = useState(false);
+
+    const { notify } = useContext(ContextData)
 
     useHandleclickoutside("popup", "delete-collection-container", setShowDelCollection, deleting);
 
@@ -19,16 +22,21 @@ const DeleteCollections = ({ setShowDelCollection, showDelCollection, cat, setCa
             const res = await userAxios.post('/deletecollection', { colid: cat._id })
 
             if (res.data.success) {
-                localStorage.setItem("cat", "All");
-                setCatagory(catagory.filter((ele) => {
+                let catTempId = 0;
+                setCatagory(catagory.filter((ele, idx) => {
+                    if (ele._id === cat._id) {
+                        catTempId = idx - 1;
+                    }
                     return ele._id !== cat._id
                 }))
+                localStorage.setItem("cat", catagory[catTempId].name);
 
-                setCat(catagory[0]);
+                setCat(catagory[catTempId]);
             }
 
             setDeleting(false);
             setShowDelCollection(false);
+            notify("success", res.data.message);
         } catch (error) {
             setDeleting(false)
             if (error?.response?.data?.message) {

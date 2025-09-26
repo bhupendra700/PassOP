@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose"
 
-const shareShema = new Schema({
+const shareSchema = new Schema({
     from : {
         type : String,
         required : true,
@@ -23,6 +23,6 @@ const shareShema = new Schema({
     }
 })
 
-const share = mongoose.models.shareShema || mongoose.model("share", shareShema);
+const share = mongoose.models.share || mongoose.model("share", shareSchema);
 
 export default share;

@@ -7,6 +7,8 @@ import { authAxios, shareAxios } from './config/axiosconfig.js';
 import io from "socket.io-client"
 import { getToken, onMessage } from "firebase/messaging"
 import { messaging } from "./Functions/Firebase.js"
+import { backendUrl } from './config/axiosconfig.js';
+import CustomeToast from './Component/CustomeToast.jsx/CustomeToast.jsx';
 
 const ContextData = createContext();
 
@@ -25,7 +27,7 @@ const notify = (method, message) => {
     });
 }
 
-const socket = io("https://passop-sj3o.onrender.com");
+const socket = io(backendUrl);
 
 const Root = () => {
     const [user, setUser] = useState(null);
@@ -90,11 +92,16 @@ const Root = () => {
     const [passwordCount, setPasswordCount] = useState(0);
 
     useEffect(() => {
-        setPasswordCount(data.length)
+        setPasswordCount(data?.length)
     }, [data])
 
     useEffect(() => {
         if (user) {
+            if (user.isPassKey) {
+                localStorage.setItem("passKey", user._id);
+            } else {
+                localStorage.removeItem("passKey");
+            }
             setData(user.AllPassword)
         }
     }, [user])
@@ -209,6 +216,7 @@ const Root = () => {
                 const token = await getToken(messaging, { vapidKey: "BIKWyOoNTRt-Ef0DP1iU1dVf712O5AfdbKOWxIT3s1M89tGYLeMYWuisl-cBh-QizcBipSLPaFuRk36iPexkVRU" })
 
                 const localToken = localStorage.getItem("token");
+
                 if (localToken !== token) {
                     await shareAxios.post("/registerToken", { token });
                     localStorage.setItem("token", token);
@@ -225,10 +233,19 @@ const Root = () => {
 
     useEffect(() => {
         const unsubscribe = onMessage(messaging, (payload) => {
-            new Notification(payload.data.title, {
-                body: payload.data.body,
-                icon: '/icon.png'
-            })
+            console.log(payload.data.title, payload.data.body);
+            toast(<CustomeToast title={payload.data.title} body={payload.data.body} />, {
+                toastId: "123",
+                closeButton: false,
+                draggable: true,
+                draggablePercent: 20,
+                position: "top-right",
+                type: "default",
+                className: "no-padding-toast",
+                theme: "dark",
+                hideProgressBar: true,
+                autoClose: 10000
+            });
         })
 
         return () => unsubscribe
@@ -237,8 +254,8 @@ const Root = () => {
     return <ContextData.Provider value={{ notify, user, setUser, alert, setAlert, loginLoader, setLoginLoader, data, setData, passwordCount, setPasswordCount, shareableUsers, setShareableUsers, setRecieveableUsers, recieveableUsers, sentDocs, setSentDocs, receivedDocs, setReceivedDocs, socket }}>
         <Router>
             <App />
+            <ToastContainer />
         </Router >
-        <ToastContainer />
     </ContextData.Provider>
 }
 

@@ -60,18 +60,19 @@ const Userheader = () => {
           <img src={icon} alt="" />
           <div>&lt;<span>Pass</span>OP/&gt;</div>
         </div>
-        {size > 800 ? <div className="nav">
+        {size > 950 ? <div className="nav">
           <NavLink className="link" to={`/`}><i className="ri-home-4-line"></i> Home</NavLink>
           <NavLink className="link" to={"/about"}><i className="ri-info-card-line"></i> About</NavLink>
           <NavLink className="link" to={"/contactus"}><i className="ri-contacts-line"></i>  Contact Us</NavLink>
           <NavLink className="link" onClick={(e)=>{e.preventDefault() ; setAlert(true)}} to={"/people"}><i className="ri-p2p-fill" ></i> People</NavLink>
+          <NavLink className="link" to={"/pricing"}><i className="ri-price-tag-3-line"></i>Pricing</NavLink>
           <button onClick={() => { setIsLogin(true) }}><i className="ri-login-box-line"></i> Login</button>
         </div> :
           <div className="mob-nav">
             <div className="hem" onClick={() => { setSlider(!slider) }}><i className="ri-menu-line"></i></div>
           </div>}
       </div>
-      {(size <= 800 && slider) && <div className="bottom">
+      {(size <= 950 && slider) && <div className="bottom">
         <div className="bottom-content">
           <i className="ri-close-line" onClick={() => { closeSlider() }}></i>
           <div className="logo">
@@ -87,6 +88,7 @@ const Userheader = () => {
             <NavLink className="link" to={"/about"} onClick={() => { closeSlider() }}><i className="ri-info-card-line"></i> About</NavLink>
             <NavLink className="link" to={"/contactus"} onClick={() => { closeSlider() }}><i className="ri-contacts-line"></i>  Contact Us</NavLink>
             <NavLink className="link" onClick={(e) => {e.preventDefault() ; setAlert(true) ; closeSlider() }} to={"/people"}><i className="ri-p2p-fill"></i> People</NavLink>
+            <NavLink className="link" to={"/pricing"}><i className="ri-price-tag-3-line"></i> Pricing</NavLink>
             <button onClick={() => {
               closeSlider()
               setTimeout(() => {

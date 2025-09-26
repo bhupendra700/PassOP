@@ -97,7 +97,7 @@ const Save = ({ catagory, passDocs, setPassDocs, emailDocs, setEmailDocs, cardDo
             <summary>
                 <div>{count === 1 ? "Add Password" : count === 2 ? "Add Email" : "Add Card"}</div>
 
-                <div className="toggle-switch-main" onClick={(e) => { e.stopPropagation(); e.preventDefault(); if (!isEdit) { setCountFun((count % 3) + 1) } }}>
+                <div className="toggle-switch-main" onClick={(e) => { e.stopPropagation(); e.preventDefault(); if (!isEdit && !loader) { setCountFun((count % 3) + 1) } }}>
 
                     <div className={`toggle-switch-button ${count === 1 ? "passimg" : count === 2 ? "email" : "credit-card"}`}>{count === 1 ? <TbLockPlus className='react-font-lock' /> : count === 2 ? <MdOutlineMailLock className='react-font-email' /> : <BsCreditCard2Front className='react-font-card' />}
                     </div>

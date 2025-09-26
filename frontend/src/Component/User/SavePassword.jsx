@@ -12,7 +12,9 @@ const SavePassword = () => {
     const { isEdit, setIsEdit, passDocs, setPassDocs, passError, setPassError, cat, setCat, newcat, newsetCat, catagory, setCatagory, loader, setLoader } = useContext(SaveContext);
 
     const size = useWindowSize();
-    const [eye, setEye] = useState(false)
+    const [eye, setEye] = useState(false);
+    const [strengthText, setStrengthText] = useState("Very Poor");
+    const [color, setColor] = useState("gray");
 
     const addPassword = async () => {
         try {
@@ -40,7 +42,11 @@ const SavePassword = () => {
 
             setPassDocs({ url: "", username: "", password: "", notes: "" })
             setPassError({ url: "", username: "", password: "" })
-            setLoader(false)
+            setStrengthText("Very Poor")
+            setColor("gray")
+            setLoader(false);
+            notify("success", "Password has been added successfully.")
+
         } catch (catcherror) {
             setPassError({ url: "", username: "", password: "" })
             setLoader(false)
@@ -57,7 +63,7 @@ const SavePassword = () => {
                     })
                 })
             } else {
-                notify("error", catcherror?.response?.data?.message)
+                notify("error", catcherror?.response?.data?.message || catcherror?.message || "Something went wrong")
             }
         }
     }
@@ -80,9 +86,10 @@ const SavePassword = () => {
 
             setPassDocs({ url: "", username: "", password: "", notes: "" })
             setPassError({ url: "", username: "", password: "" })
-            setLoader(false)
-            setIsEdit(false)
-            notify("success", "Your changes have been saved.")
+            setLoader(false);
+            setIsEdit(false);
+            setStrengthText("Very Poor");
+            setColor("gray");
 
             setSentDocs((prev) => prev.map((ele) => {
                 if (ele._id === passDocs._id) {
@@ -93,6 +100,8 @@ const SavePassword = () => {
                     return ele;
                 }
             }))
+
+            notify("success", "Your changes have been saved.")
         } catch (catcherror) {
             setPassError({ url: "", username: "", password: "" })
             setLoader(false)
@@ -113,9 +122,6 @@ const SavePassword = () => {
             }
         }
     }
-
-    const [strengthText, setStrengthText] = useState("Very Poor");
-    const [color, setColor] = useState("gray");
 
     const checkPasswordStrength = (password) => {
         let score = 0;
@@ -160,6 +166,12 @@ const SavePassword = () => {
                 setStrengthText("Very Poor");
         }
     };
+
+    useEffect(() => {
+        if (passDocs.password) {
+            checkPasswordStrength(passDocs.password)
+        }
+    }, [passDocs])
 
     return <form className="save-container" onSubmit={(e) => {
         e.preventDefault();
@@ -208,7 +220,9 @@ const SavePassword = () => {
                     if (!loader) {
                         setPassDocs({ url: "", username: "", password: "", notes: "" });
                         setPassError({ url: "", username: "", password: "" })
-                        setIsEdit(false)
+                        setIsEdit(false);
+                        setStrengthText("Very Poor");
+                        setColor("gray")
                     }
                 }}>Cancel</button>
                 {!loader ? <button type='submit'><MdEditSquare className='edit-icon' /> Edit</button> :

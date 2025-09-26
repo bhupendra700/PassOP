@@ -19,7 +19,7 @@ const SaveCard = () => {
             const docs = { ...cardDocs, Doctype: "card" }
             const res = await userAxios.post('/addcard', { docs, cat });
 
-            if (res.data.success) {
+            if (res.data.success && !res.data?.upgrade) {
                 setData([...data, res.data.data]);
 
                 if (cat !== "All") {
@@ -39,7 +39,8 @@ const SaveCard = () => {
 
             setCardDocs({ card_holder_name: "", card_number: "", expiry_date: "" })
             setCardError({ card_holder_name: "", card_number: "", expiry_date: "" })
-            setLoader(false)
+            setLoader(false);
+            notify("success", "Cards has been added successfully.")
         } catch (catcherror) {
             setCardError({ card_holder_name: "", card_number: "", expiry_date: "" })
             setLoader(false)
@@ -56,7 +57,7 @@ const SaveCard = () => {
                     })
                 })
             } else {
-                notify("error", catcherror?.response?.data?.message)
+                notify("error", catcherror?.response?.data?.message || catcherror?.message || "Something went wrong")
             }
         }
     }

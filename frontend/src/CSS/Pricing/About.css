@@ -1,0 +1,129 @@
+.about-main-con {
+  min-height: calc(100dvh - 102px);
+}
+.about-main-con .page {
+  margin: auto;
+}
+.about-main-con .page .image {
+  height: 300px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url("../../Images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.about-main-con .page .image .first-statement {
+  width: min(90%, 1000px);
+  text-align: center;
+  font-size: min(40px, 8vw);
+  font-weight: 700;
+  color: white;
+  cursor: context-menu;
+  text-decoration: underline;
+}
+.about-main-con .page .image .first-statement > span {
+  color: #299f29;
+}
+.about-main-con .page .image .first-statement > span > span {
+  color: white;
+}
+.about-main-con .page .image .second-statement {
+  width: min(90%, 1000px);
+  text-align: center;
+  font-size: min(30px, 6vw);
+  color: white;
+  font-weight: 600;
+  cursor: context-menu;
+}
+.about-main-con .page .image .third-statement {
+  width: min(90%, 1000px);
+  text-align: center;
+  font-size: min(20px, 4vw);
+  color: white;
+  font-weight: 600;
+  cursor: context-menu;
+}
+.about-main-con .page .text-details {
+  width: min(90%, 1000px);
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.about-main-con .page .text-details .text-first {
+  color: #299f29;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: context-menu;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(41, 159, 41, 0.2745098039);
+  width: 100%;
+  line-height: 40px;
+}
+.about-main-con .page .text-details .text-first > span {
+  background-color: white;
+  color: #299f29;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.about-main-con .page .text-details .text-first > span > span {
+  color: black;
+}
+.about-main-con .page .text-details .text-first > span:not(:first-child) {
+  font-size: 20px;
+  font-weight: 650;
+}
+.about-main-con .page .text-details .text-second {
+  width: 100%;
+  color: #299f29;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: context-menu;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(41, 159, 41, 0.2745098039);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.about-main-con .page .text-details .text-second p {
+  font-size: 20px;
+  font-weight: 650;
+  background-color: #299f29;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+.about-main-con .page .text-details .text-third {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.about-main-con .page .text-details .text-third .safe-agurd-logo {
+  height: 35px;
+  width: 35px;
+}
+.about-main-con .page .text-details .text-third .safe-agurd-logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

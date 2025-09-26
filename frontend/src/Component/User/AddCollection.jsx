@@ -20,14 +20,6 @@ const AddCollection = ({ setShowAddCollection, showAddCollection, setCatagory, c
     try {
       setAdding(true)
 
-      const duplicateName = catagory.find((ele) => {
-        return ele.name === name;
-      })
-
-      if (duplicateName) {
-        throw new Error("Collection name is already exists.")
-      }
-
       const res = await userAxios.post('/addcollection', { name })
       if (res.data.success) {
         setCatagory([...catagory, res.data.data])
@@ -39,13 +31,15 @@ const AddCollection = ({ setShowAddCollection, showAddCollection, setCatagory, c
       setAdding(false)
       setShowAddCollection(false)
       setError("")
+      notify("success", res.data.message);
+
     } catch (error) {
       setAdding(false)
       setError("")
-      if (error?.response?.data?.message) {
+      if (error?.response?.data?.message){
         if (error?.response?.data?.message.includes("name")) {
           setError(error?.response?.data?.message)
-        } else {
+        }else {
           notify("error", error?.response?.data?.message);
         }
       } else {

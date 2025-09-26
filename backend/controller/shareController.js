@@ -234,11 +234,42 @@ const deleteRecievedDocs = async (req, res) => {
 
 const sendDocs = async (req, res) => {
     try {
-        const { arr_of_Id, _id: passwordId, expiredAt } = req.body;
+        const { arr_of_Id, _id: passwordId, expiredAt, sharedItem } = req.body;
         const from = req.userId;
 
         if (arr_of_Id.length == 0) {
-            return res.json({ success: true, message: "Docs sended Successfully" })
+            throw new Error(`Please select at least one user to share the ${sharedItem}.`)
+        }
+
+        const ValidUser = req.user;
+        const isPremiumUser = ValidUser.plan_type === "Ultimate" || ((ValidUser.plan_type === "Pro") && (new Date(ValidUser.plan_expiry) > new Date()))
+
+        if (!isPremiumUser) {
+            if (arr_of_Id.length > 5) {
+                throw new Error("Free plan allows sharing with 5 users. Upgrade to Pro or Ultimate for more.");
+            }
+
+            if (!(expiredAt === "1 Days" || expiredAt === "7 Days")) {
+                throw new Error("Free plan allows 1 or 7 days expiry. Upgrade to Pro/Ultimate for longer durations.")
+            }
+
+            const today = new Date();
+
+            const currentDate = new Date(today.getFullYear() , today.getMonth() , today.getDate());
+            const nextDate = new Date(today.getFullYear() , today.getMonth() , today.getDate() + 1);
+
+            let sharedItem = await share.find({
+                createdAt : {
+                    $gte : currentDate,
+                    $lt : nextDate
+                }
+            }).lean();
+
+            const sharedPassword = [...new Set(sharedItem.map((ele)=>ele.passwordId))];
+
+            if(sharedPassword?.length >= 10){
+                throw new Error("You have reached your 10-items/day sharing limit on the Free plan. Upgrade to Pro or Ultimate to share more items.")
+            }
         }
 
         const docsArr = [];

@@ -1,0 +1,4 @@
+.pricing-con {
+  background-color: red;
+  min-height: calc(100dvh - 102px);
+}

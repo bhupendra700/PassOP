@@ -184,30 +184,20 @@
 }
 .signup-con .popup .google {
   color: #299f29;
-  border-radius: 100px;
+  border-radius: 5px;
   padding: 8px;
   font-size: 16px;
   font-weight: 550;
-  border: 1px solid #299f29;
+  border: 1px solid rgba(0, 0, 0, 0.118);
   cursor: pointer;
   transition: all 0.12s linear;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(0, 0, 255, 0.195);
 }
 .signup-con .popup .google:hover {
-  border: 1px solid #299f29;
-  background-color: #299f29;
+  background-color: rgba(134, 134, 225, 0.158);
   color: white;
-}
-.signup-con .popup .google:hover .circularprogress {
-  color: white;
-}
-.signup-con .popup .google i {
-  padding-right: 5px;
-  font-size: 20px;
-  font-weight: 600;
-}
-.signup-con .popup .google .circularprogress {
-  color: #299f29;
 }

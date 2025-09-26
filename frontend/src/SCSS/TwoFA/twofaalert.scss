@@ -1,0 +1,75 @@
+$width : min(90%, 1000px);
+$calheight : calc(100dvh - 102px);
+$color : #299f29;
+$hover : #299f291a;
+$bgcolor : #299f2948;
+
+.twofa_alert {
+    background-color: #fff3cd;
+    position: relative;
+
+    &>div {
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        width: $width;
+        margin: auto;
+        cursor: context-menu;
+        gap: 20px;
+
+        &>div:first-child {
+            // background-color: red;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        &>div:last-child {
+            // background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 15px;
+            padding-right: 25px;
+
+            &>button {
+                background-color: white;
+                border: none;
+                border-radius: 300px;
+                font-size: 12px;
+                font-weight: 600;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-wrap: nowrap;
+
+
+                &:first-child {
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                    padding: 5px 15px;
+
+                    &:hover {
+                        background-color: $color;
+                        color: white;
+                    }
+                }
+
+                &:last-child {
+                    background-color: transparent;
+                    font-size: 12px;
+                    font-weight: 600;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    right: 30px;
+                    transform: translate(50% , -50%);
+                }
+            }
+        }
+    }
+
+}

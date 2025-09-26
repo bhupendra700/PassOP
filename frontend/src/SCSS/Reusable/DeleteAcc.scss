@@ -70,64 +70,60 @@ $bgcolor : #c3e4c3;
         }
 
         form {
-            .password-con {
-                // background-color: red;
+            &>.twofaotp {
                 color: $color;
-                font-weight: 600;
                 margin-bottom: 30px;
-                font-size: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
 
-                .password-box {
-                    width: 100%;
-                    background-color: white;
-                    border: 1px solid #299f295d;
-                    border-radius: 5px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 10px;
-                    margin-top: 10px;
-                    transition: all .12s linear;
-
-                    &:hover , &:has(input:focus) , &:has(input:not(:placeholder-shown)) {
-                        border: 1px solid $color;
-
-                        &>input::placeholder , i{
-                            color: $color;
-                        }
-                    }
-
-                    input {
-                        width: 100%;
-                        outline: none;
-                        transition: all .2s linear;
-                        border: none;
-                        font-size: 14px;
-                        font-weight: 600;
-                        padding: 0 10px;
-                        color: $color;
-
-                        // &:focus {
-                        //     border: 1px solid rgba(0, 0, 0, 0.952);
-                        // }
-
-                        &::placeholder {
-                            color: #299f29b7;
-                        }
-                    }
-
-                    i{
-                        font-size: 18px;
-                        font-weight: 600;
-                        color: #299f29b7;
-                    }
+                &>.message {
+                    font-size: 16px;
+                    font-weight: 600;
+                    cursor: context-menu;
+                    text-align: center;
                 }
 
-                &>div {
-                    color: red;
-                    font-size: 13px;
-                    font-weight: 500;
-                    margin-top: 5px;
+                &>.input-div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    &>div:first-child {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 5px;
+                        flex-wrap: wrap;
+                        width: min(100%, 400px);
+                        margin: auto;
+
+                        &>input {
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 5px;
+                            outline: none;
+                            border: 2px solid #299f2989;
+                            color: $color;
+                            font-size: 25px;
+                            font-weight: 600;
+                            text-align: center;
+
+
+                            &:hover , &:focus , &:not(:placeholder-shown){
+                                border: 2px solid $color;
+
+                            }
+                        }
+                    }
+
+                    &>div:last-child{
+                        width: min(100%, 400px);
+                        margin: auto;
+                        color: red;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: context-menu;
+                    }
                 }
             }
 

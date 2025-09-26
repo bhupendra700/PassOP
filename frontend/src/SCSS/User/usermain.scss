@@ -1002,6 +1002,9 @@ $bgcolor : #299f2948;
                                         display: flex;
                                         overflow: hidden;
                                         flex-shrink: 0;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
 
                                         &>a {
                                             overflow: hidden;
@@ -1010,6 +1013,7 @@ $bgcolor : #299f2948;
                                             display: flex;
                                             justify-content: center;
                                             align-items: center;
+                                            border-radius: 5px;
 
                                             &>img {
                                                 height: 100%;
@@ -3254,6 +3258,7 @@ $bgcolor : #299f2948;
                             font-weight: 600;
                             color: white;
                             flex-shrink: 0;
+                            overflow: hidden;
 
                             img {
                                 height: 100%;

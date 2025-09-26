@@ -1,0 +1,58 @@
+.twofa_alert {
+  background-color: #fff3cd;
+  position: relative;
+}
+.twofa_alert > div {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  width: min(90%, 1000px);
+  margin: auto;
+  cursor: context-menu;
+  gap: 20px;
+}
+.twofa_alert > div > div:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+.twofa_alert > div > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  padding-right: 25px;
+}
+.twofa_alert > div > div:last-child > button {
+  background-color: white;
+  border: none;
+  border-radius: 300px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+}
+.twofa_alert > div > div:last-child > button:first-child {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 5px 15px;
+}
+.twofa_alert > div > div:last-child > button:first-child:hover {
+  background-color: #299f29;
+  color: white;
+}
+.twofa_alert > div > div:last-child > button:last-child {
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translate(50%, -50%);
+}
