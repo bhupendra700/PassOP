@@ -223,7 +223,7 @@
   color: #299f29;
   width: 100%;
 }
-.show2fapopup > .showqr-con > .otp > .box {
+.show2fapopup > .showqr-con > .otp > .qr-box {
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -232,7 +232,7 @@
   flex-wrap: wrap;
   width: 100%;
 }
-.show2fapopup > .showqr-con > .otp > .box input[type=text] {
+.show2fapopup > .showqr-con > .otp > .qr-box input[type=text] {
   border: 2px solid rgba(0, 128, 0, 0.24);
   border-radius: 5px;
   width: 40px;
@@ -244,7 +244,7 @@
   font-weight: 500;
   color: #299f29;
 }
-.show2fapopup > .showqr-con > .otp > .box input[type=text]:hover, .show2fapopup > .showqr-con > .otp > .box input[type=text]:focus, .show2fapopup > .showqr-con > .otp > .box input[type=text]:not(:placeholder-shown) {
+.show2fapopup > .showqr-con > .otp > .qr-box input[type=text]:hover, .show2fapopup > .showqr-con > .otp > .qr-box input[type=text]:focus, .show2fapopup > .showqr-con > .otp > .qr-box input[type=text]:not(:placeholder-shown) {
   border: 2px solid #299f29;
 }
 .show2fapopup > .showqr-con > .otp > .error {
@@ -254,7 +254,7 @@
   cursor: context-menu;
   width: 100%;
 }
-.show2fapopup > .showqr-con > button {
+.show2fapopup > .showqr-con > .otp > button {
   background-color: white;
   color: #299f29;
   border-radius: 10px;
@@ -270,14 +270,14 @@
   transition: all 0.12s linear;
   width: 100%;
 }
-.show2fapopup > .showqr-con > button:hover {
+.show2fapopup > .showqr-con > .otp > button:hover {
   background-color: #299f29;
   color: white;
 }
-.show2fapopup > .showqr-con > button:has(.loader) {
+.show2fapopup > .showqr-con > .otp > button:has(.loader) {
   background-color: #299f29;
 }
-.show2fapopup > .showqr-con > button > .loader {
+.show2fapopup > .showqr-con > .otp > button > .loader {
   color: white;
 }
 .show2fapopup > .showqr-con > .tip {

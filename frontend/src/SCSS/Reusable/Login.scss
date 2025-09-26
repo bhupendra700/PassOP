@@ -22,7 +22,7 @@ $color : #299f29;
         box-shadow: rgba(100, 100, 111, 0.111) 0px 7px 29px 0px;
         width: min(500px, 100%);
 
-        .login-header {
+        &>.login-header {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -63,7 +63,7 @@ $color : #299f29;
             }
         }
 
-        .body {
+        &>.body {
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
@@ -195,7 +195,7 @@ $color : #299f29;
             }
         }
 
-        .register {
+        &>.register {
             background-color: white;
             text-align: center;
             font-size: 13px;
@@ -212,7 +212,7 @@ $color : #299f29;
             }
         }
 
-        .or {
+        &>.or {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -231,7 +231,7 @@ $color : #299f29;
             }
         }
 
-        .google {
+        &>.google {
             // background-color: red;
             color: $color;
             border-radius: 5px;
@@ -245,6 +245,7 @@ $color : #299f29;
             justify-content: center;
             align-items: center;
             gap: 10px;
+            width: 100%;
 
             border: 1px solid rgba(0, 0, 255, 0.195);
 
@@ -252,6 +253,10 @@ $color : #299f29;
                 background-color: rgba(134, 134, 225, 0.158);
                 color: white;
             }
+        }
+
+        &>.google-btn{
+            width: 100%;
         }
     }
 }

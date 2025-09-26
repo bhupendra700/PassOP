@@ -1,0 +1,82 @@
+.box {
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: black;
+  padding: 10px;
+  cursor: context-menu;
+}
+.box > div:first-child {
+  display: flex;
+  gap: 10px;
+}
+.box > div:first-child > div:first-child {
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.box > div:first-child > div:first-child > img {
+  height: 100%;
+  width: 100%;
+}
+.box > div:first-child > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+.box > div:first-child > div:last-child > div:first-child {
+  font-size: 14px;
+  font-weight: 500;
+}
+.box > div:first-child > div:last-child > div:last-child {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(187, 183, 183);
+}
+.box > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.box > div:last-child > button {
+  width: 100%;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.12s linear;
+}
+.box > div:last-child > button:first-child {
+  color: #299f29;
+}
+.box > div:last-child > button:last-child {
+  color: red;
+}
+.box > div:last-child > button:first-child:hover {
+  background-color: #299f29;
+  color: white;
+}
+.box > div:last-child > button:last-child:hover {
+  background-color: red;
+  color: white;
+}
+
+.no-padding-toast {
+  padding: 0 !important;
+}
+.no-padding-toast > .Toastify__close-button {
+  color: white !important;
+}

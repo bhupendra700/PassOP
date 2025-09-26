@@ -183,7 +183,7 @@ const Login = ({ setIsLogin, setIsForgot, setIsSignUp }) => {
                     <span></span>
                 </div>
                 {!googleLoader ?
-                    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID} >
+                    <GoogleOAuthProvider className="google-btn" clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID} >
                         <GoogleLogin
                             onSuccess={async (credentialResponse) => {
                                 try {

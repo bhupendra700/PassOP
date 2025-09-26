@@ -787,6 +787,9 @@
   display: flex;
   overflow: hidden;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .image > a {
   overflow: hidden;
@@ -795,6 +798,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 .usermain .main-container .user-table .user-table-content .user-table-main .user-table-main-body .card > .card-det > summary .image > a > img {
   height: 100%;

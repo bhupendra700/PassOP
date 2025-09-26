@@ -19,7 +19,7 @@
   box-shadow: rgba(100, 100, 111, 0.111) 0px 7px 29px 0px;
   width: min(500px, 100%);
 }
-.login-con .popup .login-header {
+.login-con .popup > .login-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +28,7 @@
   margin-bottom: 20px;
   position: relative;
 }
-.login-con .popup .login-header i {
+.login-con .popup > .login-header i {
   background-color: white;
   text-align: end;
   padding: 5px;
@@ -43,60 +43,60 @@
   right: -25px;
   top: -25px;
 }
-.login-con .popup .login-header i:hover {
+.login-con .popup > .login-header i:hover {
   background-color: #299f29;
   color: white;
 }
-.login-con .popup .login-header h2 {
+.login-con .popup > .login-header h2 {
   font-weight: 600;
   cursor: context-menu;
   color: #299f29;
 }
-.login-con .popup .body {
+.login-con .popup > .body {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.login-con .popup .body .common {
+.login-con .popup > .body .common {
   justify-content: center;
   transition: all 0.12s linear;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.login-con .popup .body .common > div:first-child {
+.login-con .popup > .body .common > div:first-child {
   border: 1px solid rgba(0, 128, 0, 0.237);
   display: flex;
   align-items: center;
   border-radius: 5px;
   overflow: hidden;
 }
-.login-con .popup .body .common > div:first-child:hover {
+.login-con .popup > .body .common > div:first-child:hover {
   border: 1px solid #299f29;
 }
-.login-con .popup .body .common > div:first-child:hover input::placeholder {
+.login-con .popup > .body .common > div:first-child:hover input::placeholder {
   color: #299f29;
 }
-.login-con .popup .body .common > div:first-child:hover i {
+.login-con .popup > .body .common > div:first-child:hover i {
   color: #299f29;
 }
-.login-con .popup .body .common > div:first-child:has(input:not(:placeholder-shown)) {
+.login-con .popup > .body .common > div:first-child:has(input:not(:placeholder-shown)) {
   border: 1px solid #299f29;
 }
-.login-con .popup .body .common > div:first-child:has(input:not(:placeholder-shown)) i {
+.login-con .popup > .body .common > div:first-child:has(input:not(:placeholder-shown)) i {
   color: #299f29;
 }
-.login-con .popup .body .common > div:first-child:has(input:focus) {
+.login-con .popup > .body .common > div:first-child:has(input:focus) {
   border: 1px solid #299f29;
 }
-.login-con .popup .body .common > div:first-child:has(input:focus) i {
+.login-con .popup > .body .common > div:first-child:has(input:focus) i {
   color: #299f29;
 }
-.login-con .popup .body .common > div:first-child:has(input:focus) input::placeholder {
+.login-con .popup > .body .common > div:first-child:has(input:focus) input::placeholder {
   color: #299f29;
 }
-.login-con .popup .body .common > div:first-child input {
+.login-con .popup > .body .common > div:first-child input {
   width: 100%;
   font-weight: 500;
   font-size: 14px;
@@ -106,10 +106,10 @@
   padding: 12px;
   color: #299f29;
 }
-.login-con .popup .body .common > div:first-child input::placeholder {
+.login-con .popup > .body .common > div:first-child input::placeholder {
   color: rgba(0, 128, 0, 0.585);
 }
-.login-con .popup .body .common > div:first-child i {
+.login-con .popup > .body .common > div:first-child i {
   flex-shrink: 0;
   padding: 10px;
   font-size: 20px;
@@ -117,12 +117,12 @@
   cursor: context-menu;
   color: rgba(0, 128, 0, 0.584);
 }
-.login-con .popup .body .common > div:last-child {
+.login-con .popup > .body .common > div:last-child {
   color: red;
   font-size: 14px;
   font-weight: 500;
 }
-.login-con .popup .body .forgot {
+.login-con .popup > .body .forgot {
   margin-left: auto;
   font-size: 12px;
   color: #299f29;
@@ -130,11 +130,11 @@
   transition: all 0.12s linear;
   font-weight: 600;
 }
-.login-con .popup .body .forgot:hover {
+.login-con .popup > .body .forgot:hover {
   color: #299f29;
 }
-.login-con .popup .body button[type=submit],
-.login-con .popup .body button {
+.login-con .popup > .body button[type=submit],
+.login-con .popup > .body button {
   border-radius: 200px;
   padding: 10px;
   font-size: 16px;
@@ -148,21 +148,21 @@
   justify-content: center;
   align-items: center;
 }
-.login-con .popup .body button[type=submit]:hover,
-.login-con .popup .body button:hover {
+.login-con .popup > .body button[type=submit]:hover,
+.login-con .popup > .body button:hover {
   background-color: #299f29;
   color: white;
   border: 1px solid #299f29;
 }
-.login-con .popup .body button[type=submit]:hover .circularprogress,
-.login-con .popup .body button:hover .circularprogress {
+.login-con .popup > .body button[type=submit]:hover .circularprogress,
+.login-con .popup > .body button:hover .circularprogress {
   color: white;
 }
-.login-con .popup .body button[type=submit] .circularprogress,
-.login-con .popup .body button .circularprogress {
+.login-con .popup > .body button[type=submit] .circularprogress,
+.login-con .popup > .body button .circularprogress {
   color: #299f29;
 }
-.login-con .popup .register {
+.login-con .popup > .register {
   background-color: white;
   text-align: center;
   font-size: 13px;
@@ -171,29 +171,29 @@
   margin-bottom: 20px;
   color: #299f29;
 }
-.login-con .popup .register span {
+.login-con .popup > .register span {
   color: #299f29;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
 }
-.login-con .popup .or {
+.login-con .popup > .or {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 40px 0;
 }
-.login-con .popup .or span:not(:nth-child(2)) {
+.login-con .popup > .or span:not(:nth-child(2)) {
   border-top: 1px solid #299f29;
   width: 100%;
 }
-.login-con .popup .or span:nth-child(2) {
+.login-con .popup > .or span:nth-child(2) {
   color: #299f29;
   padding: 0 10px;
   font-size: 14px;
   font-weight: 600;
 }
-.login-con .popup .google {
+.login-con .popup > .google {
   color: #299f29;
   border-radius: 5px;
   padding: 8px;
@@ -206,9 +206,13 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  width: 100%;
   border: 1px solid rgba(0, 0, 255, 0.195);
 }
-.login-con .popup .google:hover {
+.login-con .popup > .google:hover {
   background-color: rgba(134, 134, 225, 0.158);
   color: white;
+}
+.login-con .popup > .google-btn {
+  width: 100%;
 }
