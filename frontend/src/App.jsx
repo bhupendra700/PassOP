@@ -9,7 +9,7 @@ import Error from './Component/Error/Error'
 import About from './Component/About/About'
 import People from './Component/People/People'
 import TwoFAAlert from './Component/TwoFA/TwoFAAlert'
-import Show2FAPopup from './Component/TwoFA/Show2FAPopup'
+import Show2FAPopUp from './Component/TwoFA/Show2FAPopUp'
 import ShowDisable2FA from './Component/TwoFA/ShowDisable2FA'
 import Insights from './Component/Analytics/Insights'
 import Pricing from './Component/Pricing/Pricing'
@@ -57,7 +57,7 @@ const App = () => {
       {user && <Route path='/analytics' element={<Insights />} />}
       <Route path='/*' element={loginLoader ? <Home /> : <Error />} />
     </Routes>
-    {(show2FAPopUp && user) && <Show2FAPopup />}
+    {(show2FAPopUp && user) && <Show2FAPopUp />}
     {(user && showDisable2FA) && <ShowDisable2FA />}
   </AppContext.Provider>
 }
