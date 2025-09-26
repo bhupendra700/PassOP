@@ -256,12 +256,9 @@ $color : #299f29;
         }
 
         &>.btng {
-            margin: 0 auto;
-            background-color: red;
-
-            &>.google-btn {
-                width: 100%;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

@@ -214,9 +214,7 @@
   color: white;
 }
 .login-con .popup > .btng {
-  margin: 0 auto;
-  background-color: red;
-}
-.login-con .popup > .btng > .google-btn {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
