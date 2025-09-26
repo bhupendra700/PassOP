@@ -14,7 +14,7 @@ $color : #299f29;
     z-index: 1000;
 
 
-    .popup {
+    &>.popup {
         margin: auto;
         background-color: white;
         padding: 30px;
@@ -22,7 +22,7 @@ $color : #299f29;
         box-shadow: rgba(100, 100, 111, 0.111) 0px 7px 29px 0px;
         width: min(500px, 100%);
 
-        .signup-header {
+        &>.signup-header {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -63,7 +63,7 @@ $color : #299f29;
             }
         }
 
-        .body {
+        &>.body {
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
@@ -181,7 +181,7 @@ $color : #299f29;
             }
         }
 
-        .login {
+        &>.login {
             background-color: white;
             text-align: center;
             font-size: 13px;
@@ -198,7 +198,7 @@ $color : #299f29;
             }
         }
 
-        .or {
+        &>.or {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -217,7 +217,15 @@ $color : #299f29;
             }
         }
 
-        .google {
+        &>.btng {
+            margin: 0 auto;
+
+            &>.google-btn {
+                width: 100%;
+            }
+        }
+
+        &>.google {
             // background-color: red;
             color: $color;
             border-radius: 5px;

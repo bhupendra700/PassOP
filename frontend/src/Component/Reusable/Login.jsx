@@ -183,29 +183,30 @@ const Login = ({ setIsLogin, setIsForgot, setIsSignUp }) => {
                     <span></span>
                 </div>
                 {!googleLoader ?
-                    <GoogleOAuthProvider className="google-btn" clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID} >
-                        <GoogleLogin
-                            onSuccess={async (credentialResponse) => {
-                                try {
-                                    setGoogleLoader(true);
+                    <div className='btng'>
+                        <GoogleOAuthProvider className="google-btn" clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID} >
+                            <GoogleLogin
+                                onSuccess={async (credentialResponse) => {
+                                    try {
+                                        setGoogleLoader(true);
 
-                                    const res = await authAxios.post('/google_login', { token: credentialResponse.credential });
+                                        const res = await authAxios.post('/google_login', { token: credentialResponse.credential });
 
-                                    setUserAfterLogin(res);
-                                    if (!res.data.user.is2FA) {
-                                        notify("success", "User logged in successfully")
+                                        setUserAfterLogin(res);
+                                        if (!res.data.user.is2FA) {
+                                            notify("success", "User logged in successfully")
+                                        }
+                                        setGoogleLoader(false)
+                                    } catch (error) {
+                                        setGoogleLoader(false)
+                                        notify("error", error?.response?.data?.message || error?.message || "Google login failed")
                                     }
-                                    setGoogleLoader(false)
-                                } catch (error) {
-                                    setGoogleLoader(false)
-                                    notify("error", error?.response?.data?.message || error?.message || "Google login failed")
-                                }
-                            }}
-                            onError={() => {
-                                notify("error", "Google login failed")
-                            }}
-                        />
-                    </GoogleOAuthProvider>
+                                }}
+                                onError={() => {
+                                    notify("error", "Google login failed")
+                                }}
+                            />
+                        </GoogleOAuthProvider></div>
                     : <div className="google">
                         <CircularProgress size={21} className='circularprogress' />
                     </div>}
