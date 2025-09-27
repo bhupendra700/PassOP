@@ -580,8 +580,7 @@ const contactUs = async (req, res) => {
         return res.status(200).send({ success: true, message: "Your message has been delivered! Our team will review your request and contact you shortly." })
 
     } catch (error) {
-        return res.status(400).json({ success: false, type: "server", message: error.message ,  user: process.env.EMAIL_USER, 
-        pass: process.env.EMAIL_PASS})
+        return res.status(400).json({ success: false, type: "server", message: error.message})
     }
 }
 
