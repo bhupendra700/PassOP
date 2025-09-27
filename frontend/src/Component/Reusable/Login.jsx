@@ -131,10 +131,6 @@ const Login = ({ setIsLogin, setIsForgot, setIsSignUp }) => {
         loginByBiometric()
     }, [])
 
-    useEffect(() => {
-        console.log(biometricLoader);
-    }, [biometricLoader])
-
     return <>
         {!showLogin2FA && <div className="login-con">
             <div className="popup">
