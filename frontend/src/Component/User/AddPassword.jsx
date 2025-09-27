@@ -32,11 +32,7 @@ const AddPassword = ({ setSelect, select, data, cat, setCat, makeUrl, isSites, i
         try {
             const regex = /^(?:https?:\/\/)?([^\/]+)/i;
             const result = url.match(regex);
-            if (!result[0].startsWith("https://") && !result[0].startsWith("http://")) {
-                return `https://www.google.com/s2/favicons?sz=64&domain=https://${result[0]}`
-            } else {
-                return `https://www.google.com/s2/favicons?sz=64&domain=${result[0]}`
-            }
+            return `https://img.logo.dev/${result[0].replace(/^https?:\/{0,2}/, "")}?token=pk_Slm3zZ2dQJGp1U_6Wof0sQ`
         } catch (error) {
             return null
         }
@@ -237,7 +233,7 @@ const AddPassword = ({ setSelect, select, data, cat, setCat, makeUrl, isSites, i
                                     </div>
                                     <div className="smart-chip">
                                         <div className="image">
-                                            <img src={smartchip} alt="EMV"/>
+                                            <img src={smartchip} alt="EMV" />
                                         </div>
                                     </div>
                                     <div className="card-holder-details">

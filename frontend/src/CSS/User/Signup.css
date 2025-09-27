@@ -11,7 +11,7 @@
   overflow: auto;
   z-index: 1000;
 }
-.signup-con .popup {
+.signup-con > .popup {
   margin: auto;
   background-color: white;
   padding: 30px;
@@ -19,7 +19,7 @@
   box-shadow: rgba(100, 100, 111, 0.111) 0px 7px 29px 0px;
   width: min(500px, 100%);
 }
-.signup-con .popup .signup-header {
+.signup-con > .popup > .signup-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +28,7 @@
   margin-bottom: 20px;
   position: relative;
 }
-.signup-con .popup .signup-header i {
+.signup-con > .popup > .signup-header i {
   background-color: white;
   text-align: end;
   padding: 5px;
@@ -43,60 +43,60 @@
   right: -25px;
   top: -25px;
 }
-.signup-con .popup .signup-header i:hover {
+.signup-con > .popup > .signup-header i:hover {
   background-color: #299f29;
   color: white;
 }
-.signup-con .popup .signup-header h2 {
+.signup-con > .popup > .signup-header h2 {
   font-weight: 600;
   cursor: context-menu;
   color: #299f29;
 }
-.signup-con .popup .body {
+.signup-con > .popup > .body {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.signup-con .popup .body .common {
+.signup-con > .popup > .body .common {
   justify-content: center;
   transition: all 0.12s linear;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.signup-con .popup .body .common > div:first-child {
+.signup-con > .popup > .body .common > div:first-child {
   border: 1px solid rgba(0, 128, 0, 0.237);
   display: flex;
   align-items: center;
   border-radius: 5px;
   overflow: hidden;
 }
-.signup-con .popup .body .common > div:first-child:hover {
+.signup-con > .popup > .body .common > div:first-child:hover {
   border: 1px solid #299f29;
 }
-.signup-con .popup .body .common > div:first-child:hover input::placeholder {
+.signup-con > .popup > .body .common > div:first-child:hover input::placeholder {
   color: #299f29;
 }
-.signup-con .popup .body .common > div:first-child:hover i {
+.signup-con > .popup > .body .common > div:first-child:hover i {
   color: #299f29;
 }
-.signup-con .popup .body .common > div:first-child:has(input:not(:placeholder-shown)) {
+.signup-con > .popup > .body .common > div:first-child:has(input:not(:placeholder-shown)) {
   border: 1px solid #299f29;
 }
-.signup-con .popup .body .common > div:first-child:has(input:not(:placeholder-shown)) i {
+.signup-con > .popup > .body .common > div:first-child:has(input:not(:placeholder-shown)) i {
   color: #299f29;
 }
-.signup-con .popup .body .common > div:first-child:has(input:focus) {
+.signup-con > .popup > .body .common > div:first-child:has(input:focus) {
   border: 1px solid #299f29;
 }
-.signup-con .popup .body .common > div:first-child:has(input:focus) i {
+.signup-con > .popup > .body .common > div:first-child:has(input:focus) i {
   color: #299f29;
 }
-.signup-con .popup .body .common > div:first-child:has(input:focus) input::placeholder {
+.signup-con > .popup > .body .common > div:first-child:has(input:focus) input::placeholder {
   color: #299f29;
 }
-.signup-con .popup .body .common > div:first-child input {
+.signup-con > .popup > .body .common > div:first-child input {
   width: 100%;
   font-weight: 500;
   font-size: 14px;
@@ -106,10 +106,10 @@
   padding: 12px;
   color: #299f29;
 }
-.signup-con .popup .body .common > div:first-child input::placeholder {
+.signup-con > .popup > .body .common > div:first-child input::placeholder {
   color: rgba(0, 128, 0, 0.585);
 }
-.signup-con .popup .body .common > div:first-child i {
+.signup-con > .popup > .body .common > div:first-child i {
   flex-shrink: 0;
   padding: 10px;
   font-size: 20px;
@@ -117,13 +117,13 @@
   cursor: context-menu;
   color: rgba(0, 128, 0, 0.584);
 }
-.signup-con .popup .body .common > div:last-child {
+.signup-con > .popup > .body .common > div:last-child {
   color: red;
   font-size: 14px;
   font-weight: 500;
 }
-.signup-con .popup .body button[type=submit],
-.signup-con .popup .body button {
+.signup-con > .popup > .body button[type=submit],
+.signup-con > .popup > .body button {
   border-radius: 200px;
   padding: 10px;
   font-size: 16px;
@@ -137,21 +137,21 @@
   justify-content: center;
   align-items: center;
 }
-.signup-con .popup .body button[type=submit]:hover,
-.signup-con .popup .body button:hover {
+.signup-con > .popup > .body button[type=submit]:hover,
+.signup-con > .popup > .body button:hover {
   background-color: #299f29;
   color: white;
   border: 1px solid #299f29;
 }
-.signup-con .popup .body button[type=submit]:hover .circularprogress,
-.signup-con .popup .body button:hover .circularprogress {
+.signup-con > .popup > .body button[type=submit]:hover .circularprogress,
+.signup-con > .popup > .body button:hover .circularprogress {
   color: white;
 }
-.signup-con .popup .body button[type=submit] .circularprogress,
-.signup-con .popup .body button .circularprogress {
+.signup-con > .popup > .body button[type=submit] .circularprogress,
+.signup-con > .popup > .body button .circularprogress {
   color: #299f29;
 }
-.signup-con .popup .login {
+.signup-con > .popup > .login {
   background-color: white;
   text-align: center;
   font-size: 13px;
@@ -160,29 +160,34 @@
   margin-bottom: 20px;
   color: #299f29;
 }
-.signup-con .popup .login span {
+.signup-con > .popup > .login span {
   color: #299f29;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
 }
-.signup-con .popup .or {
+.signup-con > .popup > .or {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 40px 0;
 }
-.signup-con .popup .or span:not(:nth-child(2)) {
+.signup-con > .popup > .or span:not(:nth-child(2)) {
   border-top: 1px solid #299f29;
   width: 100%;
 }
-.signup-con .popup .or span:nth-child(2) {
+.signup-con > .popup > .or span:nth-child(2) {
   color: #299f29;
   padding: 0 10px;
   font-size: 14px;
   font-weight: 600;
 }
-.signup-con .popup .google {
+.signup-con > .popup > .btng {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-con > .popup > .google {
   color: #299f29;
   border-radius: 5px;
   padding: 8px;
@@ -197,7 +202,7 @@
   gap: 10px;
   border: 1px solid rgba(0, 0, 255, 0.195);
 }
-.signup-con .popup .google:hover {
+.signup-con > .popup > .google:hover {
   background-color: rgba(134, 134, 225, 0.158);
   color: white;
 }

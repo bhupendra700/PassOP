@@ -1972,6 +1972,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 .usermain .main-container .add-password-popup .popup .option .card > .select-card-det > summary .image > a > img {
   height: 100%;

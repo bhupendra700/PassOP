@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const backendUrl = "https://passop-sj3o.onrender.com"
+const backendUrl = "https://passop-sj3o.onrender.com";
 // const backendUrl = "http://localhost:8000"
 
 const userAxios = axios.create({
