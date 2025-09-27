@@ -146,7 +146,7 @@ const ForgotPassword = ({ setIsForgot }) => {
                 </div>
             </div>
             <form className="email" onSubmit={(e) => { e.preventDefault(); handleEmail() }}>
-                <div className="box">
+                <div className="box-forgot">
                     <div className="input">
                         <i className="ri-mail-line"></i>
                         <input type="email" placeholder='example@gmail.com' required value={email} onChange={(e) => { setEmail(e.target.value) }} />
@@ -211,7 +211,7 @@ const ForgotPassword = ({ setIsForgot }) => {
                 </div>
             </div>
             <form className="email" onSubmit={(e) => { e.preventDefault(); handleNewPassword() }}>
-                <div className="box">
+                <div className="box-forgot">
                     <div className="input">
                         <i className="ri-lock-2-line"></i>
                         <input type="password" placeholder='New password' required value={newPassword} onChange={(e) => { setNewPassword(e.target.value) }} />
