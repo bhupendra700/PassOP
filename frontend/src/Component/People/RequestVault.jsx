@@ -233,8 +233,8 @@ const RequestVault = () => {
             <legend>Requests Sent</legend>
             <div className="request-search">
                 <div className="search">
-                    <i className="ri-search-line"></i>
-                    <input onKeyDown={(e) => { if (e.key === "Enter") { searchUserFun() } }} type="text" placeholder='Send request by email' value={searchUser} onChange={(e) => { handleChange(e) }} />
+                    <i className="ri-search-line" onClick={()=>{searchUserFun()}}></i>
+                    <input onKeyDown={(e) => { if (e.key === "Enter") { searchUserFun() } }} type="text" placeholder='Send request by email' value={searchUser} onChange={(e) => { handleChange(e) }} enterkeyhint="enter" />
                     {searchUser && <i className="ri-close-large-line" onClick={() => { setSearchUser("") }}></i>}
                 </div>
                 {(isLoading || searchUserResult) && <div className='result'>

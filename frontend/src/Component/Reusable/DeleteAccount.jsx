@@ -101,7 +101,7 @@ const DeleteAccount = ({ setIsDeleteAcc }) => {
       </div>
       <div className="delete-message">
         <p><i className="ri-information-2-fill"></i> Are you sure?</p>
-        <p>Deleting your account will permanently remove your saved username/email and password.This action is irreversible and cannot be undone. Please proceed only if you're certain.
+        <p>Deleting your account will permanently remove your saved data.This action is irreversible and cannot be undone. Please proceed only if you're certain.
         </p>
       </div>
       <form autoComplete='off' onSubmit={(e) => {

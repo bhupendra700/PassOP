@@ -88,9 +88,9 @@ const Userheader = () => {
 
       if (verifiedRes.data.success) {
         setUser({ ...user, isPassKey: true });
+        closeSlider();
         notify("success", "Passkey Successfully Registered!")
       }
-
       setLayer(false);
     } catch (error) {
       setLayer(false);

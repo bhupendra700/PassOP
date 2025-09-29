@@ -18,7 +18,7 @@ function CustomeToast({title , body}) {
             </div>
         </div>
         <div>
-            <button onClick={()=>{navigate('/people')}}>View</button>
+            <button onClick={()=>{navigate('/people') ; toast.dismiss()}}>View</button>
             <button onClick={()=>{toast.dismiss()}}>Cancel</button>
         </div>
     </div>
