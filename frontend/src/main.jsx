@@ -233,7 +233,6 @@ const Root = () => {
 
     useEffect(() => {
         const unsubscribe = onMessage(messaging, (payload) => {
-            console.log(payload.data.title, payload.data.body);
             toast(<CustomeToast title={payload.data.title} body={payload.data.body} />, {
                 toastId: "123",
                 closeButton: false,
