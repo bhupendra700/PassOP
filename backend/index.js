@@ -16,8 +16,8 @@ connectDB()
 const app = express();
 app.use(cookieParser())
 
-const allowedOrigin = ["https://passopfree.netlify.app"]
-// const allowedOrigin = ["http://localhost:5173"]
+const allowedOrigin = process.env.NODE_ENV === "developer" ? ["http://localhost:5173"] : ["https://passopfree.netlify.app"]
+
 app.use(cors({
     origin: allowedOrigin,
     credentials: true

@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const backendUrl = "https://passop-sj3o.onrender.com";
-// const backendUrl = "http://localhost:8000"
+const backendUrl = import.meta.env.VITE_BACKEND_URI;
 
 const userAxios = axios.create({
     baseURL: `${backendUrl}/user`,
